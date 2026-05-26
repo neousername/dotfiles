@@ -230,7 +230,7 @@ pacman -S file ffmpeg 7zip jq poppler fd ripgrep fzf zoxide resvg imagemagick ya
 
 Then, there are favourite apps I use: 
 ```
-pacman -S signal-desktop telegram-desktop thunderbird firefox gimp
+pacman -S signal-desktop telegram-desktop thunderbird firefox gimp libreoffice-still obs-studio
 ```
 
 
