@@ -11,6 +11,7 @@
 !Pictures/Wallpapers/**
 
 !.bashrc
+!.bash_profile
 
 !.config/
 !.config/nvim/
