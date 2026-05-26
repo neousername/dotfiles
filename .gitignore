@@ -4,7 +4,7 @@
 
 # Un-ignore folders and files
 !Documents/
-!"Documents/Arch.md"
+!Documents/Personal Arch Linux Installation Guide.md
 
 !Pictures/
 !Pictures/Wallpapers/
