@@ -243,6 +243,8 @@ Essentially all apps require specific configuration with specific environmental 
 
 Do not forget to make the sh files executables inside of *scripts* directory.
 
+keychain should be configured in bash_profile after generating ssh keys.
+
 Add these to *uwsm/env* file in order for GDK and QT-Based apps to work as expected:
 ```
 export GDK_BACKEND=wayland,x11,*
