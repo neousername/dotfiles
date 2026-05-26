@@ -1,6 +1,6 @@
 hl.config({
     input = {
-        kb_layout  = "de",
+        kb_layout  = "de, ua",
         kb_variant = "",
         kb_model   = "",
         kb_options = "",

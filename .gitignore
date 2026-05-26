@@ -1,0 +1,47 @@
+# Ignore everything
+*
+!.gitignore
+
+# Un-ignore folders and files
+!Documents/
+!"Documents/Personal Arch Linux Installation Guide.md"
+
+!Pictures/
+!Pictures/Wallpapers/
+!Pictures/Wallpapers/**
+
+!.bashrc
+
+!.config/
+!.config/nvim/
+!.config/nvim/**
+
+!.config/hypr/
+!.config/hypr/hyprland.lua
+!.config/hypr/autostart.lua
+!.config/hypr/input.lua
+!.config/hypr/style.lua
+!.config/hypr/windowrules.lua
+!.config/hypr/keybinds.lua
+!.config/hypr/hypridle.conf
+!.config/hypr/hyprlock.conf
+!.config/hypr/hyprpaper.conf
+!.config/hypr/hyprsunset.conf
+
+!.config/scripts/
+!.config/scripts/**
+
+!.config/tmux/
+!.config/tmux/**
+
+!.config/rofi/
+!.config/rofi/**
+
+!.config/alacritty/
+!.config/alacritty/**
+
+!.config/yazi/
+!.config/yazi/**
+
+!.config/waybar/
+!.config/waybar/**
