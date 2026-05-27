@@ -255,7 +255,8 @@ Do not forget to make the sh files executables inside of *scripts* directory.
 
 keychain should be configured in bash_profile after generating ssh keys.
 
-Add these to *uwsm/env* file in order for GDK and QT-Based apps to work as expected:
+Add these to *uwsm/env* file (create manually)
+in order for GDK and QT-Based apps to work as expected:
 ```
 export GDK_BACKEND=wayland,x11,*
 export QT_QPA_PLATFORM=wayland;xcb
@@ -275,9 +276,9 @@ pacman -Syu linux-headers nvidia-dkms nvidia-utils lib32-nvidia-utils egl-waylan
 
 Enable these services for sleep to work:
 ```
-sudo systemctl enable nvidia-suspend.service
-sudo systemctl enable nvidia-hibernate.service
-sudo systemctl enable nvidia-resume.service
+systemctl enable nvidia-suspend.service
+systemctl enable nvidia-hibernate.service
+systemctl enable nvidia-resume.service
 ```
 
 Add `resume` hook after `encrypt` in 'mkinitcpio.conf' for hibernation
@@ -309,6 +310,27 @@ and the **uwsm-managed** session for **hyprland**.
 Enable hypridle: `systemctl --user enable --now hypridle.service`
 
 
+## Finalizing my setup
+
+Go to *.config/hypr/hypr.conf* and add a binding for 
+alacritty and firefox.
+
+Generate ssh key and add it to github.
+Use `ssh-keygen -t ed25519 -C "your_email@example.com"`.
+Add the public key to the GitHub.
+
+Fetch my config:
+```
+git init
+git remote add origin git@github.com:USERNAME/REPO-NAME.git
+git fetch
+git checkout -f main
+```
+
+Set up keychain in .bash_profile. Replace the placeholder
+with the actual ssh-key type.
+
+
 # Secure boot
 
 The following definitely works on ASUS motherboards.
@@ -321,17 +343,16 @@ sub menu: *Key Managment*. Use `Clear Secure Boot Keys` to enter Setup Mode.
 Secure boot should be disabled now. Exit the firmware with save and reset option,
 even if it says no changes have been performed. 
 
-Confirm that setup mode is enabled: `sbctl status`
-Create custom secure boot keys: `sbctl create-keys`
-Enroll custom secure boot keys: `sbctl enroll-keys --microsoft`
-Confirm that setup mode is disabled now: `sbctl status`
+Confirm that setup mode is enabled: `sudo sbctl status`
+Create custom secure boot keys: `sudo sbctl create-keys`
+Enroll custom secure boot keys: `sudo sbctl enroll-keys --microsoft`
 
 Sign bootloader and kernel with sbctl before rebooting. the -s flag
 saves the path so sbctl re-signs it automatically on updates via
 its pacman hook:
 ```
-sbctl sign -s /boot/EFI/limine/BOOTX64.EFI
-sbctl sign -s /boot/vmlinuz-linux
+sudo sbctl sign -s /boot/EFI/limine/BOOTX64.EFI
+sudo sbctl sign -s /boot/vmlinuz-linux
 ```
 
-Confirm secure boot status after reboot: `sbctl status`
+Confirm that setup mode is disabled now: `sudo sbctl status`
