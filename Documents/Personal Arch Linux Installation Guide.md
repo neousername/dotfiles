@@ -237,11 +237,8 @@ pacman -S signal-desktop telegram-desktop thunderbird \
 firefox gimp libreoffice-still obs-studio
 ```
 
-These are required for my nvim config, but better to check again later
-with `checkhealth` command.
-```
-pacman -S unzip wget npm nodejs tree-sitter-cli
-```
+Install dependencies for nvim plugings
+after running `checkhealth` command.
 
 
 ## Configuring apps
@@ -327,9 +324,8 @@ git fetch
 git checkout -f main
 ```
 
-Set up keychain in .bash_profile. Replace the placeholder
-with the actual ssh-key type.
-
+Keychain is already set up in my bash_profile and 
+should work out of the box.
 
 # Secure boot
 

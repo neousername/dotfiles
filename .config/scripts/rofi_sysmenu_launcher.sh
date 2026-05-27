@@ -18,7 +18,7 @@ declare -A CMDS=(
     [Performance]="uwsm app -- alacritty -e btop"
     [Display]="uwsm app -- nwg-displays"
     [QT6]="uwsm app -- qt6ct"
-    [Hibernate]="uwsm app -- hyprlock & systemctl hibernate"
+    [Hibernate]="systemctl hibernate"
     [Logout]="uwsm stop"
 )
 
