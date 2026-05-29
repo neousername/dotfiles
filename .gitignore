@@ -29,6 +29,9 @@
 !.config/hypr/hyprpaper.conf
 !.config/hypr/hyprsunset.conf
 
+!.config/uwsm/
+!.config/uwsm/**
+
 !.config/scripts/
 !.config/scripts/**
 
