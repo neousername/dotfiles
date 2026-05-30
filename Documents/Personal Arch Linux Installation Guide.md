@@ -262,21 +262,15 @@ Run this:
 pacman -Syu linux-headers nvidia-dkms nvidia-utils lib32-nvidia-utils egl-wayland 
 ```
 
-Enable these services for sleep to work:
-```
-systemctl enable nvidia-suspend.service
-systemctl enable nvidia-hibernate.service
-systemctl enable nvidia-resume.service
-```
-
-Run `mkinitcpio -P`
-
 After launching Hyprland for the first time, 
 add these environment variables to *.config/uwsm/env*:
 ```
 export LIBVA_DRIVER_NAME=nvidia
 export __GLX_VENDOR_LIBRARY_NAME=nvidia
 ```
+
+Sleep should work outside of the box. Hibernation on NVIDIA on Wayland 
+is broken in my experience.
 
 ## Greetd setup
 
