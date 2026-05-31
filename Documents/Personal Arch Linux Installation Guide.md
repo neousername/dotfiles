@@ -252,6 +252,20 @@ Do not forget to make the sh files executables inside of *scripts* directory.
 
 keychain should be configured in bash_profile after generating ssh keys.
 
+## My envs in uwsm
+
+This way my apps work as expected:
+```
+export ELECTRON_ENABLE_WAYLAND=1
+export ELECTRON_OZONE_PLATFORM_HINT=auto
+
+export GDK_BACKEND=wayland,x11,*
+export QT_QPA_PLATFORM=wayland;xcb
+
+export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
+export QT_QPA_PLATFORMTHEME=qt6ct
+```
+
 
 ## Installing NVIDIA drivers
 

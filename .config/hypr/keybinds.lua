@@ -23,7 +23,6 @@ hl.bind(mainMod .. " + T", hl.dsp.layout("togglesplit"))
 hl.bind(mainMod .. " + SHIFT + B", hl.dsp.exec_cmd("uwsm app -- firefox"))
 hl.bind(mainMod .. " + SHIFT + E", hl.dsp.exec_cmd("uwsm app -- thunderbird"))
 hl.bind(mainMod .. " + SHIFT + T", hl.dsp.exec_cmd("uwsm app -- Telegram"))
-hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd("uwsm app -- signal-desktop"))
 
 -- Move focus with mainMod + HJKL
 hl.bind(mainMod .. " + H", hl.dsp.focus({ direction = "left" }))
