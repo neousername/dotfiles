@@ -288,7 +288,16 @@ export __GLX_VENDOR_LIBRARY_NAME=nvidia
 ```
 
 Sleep should work outside of the box. Hibernation on NVIDIA on Wayland 
-is broken in my experience.
+is broken in my experience. If you do not use hibernation,
+add the following settings in the `/etc/systemd/sleep.conf`, so that 
+the pc stays in sleep and does not power after a while:
+```
+[Sleep]
+AllowHibernation=no
+AllowSuspendThenHibernate=no
+AllowHybridSleep=no
+```
+
 
 ## Greetd setup
 
