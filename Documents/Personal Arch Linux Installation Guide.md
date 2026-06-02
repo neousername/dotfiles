@@ -235,7 +235,7 @@ zoxideresvg imagemagick yazi
 Then, there are favourite apps I use: 
 ```
 pacman -S signal-desktop telegram-desktop thunderbird \
-firefox gimp libreoffice-still obs-studio discord steam
+firefox gimp libreoffice-still obs-studio discord steam bitwarden
 ```
 
 Install dependencies for nvim plugings
