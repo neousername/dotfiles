@@ -231,12 +231,13 @@ pacman -S file ffmpeg 7zip jq poppler fd ripgrep fzf \
 zoxideresvg imagemagick yazi
 ```
 
-
-Then, there are favourite apps I use: 
+Then, there are favourite apps I use (ollama-cuda for NVIDIA): 
 ```
 pacman -S signal-desktop telegram-desktop thunderbird \
 firefox gimp libreoffice-still obs-studio discord steam bitwarden
+opencode ollama ollama-cuda
 ```
+
 
 Install dependencies for nvim plugings
 after running `checkhealth` command.
@@ -246,29 +247,17 @@ after running `checkhealth` command.
 
 I use uwsm-managed hyprland.
 
-I store and maintain my config files in a git repo. I pull it into my home directory.
-Essentially all apps require specific configuration with specific environmental variables.
+I store and maintain my config files in a git repo.
+I pull it into my home directory.
+
+Essentially all apps require specific configuration
+with specific environmental variables.
 
 Do not forget to:
-make the sh files executables inside of *scripts* directory;
-make zathura default pdf viewer with: 
-`xdg-mime default org.pwmt.zathura.desktop application/pdf`
-
-keychain should be configured in bash_profile after generating ssh keys.
-
-## My envs in uwsm
-
-This way my apps work as expected:
-```
-export ELECTRON_ENABLE_WAYLAND=1
-export ELECTRON_OZONE_PLATFORM_HINT=auto
-
-export GDK_BACKEND=wayland,x11,*
-export QT_QPA_PLATFORM=wayland;xcb
-
-export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
-export QT_QPA_PLATFORMTHEME=qt6ct
-```
+- make the sh files executables inside of *scripts* directory;
+- make zathura default pdf viewer with: 
+  `xdg-mime default org.pwmt.zathura.desktop application/pdf`
+- configure keychain
 
 
 ## Installing NVIDIA drivers
@@ -277,7 +266,8 @@ Uncomment multilib options in */etc/pacman.conf*.
 
 Run this:
 ```
-pacman -Syu linux-headers nvidia-dkms nvidia-utils lib32-nvidia-utils egl-wayland 
+pacman -Syu linux-headers nvidia-dkms nvidia-utils \
+lib32-nvidia-utils egl-wayland 
 ```
 
 After launching Hyprland for the first time, 
@@ -312,7 +302,6 @@ command = "tuigreet -w 70 –-asterisks --remember --remember-session"
 Reboot. When logging in for the first time choose the user
 and the **uwsm-managed** session for **hyprland**.
 
-Enable hypridle: `systemctl --user enable --now hypridle.service`
 
 
 ## Finalizing my setup
@@ -332,8 +321,9 @@ git fetch
 git checkout -f main
 ```
 
-Keychain is already set up in my bash_profile and 
-should work out of the box.
+Enable hypridle: `systemctl enable hypridle.service`
+Enable ollama: `systemctl ollama.service`
+
 
 # Secure boot
 

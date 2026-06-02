@@ -15,3 +15,6 @@ function y() {
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 PS1='[\W]\$ '
+
+# opencode
+export PATH=/home/neousername/.opencode/bin:$PATH
