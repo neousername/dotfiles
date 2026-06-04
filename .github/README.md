@@ -300,13 +300,12 @@ and the **uwsm-managed** session for **hyprland**
 Go to *.config/hypr/hypr.conf* and add a binding for 
 alacritty and firefox
 
-Generate ssh key and add it to github
-Use `ssh-keygen -t ed25519 -C "your_email@example.com"`
+Generate ssh key: `ssh-keygen -t ed25519 -C "your_email@example.com"`
 Add the public key to the GitHub
 
 Fork my repository on GitHub
 
-Fetch the forked repository into home directory:
+Fetch the forked repository into your home directory:
 ```
 git init
 git remote add origin git@github.com:USERNAME/REPONAME.git
