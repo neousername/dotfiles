@@ -18,7 +18,7 @@ so I reboot into ISO again to be sure.
 Run these commands:
 ```
 loadkeys de-latin1 
-setfont ter-132b
+setfont ter-132n
 ```
 
 This should return 64: `cat /sys/firmware/efi/fw_platform_size`
@@ -79,13 +79,12 @@ hwclock --systohc
 ```
 
 Configure language:
+
+`nvim /etc/locale.gen` - uncomment the locale you want.
+
 ``` 
-nvim /etc/locale.gen
 locale-gen
 echo LANG=en_US.UTF-8 > /etc/locale.conf 
-nvim /etc/vconsole.conf
-KEYMAP=de-latin1
-FONT=ter-132n 
 ```
 
 Configure users:
@@ -94,8 +93,10 @@ echo yourhostname > /etc/hostname
 passwd 
 useradd -mG wheel neousername
 passwd neousername 
-EDITOR=nvim visudo
 ```
+
+`EDITOR=nvim visudo` - uncomment the following:
+%wheel ALL=(ALL:ALL) ALL
 
 Inside of */etc/mkinitcpio.conf*:
 ```
@@ -216,40 +217,6 @@ fwupdmgr get-devices
 
 # Hyprland setup
 
-I consider these my "system" packages:
-```
-pacman -S uwsm greetd greetd-tuigreet hyprland hyprlock hypridle hyprpaper \
-hyprsunset mako xdg-desktop-portal-hyprland xdg-desktop-portal-gtk \
-nwg-displays waybar rofi-wayland cliphist wl-clipboard grim slurp qt6ct \
-nwg-look ttf-jetbrains-mono-nerd ttf-montserrat papirus-icon-theme tmux \
-zathura-pdf-mupdf imv mpv cups 
-```
-
-Yazi file manager:
-```
-pacman -S file ffmpeg 7zip jq poppler fd ripgrep fzf \
-zoxideresvg imagemagick yazi
-```
-
-Then, there are favourite apps I use (ollama-cuda for NVIDIA): 
-```
-pacman -S signal-desktop telegram-desktop thunderbird \
-firefox gimp libreoffice-still obs-studio discord steam \
-opencode ollama ollama-cuda
-```
-
-
-
-## Configuring apps
-
-I use uwsm-managed hyprland
-
-I store and maintain my config files in a git repo.
-I pull it into my home directory
-
-Essentially all apps require specific configuration
-with specific environmental variables
-
 
 ## Installing NVIDIA drivers
 
@@ -280,6 +247,42 @@ AllowHybridSleep=no
 ```
 
 
+## Installing Apps
+
+I consider these my "system" packages:
+```
+pacman -S uwsm greetd greetd-tuigreet hyprland hyprlock hypridle hyprpaper \
+hyprsunset mako xdg-desktop-portal-hyprland xdg-desktop-portal-gtk \
+nwg-displays waybar rofi-wayland cliphist wl-clipboard grim slurp qt6ct \
+nwg-look ttf-jetbrains-mono-nerd ttf-montserrat papirus-icon-theme tmux \
+zathura-pdf-mupdf imv mpv cups 
+```
+
+Yazi file manager:
+```
+pacman -S file ffmpeg 7zip jq poppler fd ripgrep fzf \
+zoxideresvg imagemagick yazi
+```
+
+Then, there are favourite apps I use (ollama-cuda for NVIDIA): 
+```
+pacman -S signal-desktop telegram-desktop thunderbird \
+firefox gimp libreoffice-still obs-studio discord steam \
+opencode ollama ollama-cuda
+```
+
+
+## Configuring apps
+
+I use uwsm-managed hyprland
+
+I store and maintain my config files in a git repo.
+I pull it into my home directory
+
+Essentially all apps require specific configuration
+with specific environmental variables
+
+
 ## Greetd setup
 
 Enable greetd with `systemctl enable greetd.service`
@@ -294,14 +297,22 @@ Reboot. When logging in for the first time choose the user
 and the **uwsm-managed** session for **hyprland**
 
 
-
 ## Finalizing my setup
 
+Enter another TTY with CTRL+ALT+F2 
+
 Go to *.config/hypr/hypr.conf* and add a binding for 
-alacritty and firefox
+alacritty and firefox.
+
+Set up correct input in the generated config:
+```
+input {
+    kb_layout = de
+}
+```
 
 Generate ssh key: `ssh-keygen -t ed25519 -C "your_email@example.com"`
-Add the public key to the GitHub
+Add the public key to the GitHub through firefox
 
 Fork my repository on GitHub
 
@@ -313,7 +324,7 @@ git fetch
 git checkout -f master
 ```
 
-- Enable hypridle: `systemctl enable hypridle.service`
+- Enable hypridle: `systemctl --user enable hypridle.service`
 - Enable ollama: `systemctl ollama.service`
 - Make .sh-files executables inside of *scripts* directory
 - make zathura default pdf viewer: `xdg-mime default org.pwmt.zathura.desktop application/pdf`
