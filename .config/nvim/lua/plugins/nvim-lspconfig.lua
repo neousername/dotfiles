@@ -1,52 +1,56 @@
-return  {
-    {
-	"Fildo7525/pretty_hover",
-	event = "LspAttach",
-	opts = {}
-    },
+return {
+  "neovim/nvim-lspconfig",
 
-    {
-      "mason-org/mason.nvim",
-      opts = {}
-    },
+  config = function()
 
-    {
-      "neovim/nvim-lspconfig",
-      config = function()
+    vim.lsp.enable({
+      "lua_ls",
+      "pylsp",
+    })
 
-	vim.api.nvim_create_autocmd("LspAttach", {
-	  callback = function(ev)
-	    local opts = { buffer = ev.buf }
-	    local map = vim.keymap.set
+    vim.api.nvim_create_autocmd('LspAttach', {
 
-	    map("n", "gD", vim.lsp.buf.declaration, opts)
-	    map("n", "gd", vim.lsp.buf.definition, opts)
-	    map("n", "K", function()
-	      require("pretty_hover").hover()
-	    end, opts)
-	    map("n", "gi", vim.lsp.buf.implementation, opts)
-	    map("n", "<C-k>", vim.lsp.buf.signature_help, opts)
-	    map("n", "<space>D", vim.lsp.buf.type_definition, opts)
-	    map("n", "<space>rn", vim.lsp.buf.rename, opts)
-	    map({ "n", "v" }, "<space>ca", vim.lsp.buf.code_action, opts)
-	    map("n", "gr", vim.lsp.buf.references, opts)
-	    map("n", "<space>f", function()
-	      vim.lsp.buf.format({ async = true })
-	    end, opts)
-	  end,
-	})
+      group = vim.api.nvim_create_augroup('my.lsp', {}),
+
+      callback = function(ev)
+
+        local client = assert(vim.lsp.get_client_by_id(ev.data.client_id))
+
+        vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {
+          buffer = ev.buf,
+          desc = 'Go to definition',
+        })
+
+        vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, {
+          buffer = ev.buf,
+          desc = 'Go to declaration',
+        })
+
+        vim.keymap.set('n', 'K', vim.lsp.buf.hover, {
+          buffer = ev.buf,
+          desc = 'Hover documentation',
+        })
+
+        if client:supports_method('textDocument/implementation') then
+          vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, {
+            buffer = ev.buf,
+            desc = 'Go to implementation',
+          })
+        end
+
+	if client:supports_method('textDocument/formatting') then
+	  vim.keymap.set('n', '<leader>lf', function()
+	    vim.lsp.buf.format({
+	      bufnr = ev.buf,
+	      id = client.id,
+	    })
+	  end, {
+	    buffer = ev.buf,
+	    desc = 'Format buffer',
+	  })
+	end
+
       end
-    },
-
-    {
-      "mason-org/mason-lspconfig.nvim",
-      dependencies = {
-	  { "mason-org/mason.nvim", opts = {} },
-	  "neovim/nvim-lspconfig",
-      },
-      opts = {
-	ensure_installed = { "lua_ls", "pylsp" },
-        automatic_enable = true,
-      },
-    },
+    })
+  end
 }
