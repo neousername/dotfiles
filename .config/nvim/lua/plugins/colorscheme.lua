@@ -1,11 +1,11 @@
 return {
-  "EdenEast/nightfox.nvim",
+  "rose-pine/neovim",
+  name = "rose-pine",
   config = function()
-    require("nightfox").setup({
-      options = {
-	transparent = true
-      }
+    require("rose-pine").setup({
+      variant = "moon", -- auto, main, moon, or dawn
+      dark_variant = "moon", -- main, moon, or dawn
     })
-    vim.cmd.colorscheme("carbonfox")
+    vim.cmd("colorscheme rose-pine")
   end
 }

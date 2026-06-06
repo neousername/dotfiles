@@ -1,4 +1,6 @@
 return {
+  root_dir = vim.fn.expand("~/.config/nvim"),
+
   settings = {
     Lua = {
       runtime = {

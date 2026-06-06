@@ -46,6 +46,13 @@ vim.api.nvim_create_autocmd('LspAttach', {
       })
     end
 
+    if client:supports_method('textDocument/codeAction', ev.buf) then
+      vim.keymap.set('n', 'ca', vim.lsp.buf.code_action, {
+        buffer = ev.buf,
+        desc = 'Code action',
+      })
+    end
+
     if client:supports_method('textDocument/formatting', ev.buf) then
       vim.keymap.set('n', '<leader>lf', function()
         vim.lsp.buf.format({

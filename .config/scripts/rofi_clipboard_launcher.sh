@@ -1,9 +1,14 @@
 #!/usr/bin/env bash
-selected=$(cliphist list | cut -f 2- | rofi -dmenu -p "Clipboard:" -theme "$HOME/.config/rofi/config.rasi")
-[[ -z "$selected" ]] && exit 0
+mapfile -t entries < <(cliphist list)
+(( ${#entries[@]} == 0 )) && exit 0
+
+choice=$(printf '%s\n' "${entries[@]#*$'\t'}" | rofi -dmenu -format i -p "Clipboard:" -theme "$HOME/.config/rofi/config.rasi")
+[[ -z "$choice" || "$choice" == "-1" ]] && exit 0
+
+selected=${entries[$choice]}
 
 tmp=$(mktemp)
 trap 'rm -f "$tmp"' EXIT
 
-echo "$selected" | cliphist decode > "$tmp"
+printf '%s' "$selected" | cliphist decode > "$tmp"
 wl-copy --foreground < "$tmp"
