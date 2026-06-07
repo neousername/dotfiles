@@ -23,6 +23,9 @@
 !.config/nvim/after/lsp/
 !.config/nvim/after/lsp/**
 
+!.config/zathura/
+!.config/zathura/**
+
 !.config/opencode/
 !.config/opencode/opencode.jsonc
 
