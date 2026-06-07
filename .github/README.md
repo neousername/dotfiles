@@ -318,13 +318,13 @@ git checkout -f master
 ```
 
 - Enable hypridle: `systemctl --user enable hypridle.service`
-- Enable docker: `systemctl enable docker.service`
 - Make .sh-files executables inside of *scripts* directory
 - make zathura default pdf viewer: `xdg-mime default org.pwmt.zathura.desktop application/pdf`
 - Install dependencies for nvim plugings after running `checkhealth` command
 - Clean up garbage files like steampath links in *home* and user-dirs configuration in .config
 - Configure nwg-look and qt6ct to use inter-font
 - run opencode server and ollama server when vibe-coding with bash aliases (guarantees virginity till 30)
+- Use systemctl start docker.service when working with docker in the current session
 
 
 # Secure boot
