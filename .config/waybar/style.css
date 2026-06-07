@@ -10,7 +10,7 @@
 window#waybar {
     background-color: alpha(@bg, 0.75);
     color: @fg;
-    font-family: "Montserrat";
+    font-family: "Inter";
     font-size: 22px;
     font-weight: 500;
 }

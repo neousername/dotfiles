@@ -17,7 +17,7 @@ window {
     width:            480px;
     height:           500px;
     padding:          0px;
-    font:             "Montserrat 22";
+    font:             "Inter 22";
 }
 mainbox {
     background-color: transparent;

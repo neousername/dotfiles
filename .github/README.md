@@ -68,7 +68,7 @@ pacstrap -K /mnt base base-devel linux linux-firmware btrfs-progs efibootmgr \
 util-linux intel-ucode cryptsetup limine sbctl sudo networkmanager firewalld reflector \
 avahi bluez bluez-utils bluetui acpi acpi_call acpid alsa-utils pipewire pipewire-alsa \
 pipewire-pulse pipewire-jack wireplumber pulsemixer sof-firmware bash-completion \
-git openssh keychain neovim alacritty terminus-font man 
+git docker openssh keychain neovim alacritty terminus-font man 
 ```
  
 Chroot and configure time:
@@ -247,8 +247,8 @@ I consider these my "system" packages:
 pacman -S uwsm greetd greetd-tuigreet hyprland hyprlock hypridle hyprpaper \
 hyprsunset mako xdg-desktop-portal-hyprland xdg-desktop-portal-gtk \
 nwg-displays waybar rofi-wayland btop cliphist wl-clipboard grim slurp qt6ct \
-nwg-look ttf-jetbrains-mono-nerd ttf-montserrat papirus-icon-theme tmux \
-zathura-pdf-mupdf imv mpv cups 
+nwg-look ttf-jetbrains-mono-nerd inter-font papirus-icon-theme tmux \
+zathura-pdf-mupdf imv mpv cups
 ```
 
 Yazi file manager:
@@ -261,7 +261,7 @@ Then, there are favourite apps I use (ollama-cuda for NVIDIA):
 ```
 pacman -S signal-desktop telegram-desktop thunderbird \
 firefox gimp libreoffice-still obs-studio discord steam \
-opencode ollama ollama-cuda
+opencode ollama ollama-cuda 
 ```
 
 
@@ -318,11 +318,13 @@ git checkout -f master
 ```
 
 - Enable hypridle: `systemctl --user enable hypridle.service`
+- Enable docker: `systemctl enable docker.service`
 - Make .sh-files executables inside of *scripts* directory
 - make zathura default pdf viewer: `xdg-mime default org.pwmt.zathura.desktop application/pdf`
 - Install dependencies for nvim plugings after running `checkhealth` command
 - Clean up garbage files like steampath links in *home* and user-dirs configuration in .config
-- run opencode server and ollama server when vibe-coding (guarantees virginity till 30)
+- Configure nwg-look and qt6ct to use inter-font
+- run opencode server and ollama server when vibe-coding with bash aliases (guarantees virginity till 30)
 
 
 # Secure boot
