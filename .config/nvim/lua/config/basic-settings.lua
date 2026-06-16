@@ -2,7 +2,7 @@ vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 vim.opt.number = true
 vim.opt.cursorline = true
-vim.opt.shiftwidth = 2
+vim.opt.shiftwidth = 4
 vim.opt.scrolloff = 100
 vim.opt.clipboard = "unnamedplus"
 vim.wo.relativenumber = true

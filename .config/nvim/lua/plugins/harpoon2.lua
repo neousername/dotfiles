@@ -21,6 +21,15 @@ return {
 		vim.keymap.set("n", "<C-S-P>", function() harpoon:list():prev() end)
 		vim.keymap.set("n", "<C-S-N>", function() harpoon:list():next() end)
 
+		-- Clear Commands
+		vim.api.nvim_create_user_command("Hremove", function()
+			require("harpoon"):list():remove()
+		end, {})
+
+		vim.api.nvim_create_user_command("Hclear", function()
+			require("harpoon"):list():clear()
+		end, {})
+
 		-- basic telescope configuration
 		local conf = require("telescope.config").values
 		local function toggle_telescope(harpoon_files)
