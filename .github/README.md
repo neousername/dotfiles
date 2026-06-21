@@ -217,7 +217,6 @@ fwupdmgr get-devices
 
 # Hyprland setup
 
-
 ## Installing NVIDIA drivers
 
 Uncomment multilib options in */etc/pacman.conf*
