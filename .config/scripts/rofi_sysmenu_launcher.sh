@@ -17,7 +17,7 @@ declare -A CMDS=(
     [Sound]="uwsm app -- alacritty -e pulsemixer"
     [Performance]="uwsm app -- alacritty -e btop"
     [Display]="uwsm app -- nwg-displays"
-    [Sleep]="systemctl sleep"
+    [Sleep]="hyprctl dispatch dpms off && systemctl suspend"
     [Logout]="uwsm stop"
 )
 

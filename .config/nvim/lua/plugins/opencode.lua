@@ -6,10 +6,10 @@ return {
 			-- `snacks.nvim` integration is recommended, but optional
 			---@module "snacks" <- Loads `snacks.nvim` types for configuration intellisense
 			"folke/snacks.nvim",
-			optional = true,
+			optional = false,
 			opts = {
 				input = {}, -- Enhances `ask()`
-				picker = {  -- Enhances `select()`
+				picker = { -- Enhances `select()`
 					actions = {
 						opencode_send = function(...) return require("opencode").snacks_picker_send(...) end,
 					},
@@ -33,7 +33,8 @@ return {
 		vim.o.autoread = true -- Required for `vim.g.opencode_opts.events.reload`
 
 		-- I use opencode in a separate Tmux window. These are the only keybidnigs I need.
-		vim.keymap.set({ "n", "x" }, "<C-x>", function() require("opencode").ask("@this: ") end, { desc = "Ask opencode…" })
+		vim.keymap.set({ "n", "x" }, "<C-x>", function() require("opencode").ask("@this: ") end,
+			{ desc = "Ask opencode…" })
 		vim.keymap.set({ "n", "x" }, "go", function() return require("opencode").operator("@this ") end,
 			{ desc = "Add range to opencode", expr = true })
 		vim.keymap.set("n", "goo", function() return require("opencode").operator("@this ") .. "_" end,
