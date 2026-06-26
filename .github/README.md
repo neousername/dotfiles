@@ -260,7 +260,7 @@ Then, there are favourite apps I use (ollama-cuda for NVIDIA):
 ```
 pacman -S signal-desktop telegram-desktop thunderbird \
 firefox gimp libreoffice-still obs-studio discord steam \
-opencode ollama ollama-cuda 
+opencode ollama ollama-cuda lazygit
 ```
 
 

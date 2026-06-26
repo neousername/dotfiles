@@ -3,7 +3,7 @@ return {
 	dependencies = {
 		{ "nvim-telescope/telescope.nvim" }
 	},
-	ft = "python",                              -- Load when opening Python files
+	ft = "python",                           -- Load when opening Python files
 	keys = { { ",v", "<cmd>VenvSelect<cr>" } }, -- Open picker on keymap
 	opts = {
 		options = {

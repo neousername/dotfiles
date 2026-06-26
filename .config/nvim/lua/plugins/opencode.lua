@@ -33,7 +33,7 @@ return {
 		vim.o.autoread = true -- Required for `vim.g.opencode_opts.events.reload`
 
 		-- I use opencode in a separate Tmux window. These are the only keybidnigs I need.
-		vim.keymap.set({ "n", "x" }, "<C-x>", function() require("opencode").ask("@this: ") end,
+		vim.keymap.set({ "n", "x" }, "<leader>pa", function() require("opencode").ask("@this: ") end,
 			{ desc = "Ask opencode…" })
 		vim.keymap.set({ "n", "x" }, "go", function() return require("opencode").operator("@this ") end,
 			{ desc = "Add range to opencode", expr = true })
