@@ -10,6 +10,7 @@ return {
 		require("lualine").setup {
 			options = {
 				theme = "auto",
+				globalstatus = true,
 			},
 			sections = {
 				lualine_a = { "mode" },
@@ -18,7 +19,7 @@ return {
 				lualine_x = {},
 				lualine_y = { "diagnostics" },
 				lualine_z = { "location", "progress" }
-			}
+			},
 		}
 	end
 }

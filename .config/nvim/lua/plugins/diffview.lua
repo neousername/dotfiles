@@ -2,25 +2,27 @@ return {
 	"sindrets/diffview.nvim",
 	config = function()
 		require("diffview").setup({
+			hooks = {
+				view_opened = function()
+					vim.schedule(function()
+						vim.cmd("wincmd l")
+						vim.cmd("wincmd j")
+					end)
+				end
+			},
 			view = {
 				default = { layout = "diff2_vertical" },
 				file_history = { layout = "diff2_vertical" },
-				merge_tool = { layout = "diff3_vertical" },
-			},
+				merge_tool = { layout = "diff3_vertical" }
+			}
 		})
-	end,
-	keys = {
-		{
-			"<leader>gd",
-			function()
-				local lib = require("diffview.lib")
-				if lib.get_current_view() then
-					vim.cmd("DiffviewClose")
-				else
-					vim.cmd("DiffviewOpen")
-				end
-			end,
-			desc = "Toggle diff view",
-		},
-	},
+		vim.keymap.set("n", "<leader>gd", function()
+			if require("diffview.lib").get_current_view() then
+				vim.cmd("DiffviewClose")
+			else
+				vim.cmd("DiffviewOpen")
+			end
+		end, { desc = "Toggle git diff" })
+		vim.keymap.set("n", "<leader>gD", "<cmd>DiffviewClose<cr>", { desc = "Close git diff" })
+	end
 }

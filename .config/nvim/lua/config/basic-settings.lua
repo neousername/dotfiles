@@ -1,6 +1,8 @@
 vim.g.mapleader = " "
 vim.opt.number = true
 vim.opt.cursorline = true
+vim.opt.laststatus = 3
+vim.opt.showtabline = 0
 vim.opt.shiftwidth = 4
 vim.opt.scrolloff = 100
 vim.opt.clipboard = "unnamedplus"
