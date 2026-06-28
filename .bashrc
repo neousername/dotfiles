@@ -16,6 +16,7 @@ alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 
 # My aliases
+alias gcap='git add -A && git commit -m "changes" && git push'
 alias olserve="OLLAMA_CONTEXT_LENGTH=65536 ollama serve"
 alias ocserve="opencode serve --port"
 alias ocattach="opencode attach http://localhost:4096"
