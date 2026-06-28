@@ -12,8 +12,3 @@ opacity = 0.5
 [terminal.shell]
 program = "/bin/bash"
 args = ["-l"]
-
-[[keyboard.bindings]]
-key = "Return"
-mods = "Shift"
-chars = "\u001B\r"
