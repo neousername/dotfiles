@@ -23,6 +23,5 @@ return {
 				vim.cmd("DiffviewOpen")
 			end
 		end, { desc = "Toggle git diff" })
-		vim.keymap.set("n", "<leader>gD", "<cmd>DiffviewClose<cr>", { desc = "Close git diff" })
 	end
 }
