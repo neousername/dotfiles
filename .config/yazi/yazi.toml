@@ -23,3 +23,10 @@ prepend_rules = [
     { mime = "image/*", use = "image" },
     { mime = "application/pdf", use = "pdf" }
 ]
+
+# Alacritty does not support image previews
+previewers = [
+  { url = "*/", run = "folder", sync = true },  # directory view
+  { url = "*",  run = "file" },                 # file info (fallback)
+]
+preloaders = []

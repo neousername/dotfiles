@@ -9,7 +9,7 @@ hl.bind("PRINT", hl.dsp.exec_cmd("uwsm app -- ~/.config/scripts/screenshot.sh ou
 hl.bind(mainMod .. " + PRINT", hl.dsp.exec_cmd("uwsm app -- ~/.config/scripts/screenshot.sh region"))
 
 -- System
-hl.bind(mainMod .. " + RETURN", hl.dsp.exec_cmd("uwsm app -- ghostty"))
+hl.bind(mainMod .. " + RETURN", hl.dsp.exec_cmd("uwsm app -- alacritty"))
 hl.bind(mainMod .. " + ALT + SPACE", hl.dsp.exec_cmd("uwsm app -- ~/.config/scripts/rofi_sysmenu_launcher.sh"))
 hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd("uwsm app -- ~/.config/scripts/rofi_menu_launcher.sh"))
 
