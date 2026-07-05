@@ -1,12 +1,13 @@
 [mgr]
 ratio = [0, 3, 4]
+linemode = "size"
 
 [opener]
 play = [
     { run = "celluloid %s", orphan = true }
 ]
 image = [
-    { run = "imv %s", orphan = true }
+    { run = "imv-dir %s", orphan = true }
 ]
 pdf = [
     { run = "zathura %s", orphan = true }
@@ -24,9 +25,11 @@ prepend_rules = [
     { mime = "application/pdf", use = "pdf" }
 ]
 
-# Alacritty does not support image previews
+[plugin]
 previewers = [
-  { url = "*/", run = "folder", sync = true },  # directory view
-  { url = "*",  run = "file" },                 # file info (fallback)
+  { url = "*/",             run = "folder", sync = true },  # directories
+  { mime = "application/json", run = "json" },              # JSON → formatted
+  { mime = "text/*",        run = "code" },                 # other text → highlighted
+  { url = "*",              run = "file" },                 # everything else
 ]
 preloaders = []
