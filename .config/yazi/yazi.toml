@@ -5,9 +5,21 @@ ratio = [0, 3, 4]
 play = [
     { run = "celluloid %s", orphan = true }
 ]
+image = [
+    { run = "imv %s", orphan = true }
+]
+pdf = [
+    { run = "zathura %s", orphan = true }
+]
 edit = [
     { run = "nvim %s", block = true }
 ]
 open = [
     { run = "xdg-open %s", orphan = true }
+]
+
+[open]
+prepend_rules = [
+    { mime = "image/*", use = "image" },
+    { mime = "application/pdf", use = "pdf" }
 ]

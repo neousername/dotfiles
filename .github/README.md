@@ -68,7 +68,7 @@ pacstrap -K /mnt base base-devel linux linux-firmware btrfs-progs efibootmgr \
 util-linux intel-ucode cryptsetup limine sbctl sudo networkmanager firewalld reflector \
 avahi bluez bluez-utils bluetui acpi acpi_call acpid alsa-utils pipewire pipewire-alsa \
 pipewire-pulse pipewire-jack wireplumber pulsemixer sof-firmware bash-completion \
-git docker openssh keychain neovim alacritty terminus-font man 
+git docker openssh keychain neovim ghostty terminus-font man 
 ```
  
 Chroot and configure time:
@@ -318,7 +318,6 @@ git checkout -f master
 
 - Enable hypridle: `systemctl --user enable hypridle.service`
 - Make .sh-files executables inside of *scripts* directory
-- make zathura default pdf viewer: `xdg-mime default org.pwmt.zathura.desktop application/pdf`
 - Install dependencies for nvim plugings after running `checkhealth` command
 - Clean up garbage files like steampath links in *home* and user-dirs configuration in .config
 - Configure nwg-look and qt6ct to use inter-font
