@@ -1,2 +1,2 @@
 [[ -f ~/.bashrc ]] && . ~/.bashrc
-eval "$(keychain --quiet --eval --timeout 120 id_ed25519)"
+eval "$(keychain --quiet --eval id_ed25519)"
