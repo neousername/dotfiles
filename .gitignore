@@ -26,6 +26,9 @@
 !.config/zathura/
 !.config/zathura/**
 
+!.config/mako/
+!.config/mako/**
+
 !.config/opencode/
 !.config/opencode/opencode.jsonc
 
