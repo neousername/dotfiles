@@ -321,8 +321,10 @@ git checkout -f master
 - Install dependencies for nvim plugings after running `checkhealth` command
 - Clean up garbage files like steampath links in *home* and user-dirs configuration in .config
 - Configure nwg-look and qt6ct to use inter-font
-- run opencode server and ollama server when vibe-coding with bash aliases (guarantees virginity till 30)
+- run opencode server when vibe-coding with bash aliases (guarantees virginity till 30)
 - Use systemctl start docker.service when working with docker in the current session
+- Enable ollama service and pull ollama3 model (important for my local ai thunderbird setup)
+- Configure ThunderbirdAI plugin to use ollama
 
 
 # Secure boot

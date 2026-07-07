@@ -15,6 +15,7 @@
 
 
 !.config/
+
 !.config/nvim/
 !.config/nvim/lua/
 !.config/nvim/lua/**
@@ -43,6 +44,10 @@
 !.config/hypr/hyprlock.conf
 !.config/hypr/hyprpaper.conf
 !.config/hypr/hyprsunset.conf
+
+!.config/systemd/
+!.config/systemd/user/
+!.config/systemd/user/ollama.service
 
 !.config/uwsm/
 !.config/uwsm/**
