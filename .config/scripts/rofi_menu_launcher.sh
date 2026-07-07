@@ -16,7 +16,7 @@ declare -A ICONS=(
 
 declare -A CMDS=(
     [Firefox]="firefox"
-    [Email]="thunderbird"
+    [Email]="env GDK_SCALE=2 MOZ_ENABLE_WAYLAND=0 thunderbird"
     [Telegram]="Telegram"
     [Discord]="discord"
     [Signal]="signal-desktop"
