@@ -65,4 +65,9 @@ sed -i "8s|.*|$L7|" ~/.config/rofi/config.rasi
 sed -i "9s|.*|$L8|" ~/.config/rofi/config.rasi
 sed -i "10s|.*|$L9|" ~/.config/rofi/config.rasi
 
+# ── mako (~/.config/mako/config) ─────────────────────────────────────────────
+L1='background-color=#1C1C1EFF'
+
+sed -i "1s|.*|$L1|" ~/.config/mako/config
+
 echo "Done."
