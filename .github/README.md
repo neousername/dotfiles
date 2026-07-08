@@ -324,8 +324,7 @@ git checkout -f master
 - run opencode server when vibe-coding with bash aliases (guarantees virginity till 30)
 - Use systemctl start docker.service when working with docker in the current session
 - Enable ollama service and pull llama3 model (important for my ThunderAI setup)
-- Configure ThunderAI to autotag. The prompt file lives inside of .github in home 
-
+- Install ThunderAI plugin
 
 # Secure boot
 
