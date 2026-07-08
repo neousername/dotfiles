@@ -323,8 +323,8 @@ git checkout -f master
 - Configure nwg-look and qt6ct to use inter-font
 - run opencode server when vibe-coding with bash aliases (guarantees virginity till 30)
 - Use systemctl start docker.service when working with docker in the current session
-- Enable ollama service and pull ollama3 model (important for my local ai thunderbird setup)
-- Configure ThunderbirdAI plugin to use ollama
+- Enable ollama service and pull llama3 model (important for my ThunderAI setup)
+- Configure ThunderAI to autotag. The prompt file lives inside of .github in home 
 
 
 # Secure boot
