@@ -3,7 +3,7 @@ Description=Ollama server
 After=network-online.target
 
 [Service]
-Environment=OLLAMA_KEEP_ALIVE=-1
+Environment=OLLAMA_KEEP_ALIVE=30s
 Environment=OLLAMA_NUM_PARALLEL=2
 Environment=OLLAMA_CONTEXT_LENGTH=8192
 Environment=OLLAMA_ORIGINS=moz-extension://*
