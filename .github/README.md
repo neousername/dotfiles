@@ -274,7 +274,7 @@ pacman -S uwsm greetd greetd-tuigreet hyprland hyprlock hypridle hyprpaper \
 hyprsunset mako xdg-desktop-portal-hyprland xdg-desktop-portal-gtk \
 nwg-displays waybar rofi-wayland btop cliphist wl-clipboard grim slurp qt6ct \
 nwg-look ttf-jetbrains-mono-nerd inter-font papirus-icon-theme tmux \
-zathura-pdf-mupdf imv mpv cups celluloid
+zathura-pdf-mupdf imv mpv cups celluloid filelight
 ```
 
 Yazi file manager:
