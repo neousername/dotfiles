@@ -5,8 +5,9 @@ declare -A ICONS=(
     [WiFi]="$BASE/nm-device-wireless.svg"
     [Bluetooth]="$BASE/preferences-bluetooth.svg"
     [Sound]="$BASE/preferences-sound.svg"
-    [Performance]="$BASE/utilities-system-monitor.svg"
     [Display]="$BASE/preferences-desktop-display.svg"
+    [Storage]="$BASE/filelight.svg"
+    [Performance]="$BASE/utilities-system-monitor.svg"
     [Sleep]="$BASE/system-suspend.svg"
     [Logout]="$BASE/xfsm-logout.svg"
 )
@@ -15,13 +16,14 @@ declare -A CMDS=(
     [WiFi]="uwsm app -- alacritty -e nmtui"
     [Bluetooth]="uwsm app -- alacritty -e bluetui"
     [Sound]="uwsm app -- alacritty -e pulsemixer"
-    [Performance]="uwsm app -- alacritty -e btop"
     [Display]="uwsm app -- nwg-displays"
+    [Storage]="uwsm app -- filelight"
+    [Performance]="uwsm app -- alacritty -e btop"
     [Sleep]="hyprctl dispatch dpms off && systemctl suspend"
     [Logout]="uwsm stop"
 )
 
-NAMES=(WiFi Bluetooth Sound Performance Display Sleep Logout)
+NAMES=(WiFi Bluetooth Sound Display Storage Performance Sleep Logout)
 
 SELECTED=$(for name in "${NAMES[@]}"; do
     printf "%s\0icon\x1f%s\n" "$name" "${ICONS[$name]}"

@@ -68,7 +68,7 @@ pacstrap -K /mnt base base-devel linux linux-firmware btrfs-progs efibootmgr \
 util-linux intel-ucode cryptsetup limine sbctl sudo networkmanager firewalld reflector \
 avahi bluez bluez-utils bluetui acpi acpi_call acpid alsa-utils pipewire pipewire-alsa \
 pipewire-pulse pipewire-jack wireplumber pulsemixer sof-firmware bash-completion \
-git docker openssh keychain neovim ghostty terminus-font man 
+git docker openssh keychain neovim alacritty terminus-font man 
 ```
  
 Chroot and configure time:
@@ -134,12 +134,13 @@ timeout: 0
         protocol: linux
         path: boot():/vmlinuz-linux
         cmdline: quiet nowatchdog modprobe.blacklist=iTCO_wdt,intel_oc_wdt \
-                 cryptdevice=UUID=<device-UUID>:root root=/dev/mapper/root rw \
+                 cryptdevice=UUID=<device-UUID>:root:allow-discards root=/dev/mapper/root rw \
                  rootflags=subvol=@ rootfstype=btrfs
         module_path: boot():/initramfs-linux.img
 ```
 
-Adjust modprobe.blacklist argument based on the CPU. This disables *watchdog* service
+Adjust modprobe.blacklist argument based on the CPU. This disables *watchdog* service.
+Allow-discards is needed so that fstrim.timer works on an encrypted partition
 
 
 ## Finalizing arch installation
@@ -184,14 +185,41 @@ swapon --show
 nmcli device wifi connect SSID_or_BSSID password actual_password 
 ```
 
-Enable *fstrim service* and create snapshot subvolumes.
-Leave snapper at default settings:
+Enable fstrim service:
 ```
 systemctl enable --now fstrim.timer
+```
+
+Install snapper and create snapshot configs
+```
 pacman -Syu snapper
 snapper -c root create-config /
 snapper -c home create-config /home
 ```
+
+Configure snapper configs in */etc/snapper/configs*:
+```
+TIMELINE_MIN_AGE="1800"
+TIMELINE_LIMIT_HOURLY="0"
+TIMELINE_LIMIT_DAILY="7"
+TIMELINE_LIMIT_WEEKLY="0"
+TIMELINE_LIMIT_MONTHLY="0"
+TIMELINE_LIMIT_YEARLY="0"
+```
+
+Create an override folder for the service settings:
+```
+mkdir -p /etc/systemd/system/snapper-timeline.timer.d
+```
+
+Inside of *override.conf*, in previously created directory, set these settings* set these settings:
+```
+[Timer]
+OnCalendar=
+OnCalendar=daily
+```
+
+Enable *snaper-timeline.timer* and *snapper-cleanup.timer*
 
 Add pacman hook for limine in *etc/pacman.d/hooks/99-limine.hook*.
 *hooks* directory must be created manually:
