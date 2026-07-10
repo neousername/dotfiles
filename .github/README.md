@@ -353,7 +353,7 @@ git checkout -f master
 - Clean up garbage files like steampath links in *home* and user-dirs configuration in .config
 - Configure nwg-look and qt6ct to use inter-font
 - Run opencode server when vibe-coding with bash aliases (guarantees virginity till 30)
-- Run ollama with alias not a service
+- Run ollama with alias, do not enable autostart
 
 
 # Secure boot
