@@ -153,9 +153,9 @@ swapon -p 0 /swap/swapfile
 
 Networking:
 ```
-systemctl enable NetworkManager
 systemctl enable systemd-resolved 
 systemctl enable firewalld 
+systemctl enable NetworkManager.service
 systemctl enable reflector.timer
 systemctl enable bluetooth.service
 ```
@@ -223,8 +223,7 @@ Uncomment multilib options in */etc/pacman.conf*
 
 Run this:
 ```
-pacman -Syu linux-headers nvidia-dkms nvidia-utils \
-lib32-nvidia-utils egl-wayland 
+pacman -Syu linux-headers nvidia-open-dkms nvidia-utils lib32-nvidia-utils egl-wayland
 ```
 
 Sleep should work outside of the box. Hibernation on NVIDIA on Wayland 
@@ -321,10 +320,9 @@ git checkout -f master
 - Install dependencies for nvim plugings after running `checkhealth` command
 - Clean up garbage files like steampath links in *home* and user-dirs configuration in .config
 - Configure nwg-look and qt6ct to use inter-font
-- run opencode server when vibe-coding with bash aliases (guarantees virginity till 30)
-- Use systemctl start docker.service when working with docker in the current session
-- Enable ollama service and pull llama3 model (important for my ThunderAI setup)
-- Install ThunderAI plugin
+- Run opencode server when vibe-coding with bash aliases (guarantees virginity till 30)
+- Run ollama with alias not a service
+
 
 # Secure boot
 

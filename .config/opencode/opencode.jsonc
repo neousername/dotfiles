@@ -5,24 +5,11 @@
     "opencode-with-claude",
     "@slkiser/opencode-quota"
   ],
-
   "provider": {
     "anthropic": {
       "options": {
         "baseURL": "http://127.0.0.1:3456",
         "apiKey": "dummy"
-      }
-    },
-    "ollama": {
-      "name": "Ollama Local",
-      "npm": "@ai-sdk/openai-compatible",
-      "options": {
-        "baseURL": "http://localhost:11434/v1"
-      },
-      "models": {
-        "qwen3.5:4b": {
-          "tools": true
-        }
       }
     }
   }

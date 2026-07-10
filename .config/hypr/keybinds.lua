@@ -22,7 +22,7 @@ hl.bind(mainMod .. " + T", hl.dsp.layout("togglesplit"))
 
 -- Apps
 hl.bind(mainMod .. " + SHIFT + B", hl.dsp.exec_cmd("uwsm app -- firefox"))
-hl.bind(mainMod .. " + SHIFT + E", hl.dsp.exec_cmd("uwsm app -- env GDK_SCALE=2 MOZ_ENABLE_WAYLAND=0 thunderbird"))
+hl.bind(mainMod .. " + SHIFT + E", hl.dsp.exec_cmd("uwsm app -- thunderbird"))
 hl.bind(mainMod .. " + SHIFT + T", hl.dsp.exec_cmd("uwsm app -- Telegram"))
 
 -- Move focus with mainMod + HJKL
