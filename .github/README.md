@@ -255,6 +255,10 @@ pacman -S file ffmpeg 7zip jq poppler fd ripgrep fzf \
 zoxideresvg imagemagick yazi
 ```
 
+```
+ya pkg add yazi-rs/plugins:moun
+```
+
 Then, there are favourite apps I use (ollama-cuda for NVIDIA): 
 ```
 pacman -S signal-desktop telegram-desktop thunderbird \

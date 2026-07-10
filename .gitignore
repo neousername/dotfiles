@@ -65,7 +65,8 @@
 !.config/alacritty/**
 
 !.config/yazi/
-!.config/yazi/**
+!.config/yazi/yazi.toml
+!.config/yazi/keymap.toml
 
 !.config/waybar/
 !.config/waybar/**
