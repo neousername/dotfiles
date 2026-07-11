@@ -51,14 +51,14 @@ btrfs subvolume create /mnt/@var_log
 btrfs subvolume create /mnt/@var_cache
 ```
 
-Mount and configure the subvolumes without compression:
+Mount and configure the subvolumes with `zstd:1` compression.
 
 ```
 umount /mnt
-mount -o noatime,subvol=@ /dev/mapper/root /mnt
-mount --mkdir -o noatime,subvol=@home /dev/mapper/root /mnt/home
-mount --mkdir -o noatime,subvol=@var_log /dev/mapper/root /mnt/var/log
-mount --mkdir -o noatime,subvol=@var_cache /dev/mapper/root /mnt/var/cache
+mount -o compress=zstd:1,noatime,subvol=@ /dev/mapper/root /mnt
+mount --mkdir -o compress=zstd:1,noatime,subvol=@home /dev/mapper/root /mnt/home
+mount --mkdir -o compress=zstd:1,noatime,subvol=@var_log /dev/mapper/root /mnt/var/log
+mount --mkdir -o compress=zstd:1,noatime,subvol=@var_cache /dev/mapper/root /mnt/var/cache
 mount --mkdir /dev/nvme0n1p1 /mnt/boot
 ```
 
@@ -213,7 +213,9 @@ Enable the fstrim service:
 systemctl enable --now fstrim.timer
 ```
 
-Install Snapper and create the snapshot configs:
+Install Snapper and create the snapshot configs. `create-config` makes a
+nested `.snapshots` subvolume inside `@` (and inside `@home`) automatically —
+no dedicated subvolume, no fstab entry, and it inherits `zstd:1` from `@`:
 
 ```
 pacman -Syu snapper
@@ -376,7 +378,7 @@ git pull origin main
 
 - Enable hypridle: `systemctl --user enable hypridle.service`
 - Install dependencies for the nvim plugins after running the `checkhealth` command.
-- Clean up junk files, such as Steam path links in home and the user-dirs configuration in `.config`.
+- Clean up junk files created by dependencies if you see them.
 - Configure nwg-look and qt6ct to use inter-font.
 - Run the opencode server via bash aliases when vibe-coding (guarantees virginity till 30).
 - Run Ollama with an alias; do not enable autostart.
