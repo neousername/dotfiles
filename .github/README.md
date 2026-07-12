@@ -378,8 +378,10 @@ git pull origin main
 
 - Enable hypridle: `systemctl --user enable hypridle.service`
 - Install dependencies for the nvim plugins after running the `checkhealth` command.
-- Clean up junk files created by dependencies if you see them.
+- Clean up junk files created by dependencies if you see them
+- Configure xdg-user-dirs in .config.
 - Configure nwg-look and qt6ct to use inter-font.
+- Enable hypridle service on user level.
 - Run the opencode server via bash aliases when vibe-coding (guarantees virginity till 30).
 - Run Ollama with an alias; do not enable autostart.
 
