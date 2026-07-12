@@ -12,6 +12,8 @@ function y() {
 
 [[ $- != *i* ]] && return
 
+eval "$(keychain --quiet --eval id_ed25519)"
+
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 
