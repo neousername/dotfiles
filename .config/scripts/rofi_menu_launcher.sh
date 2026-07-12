@@ -5,7 +5,6 @@ declare -A ICONS=(
     [Firefox]="$BASE/firefox.svg"
     [Email]="$BASE/thunderbird.svg"
     [Telegram]="$BASE/telegram-desktop.svg"
-    [Discord]="$BASE/discord.svg"
     [Signal]="$BASE/signal-desktop.svg"
     [Steam]="$BASE/steam.svg"
     [OBS]="$BASE/obs.svg"
@@ -18,7 +17,6 @@ declare -A CMDS=(
     [Firefox]="firefox"
     [Email]="thunderbird"
     [Telegram]="Telegram"
-    [Discord]="discord"
     [Signal]="signal-desktop"
     [Steam]="steam"
     [OBS]="obs"
@@ -27,7 +25,7 @@ declare -A CMDS=(
     [Gimp]="gimp"
 )
 
-NAMES=(Firefox Email Telegram Discord Signal Steam OBS KdenLive LibreOffice Gimp)
+NAMES=(Firefox Email Telegram Signal Steam OBS KdenLive LibreOffice Gimp)
 
 SELECTED=$(for name in "${NAMES[@]}"; do
     printf "%s\0icon\x1f%s\n" "$name" "${ICONS[$name]}"
