@@ -1,7 +1,7 @@
 # Personal Arch Linux Installation Guide
 
 NVIDIA with no hibernation; Intel CPU;
-BTRFS with encryption; secure boot;
+BTRFS with encryption; 
 snapper; hyprland; my own dotfiles.
 
 # First Steps
@@ -148,18 +148,15 @@ Get your UUID: `cryptsetup luksUUID /dev/nvme0n1p2`.
 Configure Limine in `/boot/EFI/limine/limine.conf`:
 
 ```
-timeout: 0
+timeout: 1
  
 /Arch Linux
         protocol: linux
         path: boot():/vmlinuz-linux
-        cmdline: quiet nowatchdog modprobe.blacklist=iTCO_wdt,intel_oc_wdt \
-                 cryptdevice=UUID=<device-UUID>:root:allow-discards root=/dev/mapper/root rw \
-                 rootflags=subvol=@ rootfstype=btrfs
+        cmdline: quiet cryptdevice=UUID=<device-UUID>:root:allow-discards root=/dev/mapper/root rw rootflags=subvol=@ rootfstype=btrfs
         module_path: boot():/initramfs-linux.img
 ```
 
-Adjust the `modprobe.blacklist` argument based on the CPU. This disables the *watchdog* service.
 `allow-discards` is needed so that `fstrim.timer` works on an encrypted partition.
 
 ## Finalizing the Arch installation
@@ -234,13 +231,13 @@ TIMELINE_LIMIT_MONTHLY="0"
 TIMELINE_LIMIT_YEARLY="0"
 ```
 
-Create an override folder for the service settings:
+Create an override folder for the service settings with:
 
 ```
-mkdir -p /etc/systemd/system/snapper-timeline.timer.d
+SYSTEMD_EDITOR=nvim systemctl edit snapper-timeline.timer
 ```
 
-Inside `override.conf`, in the directory created above, set these settings:
+Set these settings:
 
 ```
 [Timer]
@@ -316,14 +313,14 @@ zoxide resvg imagemagick yazi
 ```
 
 ```
-ya pkg add yazi-rs/plugins:moun
+ya pkg add yazi-rs/plugins:mount
 ```
 
 Then there are the apps I personally favour (ollama-cuda for NVIDIA):
 
 ```
 pacman -S signal-desktop telegram-desktop thunderbird \
-firefox gimp libreoffice-still kdenlive obs-studio discord steam \
+firefox gimp libreoffice-still kdenlive obs-studio steam \
 opencode ollama ollama-cuda lazygit
 ```
 
@@ -384,34 +381,3 @@ git pull origin main
 - Enable hypridle service on user level.
 - Run the opencode server via bash aliases when vibe-coding (guarantees virginity till 30).
 - Run Ollama with an alias; do not enable autostart.
-
-# Secure boot
-
-The following definitely works on ASUS motherboards.
-
-Enter the UEFI setup menu: `systemctl --firmware-setup reboot`
-
-Do not change the OS Type to Custom from Windows mode. Instead, open the
-sub-menu *Key Management*. Use `Clear Secure Boot Keys` to enter Setup Mode.
-
-Secure boot should be disabled now. Exit the firmware with the save and reset option,
-even if it says no changes have been performed.
-
-Confirm that setup mode is enabled: `sudo sbctl status`
-
-Create custom secure boot keys: `sudo sbctl create-keys`
-
-Enroll the custom secure boot keys: `sudo sbctl enroll-keys --microsoft`
-
-Sign the bootloader and kernel with sbctl.
-The `-s` flag saves the path so that sbctl re-signs it
-automatically on updates via its pacman hook:
-
-```
-sudo sbctl sign -s /boot/EFI/limine/BOOTX64.EFI
-sudo sbctl sign -s /boot/vmlinuz-linux
-```
-
-Reboot.
-
-Confirm that setup mode is disabled now: `sudo sbctl status`
