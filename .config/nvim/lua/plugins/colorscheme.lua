@@ -1,11 +1,12 @@
 return {
-	"EdenEast/nightfox.nvim",
+	"catppuccin/nvim",
+	name = "catppuccin",
+	priority = 1000,
+
 	config = function()
-		require("nightfox").setup({
-			options = {
-				transparent = true,
-			},
+		require("catppuccin").setup({
+			flavour = "mocha",
 		})
-		vim.cmd("colorscheme carbonfox")
+		vim.cmd.colorscheme("catppuccin-nvim")
 	end,
 }
