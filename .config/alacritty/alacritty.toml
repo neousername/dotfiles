@@ -1,5 +1,5 @@
 [font]
-size = 20
+size = 16
 
 [font.normal]
 family = "JetBrainsMono Nerd Font"
@@ -7,4 +7,4 @@ family = "JetBrainsMono Nerd Font"
 [window]
 dynamic_padding = true
 padding = { x = 0, y = 0 }
-opacity = 0
+opacity = 1
