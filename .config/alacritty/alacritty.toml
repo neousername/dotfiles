@@ -5,7 +5,7 @@ size = 18
 family = "JetBrainsMono Nerd Font"
 
 [window]
-padding = { x = 4, y = 4 }
+padding = { x = 0, y = 0 }
 opacity = 1
 dynamic_padding = true
 

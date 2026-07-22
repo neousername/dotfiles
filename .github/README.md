@@ -305,6 +305,12 @@ nwg-look ttf-jetbrains-mono-nerd inter-font papirus-icon-theme tmux \
 zathura-pdf-mupdf imv mpv cups celluloid filelight
 ```
 
+My neovim dependencies:
+
+```
+pacman -S tree-sitter-cli python-lsp-server python-ruff stylua rust
+```
+
 Yazi file manager:
 
 ```
