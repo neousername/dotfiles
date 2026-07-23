@@ -37,4 +37,4 @@ done | rofi -dmenu \
 
 [[ -z "$SELECTED" ]] && exit 0
 
-[[ -n "${CMDS[$SELECTED]+_}" ]] && uwsm app -- ${CMDS[$SELECTED]} & disown
+[[ -n "${CMDS[$SELECTED]+_}" ]] && uwsm app -- ${CMDS[$SELECTED]} 

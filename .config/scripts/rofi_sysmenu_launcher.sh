@@ -19,7 +19,7 @@ declare -A CMDS=(
     [Display]="uwsm app -- nwg-displays"
     [Storage]="uwsm app -- filelight"
     [Performance]="uwsm app -- alacritty -e btop"
-    [Sleep]="hyprctl dispatch dpms off && systemctl suspend"
+    [Sleep]="systemctl suspend"
     [Logout]="uwsm stop"
 )
 
@@ -35,4 +35,4 @@ done | rofi -dmenu \
 
 [[ -z "$SELECTED" ]] && exit 0
 
-[[ -n "${CMDS[$SELECTED]+_}" ]] && bash -c "${CMDS[$SELECTED]}" & disown
+[[ -n "${CMDS[$SELECTED]+_}" ]] && bash -c "${CMDS[$SELECTED]}" 
