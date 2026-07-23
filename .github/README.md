@@ -318,6 +318,8 @@ pacman -S file ffmpeg 7zip jq poppler fd ripgrep fzf \
 zoxide resvg imagemagick yazi
 ```
 
+Do this from the user directory:
+
 ```
 ya pkg add yazi-rs/plugins:mount
 ```
@@ -371,7 +373,7 @@ Add the public key to GitHub through Firefox.
 
 Fork my repository on GitHub.
 
-Fetch the forked repository into your home directory:
+Fetch the repository into your home directory:
 
 ```
 git init
@@ -380,10 +382,9 @@ git pull origin main
 ```
 
 - Enable hypridle: `systemctl --user enable hypridle.service`
+- Set monitor settings with nwg-displays
 - Install dependencies for the nvim plugins after running the `checkhealth` command.
-- Clean up junk files created by dependencies if you see them
-- Configure xdg-user-dirs in .config.
-- Configure nwg-look and qt6ct to use inter-font.
-- Enable hypridle service on user level.
-- Run the opencode server via bash aliases when vibe-coding (guarantees virginity till 30).
-- Run Ollama with an alias; do not enable autostart.
+- Configure xdg-user-dirs in .config to not create some default directories.
+- Configure nwg-look and qt6ct to use inter-font and papirus icons.
+- Configure font size in firefox to 16 and clean up the layout
+- Configure Thunderbird to unify folders and have relaxed ui density
