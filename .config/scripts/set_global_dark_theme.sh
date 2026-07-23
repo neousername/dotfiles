@@ -6,6 +6,10 @@ set -euo pipefail
 # Alacritty keeps its own monospace/Nerd Font setting on purpose.
 FONT="Inter"
 
+# ── global icon theme ─────────────────────────────────────────────────────────
+# Papirus panel icons are light-colored (#dfdfdf), meant for a dark panel.
+ICON_THEME="Papirus"
+
 # ── hyprland (~/.config/hypr/style.lua) ──────────────────────────────────────
 L1='local col_active_border_1 = "rgba(aeaeb2cc)"'
 L2='local col_active_border_2 = "rgba(6e6e7388)"'
@@ -53,6 +57,26 @@ sed -i "8s|.*|$L8|" ~/.config/waybar/style.css
 
 L9="    font-family: \"$FONT\";"
 sed -i "13s|.*|$L9|" ~/.config/waybar/style.css
+
+I1="    background-image: url('/usr/share/icons/$ICON_THEME/22x22/panel/audio-volume-low-panel.svg');"
+I2="    background-image: url('/usr/share/icons/$ICON_THEME/22x22/panel/audio-volume-medium-panel.svg');"
+I3="    background-image: url('/usr/share/icons/$ICON_THEME/22x22/panel/audio-volume-high-panel.svg');"
+I4="    background-image: url('/usr/share/icons/$ICON_THEME/22x22/panel/audio-volume-muted-panel.svg');"
+I5="    background-image: url('/usr/share/icons/$ICON_THEME/22x22/panel/network-wireless-signal-excellent.svg');"
+I6="    background-image: url('/usr/share/icons/$ICON_THEME/22x22/panel/network-wired.svg');"
+I7="    background-image: url('/usr/share/icons/$ICON_THEME/22x22/panel/network-offline.svg');"
+I8="    background-image: url('/usr/share/icons/$ICON_THEME/22x22/panel/bluetooth-active.svg');"
+I9="    background-image: url('/usr/share/icons/$ICON_THEME/22x22/panel/bluetooth-paired.svg');"
+
+sed -i "68s|.*|$I1|"  ~/.config/waybar/style.css
+sed -i "72s|.*|$I2|"  ~/.config/waybar/style.css
+sed -i "76s|.*|$I3|"  ~/.config/waybar/style.css
+sed -i "80s|.*|$I4|"  ~/.config/waybar/style.css
+sed -i "90s|.*|$I5|"  ~/.config/waybar/style.css
+sed -i "97s|.*|$I6|"  ~/.config/waybar/style.css
+sed -i "104s|.*|$I7|" ~/.config/waybar/style.css
+sed -i "112s|.*|$I8|" ~/.config/waybar/style.css
+sed -i "120s|.*|$I9|" ~/.config/waybar/style.css
 
 # ── rofi (~/.config/rofi/config.rasi) ─────────────────────────────────────────
 L1='    bg:        #1C1C1E;'

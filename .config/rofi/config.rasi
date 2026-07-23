@@ -81,12 +81,12 @@ element alternate urgent {
     text-color:       #ffffffff;
 }
 element selected normal {
-    background-color: @accent;
-    text-color:       #ffffff;
+    background-color: @bg-hover;
+    text-color:       @fg;
 }
 element selected active {
-    background-color: @accent;
-    text-color:       #ffffff;
+    background-color: @bg-hover;
+    text-color:       @fg;
 }
 element selected urgent {
     background-color: @urgent;
