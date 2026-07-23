@@ -1,7 +1,7 @@
 local col_active_border_1 = "rgba(aeaeb2cc)"
 local col_active_border_2 = "rgba(6e6e7388)"
 local col_inactive_border = "rgba(3a3a3caa)"
-local col_shadow = 0xee0d0d0f
+local col_shadow         = 0xee0d0d0f
 
 hl.config({
 	general = {
