@@ -3,7 +3,6 @@ BASE="/usr/share/icons/Papirus-Dark/22x22/apps"
 
 declare -A ICONS=(
     [Firefox]="$BASE/firefox.svg"
-    [Email]="$BASE/thunderbird.svg"
     [Telegram]="$BASE/telegram-desktop.svg"
     [Signal]="$BASE/signal-desktop.svg"
     [Steam]="$BASE/steam.svg"
@@ -15,7 +14,6 @@ declare -A ICONS=(
 
 declare -A CMDS=(
     [Firefox]="firefox"
-    [Email]="thunderbird"
     [Telegram]="Telegram"
     [Signal]="signal-desktop"
     [Steam]="steam"
@@ -25,7 +23,7 @@ declare -A CMDS=(
     [Gimp]="gimp"
 )
 
-NAMES=(Firefox Email Telegram Signal Steam OBS KdenLive LibreOffice Gimp)
+NAMES=(Firefox Telegram Signal Steam OBS KdenLive LibreOffice Gimp)
 
 SELECTED=$(for name in "${NAMES[@]}"; do
     printf "%s\0icon\x1f%s\n" "$name" "${ICONS[$name]}"
