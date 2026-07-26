@@ -1,14 +1,20 @@
+# These make NVIDIA hardware acceleration work
 export LIBVA_DRIVER_NAME=nvidia
 export __GLX_VENDOR_LIBRARY_NAME=nvidia
 
-export ELECTRON_ENABLE_WAYLAND=1
-export ELECTRON_OZONE_PLATFORM_HINT=auto
-
+# This makes GTK-based apps run natively on Wayland
 export GDK_BACKEND=wayland,x11,*
-export QT_QPA_PLATFORM=wayland
 
+# These make Qt-based apps run natively on Wayland
+export QT_QPA_PLATFORM=wayland
 export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
 export QT_QPA_PLATFORMTHEME=qt6ct
 
+# These keep the cursor size consistent across all apps
 export XCURSOR_SIZE=24
 export HYPRCURSOR_SIZE=24
+
+# These enable HDR when gaming with Proton
+export PROTON_ENABLE_WAYLAND=1
+export PROTON_ENABLE_HDR=1
+export DXVK_HDR=1

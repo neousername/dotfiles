@@ -43,6 +43,7 @@
 !.config/hypr/hyprlock.conf
 !.config/hypr/hyprpaper.conf
 !.config/hypr/hyprsunset.conf
+!.config/hypr/monitors.lua
 
 !.config/systemd/
 !.config/systemd/user/

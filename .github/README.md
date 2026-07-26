@@ -300,7 +300,7 @@ I consider these my "system" packages:
 ```
 pacman -S uwsm greetd greetd-tuigreet hyprland hyprlock hypridle hyprpaper \
 hyprsunset mako xdg-desktop-portal-hyprland xdg-desktop-portal-gtk \
-nwg-displays waybar rofi-wayland btop cliphist wl-clipboard grim slurp qt6ct \
+waybar rofi-wayland btop cliphist wl-clipboard grim slurp qt6ct \
 nwg-look ttf-jetbrains-mono-nerd inter-font papirus-icon-theme tmux \
 zathura-pdf-mupdf imv mpv cups celluloid filelight
 ```
@@ -339,6 +339,10 @@ I store and maintain my config files in a git repo.
 I pull them into my home directory.
 Essentially all apps require specific configuration
 with specific environment variables.
+
+To make windows-based games from steam playable, install
+GE-Proton as explained on official GE-Proton GitHub page:
+https://github.com/GloriousEggroll/proton-ge-custom
 
 ## Greetd setup
 
@@ -381,11 +385,10 @@ git remote add origin git@github.com:USERNAME/REPONAME.git
 git pull origin main
 ```
 
+- Configure your monitor inside of hyprland/monitors.lua
 - Enable hypridle: `systemctl --user enable hypridle.service`
-- Set monitor settings with nwg-displays
 - Install dependencies for the nvim plugins after running the `checkhealth` command.
 - Configure xdg-user-dirs in .config to not create some default directories.
 - Configure nwg-look and qt6ct to use inter-font and papirus icons.
 - Configure font size in firefox to 16 and clean up the layout.
 - Configure Thunderbird to unify folders and have relaxed ui density.
-- If you have an hdr monitor, configure it in monitors.lua manually
