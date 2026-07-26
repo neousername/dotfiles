@@ -386,5 +386,6 @@ git pull origin main
 - Install dependencies for the nvim plugins after running the `checkhealth` command.
 - Configure xdg-user-dirs in .config to not create some default directories.
 - Configure nwg-look and qt6ct to use inter-font and papirus icons.
-- Configure font size in firefox to 16 and clean up the layout
-- Configure Thunderbird to unify folders and have relaxed ui density
+- Configure font size in firefox to 16 and clean up the layout.
+- Configure Thunderbird to unify folders and have relaxed ui density.
+- If you have an hdr monitor, configure it in monitors.lua manually
