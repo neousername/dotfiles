@@ -36,5 +36,5 @@ hl.window_rule({
 	float = true,
 })
 
--- These window rules enable VRR for specific windows
+-- These window rules enable VRR for specific windows (of content type 'game' or 'video')
 hl.window_rule({ match = { initial_class = "OxygenNotIncluded" }, content = "game" })
