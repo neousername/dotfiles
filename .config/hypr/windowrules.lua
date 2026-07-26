@@ -1,37 +1,40 @@
 hl.config({
 	-- XWayland HiDPI fix
 	xwayland = {
-		force_zero_scaling = true
-	}
+		force_zero_scaling = true,
+	},
 })
 
 local suppressMaximizeRule = hl.window_rule({
 	-- Ignore maximize requests from all apps. You'll probably like this.
-	name           = "suppress-maximize-events",
-	match          = { class = ".*" },
+	name = "suppress-maximize-events",
+	match = { class = ".*" },
 
 	suppress_event = "maximize",
 })
 
 hl.window_rule({
 	-- Fix some dragging issues with XWayland
-	name     = "fix-xwayland-drags",
-	match    = {
-		class      = "^$",
-		title      = "^$",
-		xwayland   = true,
-		float      = true,
+	name = "fix-xwayland-drags",
+	match = {
+		class = "^$",
+		title = "^$",
+		xwayland = true,
+		float = true,
 		fullscreen = false,
-		pin        = false,
+		pin = false,
 	},
 
 	no_focus = true,
 })
 
 hl.window_rule({
-	name  = "move-hyprland-run",
+	name = "move-hyprland-run",
 	match = { class = "hyprland-run" },
 
-	move  = "20 monitor_h-120",
+	move = "20 monitor_h-120",
 	float = true,
 })
+
+-- These window rules enable VRR for specific windows
+hl.window_rule({ match = { initial_class = "OxygenNotIncluded" }, content = "game" })
