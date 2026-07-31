@@ -38,3 +38,4 @@ hl.window_rule({
 
 -- These window rules enable VRR for specific windows (of content type 'game' or 'video')
 hl.window_rule({ match = { initial_class = "OxygenNotIncluded" }, content = "game" })
+hl.window_rule({ match = { initial_class = "huntgame.exe" }, content = "game" })

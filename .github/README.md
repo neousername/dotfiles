@@ -327,7 +327,7 @@ ya pkg add yazi-rs/plugins:mount
 Then there are the apps I personally favour (ollama-cuda for NVIDIA):
 
 ```
-pacman -S signal-desktop telegram-desktop steam \
+pacman -S signal-desktop steam \
 firefox gimp libreoffice-still kdenlive obs-studio \
 opencode ollama ollama-cuda lazygit
 ```
@@ -390,5 +390,4 @@ git pull origin main
 - Install dependencies for the nvim plugins after running the `checkhealth` command.
 - Configure xdg-user-dirs in .config to not create some default directories.
 - Configure nwg-look and qt6ct to use inter-font and papirus icons.
-- Configure font size in firefox to 16 and clean up the layout.
-- Configure Thunderbird to unify folders and have relaxed ui density.
+- Open webapps on hotkeys (see keybinds.lua under webapps)
