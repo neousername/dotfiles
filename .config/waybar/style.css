@@ -44,15 +44,14 @@ window#waybar {
     border: none;
 }
 
-#clock, #language, #pulseaudio, #network, #bluetooth {
+#language, #pulseaudio, #network, #bluetooth {
+    color: @fg;
     min-width: 44px;
     background-color: transparent;
-    color: @fg;
 }
 
 #clock {
     color: @fg;
-    letter-spacing: 0.2px;
 }
 
 #language {
@@ -83,7 +82,7 @@ window#waybar {
 
 #language:hover, #pulseaudio:hover {
     background-color: @bg_hover;
-    border-radius: 8px;
+    border-radius: 6px
 }
 
 #network.wifi {
@@ -113,7 +112,6 @@ window#waybar {
     background-position: center;
     background-repeat: no-repeat;
     background-size: 22px 22px;
-    margin-right: 8px;
 }
 
 #bluetooth.connected {
@@ -121,6 +119,4 @@ window#waybar {
     background-position: center;
     background-repeat: no-repeat;
     background-size: 22px 22px;
-    margin-right: 8px;
-    margin-right: 8px;
 }
