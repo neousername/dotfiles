@@ -26,7 +26,7 @@ hl.bind(mainMod .. " + SHIFT + B", hl.dsp.exec_cmd("uwsm app -- firefox"))
 -- Webapps
 hl.bind(mainMod .. " + SHIFT + E", hl.dsp.exec_cmd("uwsm app -- firefox --new-window https://mail.google.com"))
 hl.bind(mainMod .. " + SHIFT + W", hl.dsp.exec_cmd("uwsm app -- firefox --new-window https://web.whatsapp.com"))
-hl.bind(mainMod .. " + SHIFT + A", hl.dsp.exec_cmd("uwsm app -- firefox --new-window https://gemini.google.com"))
+hl.bind(mainMod .. " + SHIFT + A", hl.dsp.exec_cmd("uwsm app -- firefox --new-window https://chatgpt.com"))
 hl.bind(mainMod .. " + SHIFT + C", hl.dsp.exec_cmd("uwsm app -- firefox --new-window https://calendar.google.com"))
 hl.bind(mainMod .. " + SHIFT + T", hl.dsp.exec_cmd("uwsm app -- firefox --new-window https://web.telegram.org/a/"))
 hl.bind(mainMod .. " + SHIFT + L", hl.dsp.exec_cmd("uwsm app -- firefox --new-window https://linear.app"))
