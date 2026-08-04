@@ -117,9 +117,4 @@ sed -i "4s|.*|$L4|" ~/.config/mako/config
 sed -i "5s|.*|$L5|" ~/.config/mako/config
 sed -i "8s|.*|$L6|" ~/.config/mako/config
 
-# ── alacritty (~/.config/alacritty/alacritty.toml) ───────────────────────────
-L1='background = "#1C1C1E"'
-
-sed -i "2s|.*|$L1|" ~/.config/alacritty/alacritty.toml
-
 echo "Done."
