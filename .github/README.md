@@ -386,7 +386,8 @@ git remote add origin git@github.com:USERNAME/REPONAME.git
 git pull origin main
 ```
 
-- Configure your monitor inside of hyprland/monitors.lua
+- Configure your monitor with nwg-displays.
+- For HDR and VRR configure monitor options and windowrules manually.
 - Enable hypridle: `systemctl --user enable hypridle.service`
 - Install dependencies for the nvim plugins after running the `checkhealth` command.
 - Configure xdg-user-dirs in .config to not create some default directories.

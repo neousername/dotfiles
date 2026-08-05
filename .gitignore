@@ -40,11 +40,6 @@
 !.config/hypr/hyprlock.conf
 !.config/hypr/hyprpaper.conf
 !.config/hypr/hyprsunset.conf
-!.config/hypr/monitors.lua
-
-!.config/systemd/
-!.config/systemd/user/
-!.config/systemd/user/ollama.service
 
 !.config/uwsm/
 !.config/uwsm/**
