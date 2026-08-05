@@ -8,7 +8,7 @@
 @define-color urgent    #FF453A;
 
 window#waybar {
-    background-color: @bg;
+    background-color: transparent;
     color: @fg;
     font-family: "Inter";
     font-size: 22px;
@@ -16,7 +16,10 @@ window#waybar {
 }
 
 #workspaces {
-    background: transparent;
+    background-color: @bg;
+    border-radius: 20px;
+    margin-top: 4px;
+    margin-left: 4px;
 }
 
 #workspaces button {
@@ -28,13 +31,13 @@ window#waybar {
 
 #workspaces button:hover {
     color: @fg;
-    background: @bg_hover;
+    background: transparent;
     border: none;
 }
 
 #workspaces button.active {
     color: @fg;
-    background: @bg_hover;
+    background: transparent;
     border: none;
 }
 
@@ -44,6 +47,13 @@ window#waybar {
     border: none;
 }
 
+#status {
+    background-color: @bg;
+    border-radius: 20px;
+    margin-top: 4px;
+    margin-right: 4px;
+}
+
 #language, #pulseaudio, #network, #bluetooth {
     color: @fg;
     min-width: 44px;
@@ -51,10 +61,15 @@ window#waybar {
 }
 
 #clock {
+    background-color: @bg;
+    border-radius: 20px;
     color: @fg;
+    margin-top: 4px;
+    padding: 0 12px;
 }
 
 #language {
+    padding-left: 4px;
 }
 
 #pulseaudio {
@@ -78,11 +93,6 @@ window#waybar {
 #pulseaudio.muted {
     background-image: url('/usr/share/icons/Papirus/22x22/panel/audio-volume-muted-panel.svg');
     color: @fg_dim;
-}
-
-#language:hover, #pulseaudio:hover {
-    background-color: @bg_hover;
-    border-radius: 6px
 }
 
 #network.wifi {
