@@ -35,7 +35,3 @@ hl.window_rule({
 	move = "20 monitor_h-120",
 	float = true,
 })
-
--- These window rules enable VRR for specific windows (of content type 'game' or 'video')
-hl.window_rule({ match = { initial_class = "OxygenNotIncluded" }, content = "game" })
-hl.window_rule({ match = { initial_class = "huntgame.exe" }, content = "game" })
