@@ -16,6 +16,7 @@ hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd("uwsm app -- ~/.config/scripts/ro
 
 -- Useful
 hl.bind(mainMod .. " + Q", hl.dsp.window.close())
+hl.bind(mainMod .. " + mouse:274", hl.dsp.window.close())
 hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ mode = 0 }))
 hl.bind(mainMod .. " + P", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + T", hl.dsp.layout("togglesplit"))

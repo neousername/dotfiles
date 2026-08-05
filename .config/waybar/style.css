@@ -15,15 +15,48 @@ window#waybar {
     font-weight: 500;
 }
 
+#custom-sysmenu,
+#custom-menu,
+#custom-files,
+#custom-clipboard {
+    min-width: 44px;
+    background-color: @bg;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 22px 22px;
+    margin-top: 4px;
+}
+
+#custom-sysmenu {
+    background-image: url('/usr/share/icons/Papirus/22x22/apps/distributor-logo-archlinux.svg');
+    border-radius: 20px 0 0 20px;
+    margin-left: 4px;
+}
+
+#custom-menu {
+    background-image: url('/usr/share/icons/Papirus/22x22/apps/applications-all.svg');
+}
+
+#custom-files {
+    background-image: url('/usr/share/icons/Papirus/22x22/panel/system-file-manager-panel.svg');
+}
+
+#custom-clipboard {
+    background-image: url('/usr/share/icons/Papirus/22x22/panel/clipboard.svg');
+    border-radius: 0 20px 20px 0;
+    margin-right: 4px;
+}
+
 #workspaces {
     background-color: @bg;
     border-radius: 20px;
     margin-top: 4px;
     margin-left: 4px;
+    padding: 0 4px;
 }
 
 #workspaces button {
-    min-width: 44px;
+    min-width: 16px;
     color: @fg_dim;
     background-color: transparent;
     border: none;

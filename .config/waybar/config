@@ -1,13 +1,37 @@
 {
     "layer": "top",
     "position": "top",
-    "modules-left": ["hyprland/workspaces"],
+    "modules-left": ["custom/sysmenu", "custom/menu", "custom/files", "custom/clipboard", "hyprland/workspaces"],
     "modules-center": ["clock"],
     "modules-right": ["group/status"],
 
     "group/status": {
         "orientation": "horizontal",
         "modules": ["hyprland/language", "pulseaudio", "network", "bluetooth"]
+    },
+
+    "custom/sysmenu": {
+        "format": " ",
+        "tooltip": false,
+        "on-click": "~/.config/scripts/rofi_sysmenu_launcher.sh"
+    },
+
+    "custom/menu": {
+        "format": " ",
+        "tooltip": false,
+        "on-click": "~/.config/scripts/rofi_menu_launcher.sh"
+    },
+
+    "custom/files": {
+        "format": " ",
+        "tooltip": false,
+        "on-click": "alacritty -e \"$SHELL\" -ic \"y\""
+    },
+
+    "custom/clipboard": {
+        "format": " ",
+        "tooltip": false,
+        "on-click": "~/.config/scripts/rofi_clipboard_launcher.sh"
     },
 
     "hyprland/workspaces": {
