@@ -7,7 +7,7 @@ return {
 			return vim.fn.expand("%:p:h:t")
 		end
 
-		require("lualine").setup {
+		require("lualine").setup({
 			options = {
 				theme = "auto",
 				globalstatus = true,
@@ -16,10 +16,13 @@ return {
 				lualine_a = { "mode" },
 				lualine_b = { "branch" },
 				lualine_c = { cwd, "filename" },
-				lualine_x = {},
+
+				-- Show the currently connected server and its status
+				lualine_x = { require("opencode").statusline },
+
 				lualine_y = { "diagnostics" },
-				lualine_z = { "location", "progress" }
+				lualine_z = { "location", "progress" },
 			},
-		}
-	end
+		})
+	end,
 }

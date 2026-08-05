@@ -29,9 +29,6 @@
 !.config/mako/
 !.config/mako/**
 
-!.config/opencode/
-!.config/opencode/opencode.jsonc
-
 !.config/hypr/
 !.config/hypr/hyprland.lua
 !.config/hypr/autostart.lua

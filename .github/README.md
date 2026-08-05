@@ -308,7 +308,8 @@ zathura-pdf-mupdf imv mpv cups celluloid filelight
 My neovim dependencies:
 
 ```
-pacman -S tree-sitter-cli python-lsp-server python-ruff stylua rust
+pacman -S tree-sitter-cli python-lsp-server \
+python-ruff stylua rust opencode
 ```
 
 Yazi file manager:

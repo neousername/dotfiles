@@ -1,3 +1,14 @@
+vim.api.nvim_create_autocmd("FileChangedShell", {
+	callback = function(args)
+		if vim.bo[args.buf].modified then
+			vim.v.fcs_choice = "ask"
+			return
+		end
+
+		vim.v.fcs_choice = "reload"
+	end,
+})
+
 -- Custom Diagnostic Icons
 local severity = vim.diagnostic.severity
 vim.diagnostic.config({

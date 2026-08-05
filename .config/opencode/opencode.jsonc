@@ -1,16 +1,6 @@
 {
-  "$schema": "https://opencode.ai/config.json",
-  "plugin": [
-    "opencode-gemini-auth@latest",
-    "opencode-with-claude",
-    "@slkiser/opencode-quota"
-  ],
   "provider": {
-    "anthropic": {
-      "options": {
-        "baseURL": "http://127.0.0.1:3456",
-        "apiKey": "dummy"
-      }
-    }
+    // Detected openai authentication; opencode-quota added this global provider declaration.
+    "openai": {}
   }
 }
