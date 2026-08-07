@@ -24,7 +24,7 @@ window#waybar {
 }
 
 #workspaces button {
-    min-width: 16px;
+    min-width: 22px;
     color: @fg_dim;
     background-color: transparent;
     border: none;
@@ -70,7 +70,7 @@ window#waybar {
 }
 
 #language {
-    padding-left: 4px;
+    padding-left: 6px;
 }
 
 #pulseaudio {
