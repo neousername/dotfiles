@@ -309,7 +309,7 @@ My neovim dependencies:
 
 ```
 pacman -S tree-sitter-cli python-lsp-server \
-python-ruff stylua rust 
+python-ruff stylua rust opencode
 ```
 
 Yazi file manager:
@@ -330,7 +330,7 @@ Then there are the apps I personally favour (ollama-cuda for NVIDIA):
 ```
 pacman -S signal-desktop steam \
 firefox gimp libreoffice-still kdenlive obs-studio \
-opencode ollama ollama-cuda lazygit
+opencode ollama ollama-cuda lazygit rainfrog
 ```
 
 ## Configuring apps
