@@ -309,7 +309,7 @@ My neovim dependencies:
 
 ```
 pacman -S tree-sitter-cli python-lsp-server \
-python-ruff stylua rust opencode
+python-ruff stylua rust 
 ```
 
 Yazi file manager:
@@ -342,7 +342,7 @@ Essentially all apps require specific configuration
 with specific environment variables.
 
 To make windows-based games from steam playable, install
-GE-Proton as explained on official GE-Proton GitHub page:
+GE-Proton as explained on official GE-Proton GitHub page:lua
 https://github.com/GloriousEggroll/proton-ge-custom
 
 ## Greetd setup
@@ -355,7 +355,7 @@ Configure greetd in `/etc/greetd/config.toml`:
 [default_session]
 command = "tuigreet -w 70 --asterisks --remember --remember-session"
 ```
-
+lua
 Reboot. When logging in for the first time, choose the user
 and the **uwsm-managed** session for **Hyprland**.
 
