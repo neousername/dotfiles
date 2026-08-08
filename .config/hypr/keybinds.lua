@@ -29,8 +29,7 @@ hl.bind(mainMod .. " + SHIFT + E", hl.dsp.exec_cmd("uwsm app -- firefox --new-wi
 hl.bind(mainMod .. " + SHIFT + W", hl.dsp.exec_cmd("uwsm app -- firefox --new-window https://web.whatsapp.com"))
 hl.bind(mainMod .. " + SHIFT + A", hl.dsp.exec_cmd("uwsm app -- firefox --new-window https://chatgpt.com"))
 hl.bind(mainMod .. " + SHIFT + C", hl.dsp.exec_cmd("uwsm app -- firefox --new-window https://calendar.google.com"))
-hl.bind(mainMod .. " + SHIFT + T", hl.dsp.exec_cmd("uwsm app -- firefox --new-window https://tasks.google.com/tasks/"))
-hl.bind(mainMod .. " + SHIFT + L", hl.dsp.exec_cmd("uwsm app -- firefox --new-window https://linear.app"))
+hl.bind(mainMod .. " + SHIFT + T", hl.dsp.exec_cmd("uwsm app -- firefox --new-window https://tasks.google.com/tasks"))
 
 -- Move focus with mainMod + HJKL
 hl.bind(mainMod .. " + H", hl.dsp.focus({ direction = "left" }))
@@ -43,6 +42,12 @@ hl.bind(mainMod .. " + SHIFT + H", hl.dsp.window.move({ direction = "left" }))
 hl.bind(mainMod .. " + SHIFT + L", hl.dsp.window.move({ direction = "right" }))
 hl.bind(mainMod .. " + SHIFT + K", hl.dsp.window.move({ direction = "up" }))
 hl.bind(mainMod .. " + SHIFT + J", hl.dsp.window.move({ direction = "down" }))
+
+-- Resize active window with SUPER + ALT + hjkl
+hl.bind(mainMod .. " + ALT + H", hl.dsp.window.resize({ x = -50, y = 0, relative = true }), { repeating = true })
+hl.bind(mainMod .. " + ALT + J", hl.dsp.window.resize({ x = 0, y = 50, relative = true }), { repeating = true })
+hl.bind(mainMod .. " + ALT + K", hl.dsp.window.resize({ x = 0, y = -50, relative = true }), { repeating = true })
+hl.bind(mainMod .. " + ALT + L", hl.dsp.window.resize({ x = 50, y = 0, relative = true }), { repeating = true })
 
 -- Switch workspaces with mainMod + [0-9]
 -- Move active window to a workspace with mainMod + SHIFT + [0-9]
