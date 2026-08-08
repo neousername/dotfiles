@@ -4,5 +4,7 @@ border-color=#AEAEB2FF
 progress-color=#AEAEB2FF
 font=Inter 10
 
+border-radius=4
+
 [urgency=critical]
 border-color=#FF453AFF

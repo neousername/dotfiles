@@ -10,9 +10,12 @@ hl.bind(mainMod .. " + PRINT", hl.dsp.exec_cmd("uwsm app -- ~/.config/scripts/sc
 
 -- System
 hl.bind(mainMod .. " + RETURN", hl.dsp.exec_cmd("uwsm app -- alacritty"))
-hl.bind(mainMod .. " + N", hl.dsp.exec_cmd("makoctl dismiss -a"))
 hl.bind(mainMod .. " + ALT + SPACE", hl.dsp.exec_cmd("uwsm app -- ~/.config/scripts/rofi_sysmenu_launcher.sh"))
 hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd("uwsm app -- ~/.config/scripts/rofi_menu_launcher.sh"))
+
+-- Notifications
+hl.bind(mainMod .. " + N", hl.dsp.exec_cmd("makoctl dismiss"))
+hl.bind(mainMod .. " + Y", hl.dsp.exec_cmd("makoctl invoke"))
 
 -- Useful
 hl.bind(mainMod .. " + Q", hl.dsp.window.close())
