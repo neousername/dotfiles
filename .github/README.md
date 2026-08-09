@@ -291,7 +291,7 @@ I consider these my "system" packages:
 pacman -S uwsm greetd greetd-tuigreet hyprland hyprlock hypridle hyprpaper \
 hyprsunset mako xdg-desktop-portal-hyprland xdg-desktop-portal-gtk \
 waybar rofi-wayland btop cliphist wl-clipboard grim slurp qt6ct \
-nwg-look ttf-jetbrains-mono-nerd inter-font papirus-icon-theme tmux \
+nwg-look nwg-displays ttf-jetbrains-mono-nerd inter-font papirus-icon-theme tmux \
 zathura-pdf-mupdf imv mpv cups celluloid filelight
 ```
 
@@ -299,7 +299,7 @@ My neovim dependencies:
 
 ```
 pacman -S tree-sitter-cli python-lsp-server \
-python-ruff stylua rust opencode
+python-ruff stylua rust 
 ```
 
 Yazi file manager:
@@ -318,7 +318,7 @@ ya pkg add yazi-rs/plugins:mount
 Then there are the apps I personally favour (ollama-cuda for NVIDIA):
 
 ```
-pacman -S firefox libreoffice-still opencode lazygit 
+pacman -S firefox libreoffice-still opencode lazygit
 ```
 
 ## Configuring apps
@@ -365,7 +365,7 @@ Add the public key to GitHub through Firefox.
 
 Fork my repository on GitHub.
 
-Fetch the repository into your home directory:
+Pull the repository. Remove conflicting files if any:
 
 ```
 git init
@@ -374,7 +374,6 @@ git pull origin main
 ```
 
 - Configure your monitor with nwg-displays.
-- For HDR and VRR configure monitor options and windowrules manually.
 - Enable hypridle: `systemctl --user enable --now hypridle.service`
 - Install dependencies for the nvim plugins after running the `checkhealth` command.
 - Configure xdg-user-dirs in .config to not create some default directories.
