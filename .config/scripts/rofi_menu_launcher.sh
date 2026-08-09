@@ -3,23 +3,15 @@ BASE="/usr/share/icons/Papirus-Dark/22x22/apps"
 
 declare -A ICONS=(
     [Firefox]="$BASE/firefox.svg"
-    [Signal]="$BASE/signal-desktop.svg"
-    [OBS]="$BASE/obs.svg"
-    [KdenLive]="$BASE/kdenlive.svg"
     [LibreOffice]="$BASE/libreoffice7.6-startcenter.svg"
-    [Gimp]="$BASE/gimp.svg"
 )
 
 declare -A CMDS=(
     [Firefox]="firefox"
-    [Signal]="signal-desktop"
-    [OBS]="obs"
-    [KdenLive]="kdenlive"
     [LibreOffice]="libreoffice"
-    [Gimp]="gimp"
 )
 
-NAMES=(Firefox Signal OBS KdenLive LibreOffice Gimp)
+NAMES=(Firefox LibreOffice)
 
 SELECTED=$(for name in "${NAMES[@]}"; do
     printf "%s\0icon\x1f%s\n" "$name" "${ICONS[$name]}"

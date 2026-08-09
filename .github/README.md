@@ -318,9 +318,7 @@ ya pkg add yazi-rs/plugins:mount
 Then there are the apps I personally favour (ollama-cuda for NVIDIA):
 
 ```
-pacman -S signal-desktop \
-firefox gimp libreoffice-still
-kdenlive opencode lazygit obs-studio
+pacman -S firefox libreoffice-still opencode lazygit 
 ```
 
 ## Configuring apps
@@ -328,12 +326,11 @@ kdenlive opencode lazygit obs-studio
 I use a uwsm-managed Hyprland.
 I store and maintain my config files in a git repo.
 I pull them into my home directory.
-Essentially all apps require specific configuration
+Essentially every app requires specific configuration
 with specific environment variables.
 
-To make windows-based games from steam playable, install
-GE-Proton as explained on official GE-Proton GitHub page:lua
-https://github.com/GloriousEggroll/proton-ge-custom
+To add a new app to the rofi menu, edit the *rofi_menu_launcher.sh*
+inside of *.config/scripts* manually. 
 
 ## Greetd setup
 
