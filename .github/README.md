@@ -119,7 +119,7 @@ In `/etc/mkinitcpio.conf`:
 ```
 MODULES=(btrfs)
 BINARIES=(/usr/bin/btrfs) 
-HOOKS=(base udev autodetect microcode modconf keyboard keymap consolefont block encrypt filesystems fsck)
+HOOKS=(base udev autodetect microcode modconf kms keyboard keymap consolefont block encrypt filesystems fsck)
 ```
 
 Regenerate the mkinitcpio files: `mkinitcpio -P`
@@ -378,7 +378,7 @@ git pull origin main
 
 - Configure your monitor with nwg-displays.
 - For HDR and VRR configure monitor options and windowrules manually.
-- Enable hypridle: `systemctl --user enable hypridle.service`
+- Enable hypridle: `systemctl --user enable --now hypridle.service`
 - Install dependencies for the nvim plugins after running the `checkhealth` command.
 - Configure xdg-user-dirs in .config to not create some default directories.
 - Configure nwg-look and qt6ct to use inter-font and papirus icons.
