@@ -12,9 +12,7 @@
 
 !.bashrc
 
-
 !.config/
-
 !.config/nvim/
 !.config/nvim/lua/
 !.config/nvim/lua/**
