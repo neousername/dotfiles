@@ -4,47 +4,47 @@ local col_inactive_border = "rgba(3a3a3caa)"
 local col_shadow = 0xee0d0d0f
 
 hl.config({
-  general = {
-    gaps_in = 4,
-    gaps_out = 4,
+	general = {
+		gaps_in = 4,
+		gaps_out = 4,
 
-    border_size = 2,
+		border_size = 2,
 
-    col = {
-      active_border = { colors = { col_active_border_1, col_active_border_2 }, angle = 45 },
-      inactive_border = col_inactive_border,
-    },
+		col = {
+			active_border = { colors = { col_active_border_1, col_active_border_2 }, angle = 45 },
+			inactive_border = col_inactive_border,
+		},
 
-    resize_on_border = false,
-    allow_tearing = false,
-    layout = "dwindle",
-  },
+		resize_on_border = false,
+		allow_tearing = false,
+		layout = "dwindle",
+	},
 
-  decoration = {
-    rounding = 4,
-    rounding_power = 4,
+	decoration = {
+		rounding = 4,
+		rounding_power = 4,
 
-    active_opacity = 1.0,
-    inactive_opacity = 1.0,
+		active_opacity = 1.0,
+		inactive_opacity = 1.0,
 
-    shadow = {
-      enabled = false,
-      range = 4,
-      render_power = 3,
-      color = col_shadow,
-    },
+		shadow = {
+			enabled = false,
+			range = 4,
+			render_power = 3,
+			color = col_shadow,
+		},
 
-    blur = {
-      enabled = false,
-      size = 3,
-      passes = 1,
-      vibrancy = 0.1696,
-    },
-  },
+		blur = {
+			enabled = false,
+			size = 3,
+			passes = 1,
+			vibrancy = 0.1696,
+		},
+	},
 
-  animations = {
-    enabled = true,
-  },
+	animations = {
+		enabled = true,
+	},
 })
 
 -- Default curves and animations, see https://wiki.hypr.land/Configuring/Advanced-and-Cool/Animations/
@@ -73,28 +73,28 @@ hl.animation({ leaf = "zoomFactor", enabled = true, speed = 7, bezier = "quick" 
 
 -- See https://wiki.hypr.land/Configuring/Layouts/Dwindle-Layout/ for more
 hl.config({
-  dwindle = {
-    preserve_split = true,
-  },
+	dwindle = {
+		preserve_split = true,
+	},
 })
 
 -- See https://wiki.hypr.land/Configuring/Layouts/Master-Layout/ for more
 hl.config({
-  master = {
-    new_status = "master",
-  },
+	master = {
+		new_status = "master",
+	},
 })
 
 -- See https://wiki.hypr.land/Configuring/Layouts/Scrolling-Layout/ for more
 hl.config({
-  scrolling = {
-    fullscreen_on_one_column = true,
-  },
+	scrolling = {
+		fullscreen_on_one_column = true,
+	},
 })
 
 hl.config({
-  misc = {
-    force_default_wallpaper = 0,
-    disable_hyprland_logo = true,
-  },
+	misc = {
+		force_default_wallpaper = 0,
+		disable_hyprland_logo = true,
+	},
 })
