@@ -4,7 +4,10 @@ return {
   settings = {
     Lua = {
       runtime = {
-        version = 'LuaJIT',
+        version = "LuaJIT",
+      },
+      diagnostics = {
+        globals = { "vim", "hl" },
       },
       workspace = {
         preloadFileSize = 10000,
