@@ -7,6 +7,7 @@ return {
 				version = "LuaJIT",
 			},
 			diagnostics = {
+				disable = { "undefined-doc-name" },
 				globals = { "vim", "hl" },
 			},
 			workspace = {
