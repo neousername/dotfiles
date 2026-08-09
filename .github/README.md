@@ -148,7 +148,7 @@ Get your UUID: `cryptsetup luksUUID /dev/nvme0n1p2`.
 Configure Limine in `/boot/EFI/limine/limine.conf`:
 
 ```
-timeout: 3
+timeout: 5
  
 /Arch Linux
         protocol: linux
