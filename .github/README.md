@@ -281,18 +281,6 @@ Run this:
 pacman -Syu linux-headers nvidia-open-dkms nvidia-utils lib32-nvidia-utils egl-wayland
 ```
 
-Sleep should work out of the box. In my experience, hibernation on NVIDIA on Wayland
-is broken. If you do not use hibernation,
-add the following settings in `/etc/systemd/sleep.conf` so that
-the PC stays in sleep and does not power off after a while:
-
-```
-[Sleep]
-AllowHibernation=no
-AllowSuspendThenHibernate=no
-AllowHybridSleep=no
-```
-
 ## Installing apps
 
 I consider these my "system" packages:
