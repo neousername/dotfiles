@@ -119,8 +119,7 @@ In `/etc/mkinitcpio.conf`:
 ```
 MODULES=(btrfs)
 BINARIES=(/usr/bin/btrfs) 
-HOOKS=(base udev autodetect microcode modconf kms keyboard
-keymap consolefont block encrypt filesystems fsck)
+HOOKS=(base udev autodetect microcode modconf keyboard keymap consolefont block encrypt filesystems fsck)
 ```
 
 Regenerate the mkinitcpio files: `mkinitcpio -P`
@@ -280,6 +279,9 @@ Run this:
 ```
 pacman -Syu linux-headers nvidia-open-dkms nvidia-utils lib32-nvidia-utils egl-wayland
 ```
+
+NVIDIA is incapable of hibernation on Arch Linux.
+Disable it completely in */etc/systemd/sleep.conf
 
 ## Installing apps
 
