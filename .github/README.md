@@ -318,9 +318,9 @@ ya pkg add yazi-rs/plugins:mount
 Then there are the apps I personally favour (ollama-cuda for NVIDIA):
 
 ```
-pacman -S signal-desktop steam \
-firefox gimp libreoffice-still kdenlive  \
-opencode ollama ollama-cuda lazygit obs-studio
+pacman -S signal-desktop \
+firefox gimp libreoffice-still
+kdenlive opencode lazygit obs-studio
 ```
 
 ## Configuring apps
