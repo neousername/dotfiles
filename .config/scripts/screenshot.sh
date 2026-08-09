@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+
 SCREENSHOT_DIR="$HOME/Pictures/Screenshots"
 mkdir -p "$SCREENSHOT_DIR"
 FILE="$SCREENSHOT_DIR/$(date +%Y%m%d_%H%M%S).png"
@@ -12,8 +13,15 @@ case $1 in
         grim -g "$GEOM" "$FILE" || exit 1
         ;;
     *)
-        echo "Usage: screenshot.sh [output|region]"; exit 1
+        echo "Usage: screenshot.sh [output|region]"
+        exit 1
         ;;
 esac
 
 wl-copy --type image/png < "$FILE"
+
+notify-send \
+    -a "Screenshot" \
+    -t 2000 \
+    "Screenshot saved" \
+    "$(basename "$FILE")"
