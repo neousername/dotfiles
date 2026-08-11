@@ -315,10 +315,10 @@ Do this from the user directory:
 ya pkg add yazi-rs/plugins:mount
 ```
 
-Then there are the apps I personally favour (ollama-cuda for NVIDIA):
+Then there are the apps I personally favour:
 
 ```
-pacman -S firefox libreoffice-still opencode lazygit
+pacman -S firefox libreoffice-still opencode lazygit uv
 ```
 
 ## Configuring apps
