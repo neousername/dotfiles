@@ -9,6 +9,7 @@ vim.api.nvim_create_autocmd("FileChangedShell", {
 	end,
 })
 
+
 -- Custom Diagnostic Icons
 local severity = vim.diagnostic.severity
 vim.diagnostic.config({
@@ -22,12 +23,32 @@ vim.diagnostic.config({
 	},
 })
 
+-- Enable Neovim native Treesitter
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = {
+		"lua",
+		"python",
+		"sh",
+		"javascript",
+		"javascriptreact",
+		"typescript",
+		"typescriptreact",
+		"html",
+		"css",
+	},
+	callback = function(args)
+		vim.treesitter.start(args.buf)
+	end,
+})
+
 -- LSP Setup
 vim.lsp.enable({
 	"bashls",
 	"lua_ls",
 	"pylsp",
 	"vtsls",
+	"html",
+	"cssls",
 })
 
 -- Global LSP Keybinds

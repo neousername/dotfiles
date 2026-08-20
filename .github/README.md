@@ -298,22 +298,14 @@ zathura-pdf-mupdf imv mpv cups celluloid filelight
 My neovim dependencies:
 
 ```
-pacman -S python-lsp-server bash-language-server lua-language-server \
-python-ruff stylua shfmt rust nodejs npm 
-```
-
-install packages from npm to .local/bin: 
-
-```
-npm config set prefix ~/.local
-npm install -g @vtsls/language-server
+pacman -S tree-sitter-cli rust unzip
 ```
 
 Yazi file manager:
 
 ```
 pacman -S file ffmpeg 7zip jq poppler fd ripgrep fzf \
-zoxide resvg imagemagick poppler yazi 
+zoxide resvg imagemagick yazi 
 ```
 
 Do this from the user directory:

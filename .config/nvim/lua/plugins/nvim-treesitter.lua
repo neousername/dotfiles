@@ -7,7 +7,11 @@ return {
 			"lua",
 			"python",
 			"bash",
+			"javascript",
 			"typescript",
+			"tsx",
+			"html",
+			"css",
 		})
 	end,
 }
