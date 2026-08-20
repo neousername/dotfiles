@@ -298,9 +298,8 @@ zathura-pdf-mupdf imv mpv cups celluloid filelight
 My neovim dependencies:
 
 ```
-pacman -S tree-sitter-grammars tree-sitter-javascript \
-python-lsp-server bash-language-server python-ruff stylua shfmt \
-rust nodejs npm 
+pacman -S python-lsp-server bash-language-server lua-language-server \
+python-ruff stylua shfmt rust nodejs npm 
 ```
 
 install packages from npm to .local/bin: 

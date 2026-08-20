@@ -9,21 +9,6 @@ vim.api.nvim_create_autocmd("FileChangedShell", {
 	end,
 })
 
--- Treesitter parsers
-vim.api.nvim_create_autocmd("FileType", {
-	pattern = "*",
-	callback = function(args)
-		local ft = vim.bo[args.buf].filetype
-		local lang = vim.treesitter.language.get_lang(ft)
-
-		if not lang then
-			return
-		end
-
-		pcall(vim.treesitter.start, args.buf, lang)
-	end,
-})
-
 -- Custom Diagnostic Icons
 local severity = vim.diagnostic.severity
 vim.diagnostic.config({
