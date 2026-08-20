@@ -26,7 +26,7 @@ vim.diagnostic.config({
 vim.lsp.enable({
 	"lua_ls",
 	"pylsp",
-	"html",
+	"vtsls",
 })
 
 -- Global LSP Keybinds

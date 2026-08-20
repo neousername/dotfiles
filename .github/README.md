@@ -299,14 +299,21 @@ My neovim dependencies:
 
 ```
 pacman -S tree-sitter-cli python-lsp-server \
-python-ruff stylua rust 
+python-ruff stylua rust nodejs npm 
+```
+
+install packages from npm to .local/bin: 
+
+```
+npm config set prefix ~/.local
+npm install -g @vtsls/language-server
 ```
 
 Yazi file manager:
 
 ```
 pacman -S file ffmpeg 7zip jq poppler fd ripgrep fzf \
-zoxide resvg imagemagick yazi
+zoxide resvg imagemagick poppler yazi 
 ```
 
 Do this from the user directory:

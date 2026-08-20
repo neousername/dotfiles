@@ -57,6 +57,9 @@
 !.config/yazi/
 !.config/yazi/yazi.toml
 !.config/yazi/keymap.toml
+!.config/yazi/plugins
+!.config/yazi/plugins/merge-pdfs.yazi
+!.config/yazi/plugins/merge-pdfs.yazi/*
 
 !.config/waybar/
 !.config/waybar/**
