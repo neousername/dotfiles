@@ -33,7 +33,8 @@ hl.bind(mainMod .. " + SHIFT + W", hl.dsp.exec_cmd("uwsm app -- firefox --new-wi
 hl.bind(mainMod .. " + SHIFT + A", hl.dsp.exec_cmd("uwsm app -- firefox --new-window https://chatgpt.com"))
 hl.bind(mainMod .. " + SHIFT + C", hl.dsp.exec_cmd("uwsm app -- firefox --new-window https://calendar.google.com"))
 hl.bind(mainMod .. " + SHIFT + D", hl.dsp.exec_cmd("uwsm app -- firefox --new-window https://tasks.google.com/tasks"))
-hl.bind(mainMod .. " + SHIFT + T", hl.dsp.exec_cmd("uwsm app -- firefox --new-window https://web.telegram.org/"))
+hl.bind(mainMod .. " + SHIFT + T", hl.dsp.exec_cmd("uwsm app -- firefox --new-window https://web.telegram.org"))
+hl.bind(mainMod .. " + SHIFT + L", hl.dsp.exec_cmd("uwsm app -- firefox --new-window https://linear.app"))
 
 -- Move focus with mainMod + HJKL
 hl.bind(mainMod .. " + H", hl.dsp.focus({ direction = "left" }))
@@ -41,11 +42,11 @@ hl.bind(mainMod .. " + L", hl.dsp.focus({ direction = "right" }))
 hl.bind(mainMod .. " + K", hl.dsp.focus({ direction = "up" }))
 hl.bind(mainMod .. " + J", hl.dsp.focus({ direction = "down" }))
 
--- Move active window with mainMod + SHIFT + HJKL
-hl.bind(mainMod .. " + SHIFT + H", hl.dsp.window.move({ direction = "left" }))
-hl.bind(mainMod .. " + SHIFT + L", hl.dsp.window.move({ direction = "right" }))
-hl.bind(mainMod .. " + SHIFT + K", hl.dsp.window.move({ direction = "up" }))
-hl.bind(mainMod .. " + SHIFT + J", hl.dsp.window.move({ direction = "down" }))
+-- Move active window with mainMod + CTRL + HJKL
+hl.bind(mainMod .. " + CTRL + H", hl.dsp.window.move({ direction = "left" }))
+hl.bind(mainMod .. " + CTRL + L", hl.dsp.window.move({ direction = "right" }))
+hl.bind(mainMod .. " + CTRL + K", hl.dsp.window.move({ direction = "up" }))
+hl.bind(mainMod .. " + CTRL + J", hl.dsp.window.move({ direction = "down" }))
 
 -- Resize active window with SUPER + ALT + hjkl
 hl.bind(mainMod .. " + ALT + H", hl.dsp.window.resize({ x = -50, y = 0, relative = true }), { repeating = true })
