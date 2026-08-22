@@ -8,126 +8,129 @@
 @define-color urgent    #FF453A;
 
 window#waybar {
-    background-color: transparent;
-    color: @fg;
-    font-family: "Inter";
-    font-size: 22px;
-    font-weight: 500;
+  background-color: transparent;
+  color: @fg;
+  font-family: "Inter";
+  font-size: 22px;
+  font-weight: 500;
 }
 
 #workspaces {
-    background-color: @bg;
-    border-radius: 20px;
-    margin-top: 4px;
-    margin-left: 4px;
-    padding: 0 4px;
+  background-color: @bg;
+  border-radius: 20px;
+  margin-top: 4px;
+  margin-left: 4px;
+  padding: 0 4px;
 }
 
 #workspaces button {
-    min-width: 22px;
-    color: @fg_dim;
-    background-color: transparent;
-    border: none;
+  min-width: 22px;
+  color: @fg_dim;
+  background-color: transparent;
+  border: none;
 }
 
 #workspaces button:hover {
-    color: @fg;
-    background: transparent;
-    border: none;
+  color: @fg;
+  background: transparent;
+  border: none;
 }
 
 #workspaces button.active {
-    color: @fg;
-    background: transparent;
-    border: none;
+  color: @fg;
+  background: transparent;
+  border: none;
 }
 
 #workspaces button.urgent {
-    background-color: @urgent;
-    color: #ffffff;
-    border: none;
+  background-color: @urgent;
+  color: #ffffff;
+  border: none;
 }
 
 #status {
-    background-color: @bg;
-    border-radius: 20px;
-    margin-top: 4px;
-    margin-right: 4px;
+  background-color: @bg;
+  border-radius: 20px;
+  margin-top: 4px;
+  margin-right: 4px;
 }
 
-#language, #pulseaudio, #network, #bluetooth {
-    color: @fg;
-    min-width: 44px;
-    background-color: transparent;
+#language,
+#pulseaudio,
+#network,
+#bluetooth {
+  color: @fg;
+  min-width: 44px;
+  background-color: transparent;
 }
 
 #clock {
-    background-color: @bg;
-    border-radius: 20px;
-    color: @fg;
-    margin-top: 4px;
-    padding: 0 12px;
+  background-color: @bg;
+  border-radius: 20px;
+  color: @fg;
+  margin-top: 4px;
+  padding: 0 12px;
 }
 
 #language {
-    padding-left: 6px;
+  padding-left: 6px;
 }
 
 #pulseaudio {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 22px 22px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 22px 22px;
 }
 
 #pulseaudio.low {
-    background-image: url('/usr/share/icons/Papirus/22x22/panel/audio-volume-low-panel.svg');
+  background-image: url("/usr/share/icons/Papirus/22x22/panel/audio-volume-low-panel.svg");
 }
 
 #pulseaudio.medium {
-    background-image: url('/usr/share/icons/Papirus/22x22/panel/audio-volume-medium-panel.svg');
+  background-image: url("/usr/share/icons/Papirus/22x22/panel/audio-volume-medium-panel.svg");
 }
 
 #pulseaudio.high {
-    background-image: url('/usr/share/icons/Papirus/22x22/panel/audio-volume-high-panel.svg');
+  background-image: url("/usr/share/icons/Papirus/22x22/panel/audio-volume-high-panel.svg");
 }
 
 #pulseaudio.muted {
-    background-image: url('/usr/share/icons/Papirus/22x22/panel/audio-volume-muted-panel.svg');
-    color: @fg_dim;
+  background-image: url("/usr/share/icons/Papirus/22x22/panel/audio-volume-muted-panel.svg");
+  color: @fg_dim;
 }
 
 #network.wifi {
-    background-image: url('/usr/share/icons/Papirus/22x22/panel/network-wireless-signal-excellent.svg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 22px 22px;
+  background-image: url("/usr/share/icons/Papirus/22x22/panel/network-wireless-signal-excellent.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 22px 22px;
 }
 
 #network.ethernet {
-    background-image: url('/usr/share/icons/Papirus/22x22/panel/network-wired.svg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 22px 22px;
+  background-image: url("/usr/share/icons/Papirus/22x22/panel/network-wired.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 22px 22px;
 }
 
 #network.disconnected {
-    background-image: url('/usr/share/icons/Papirus/22x22/panel/network-offline.svg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 22px 22px;
-    color: @fg_dim;
+  background-image: url("/usr/share/icons/Papirus/22x22/panel/network-offline.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 22px 22px;
+  color: @fg_dim;
 }
 
 #bluetooth {
-    background-image: url('/usr/share/icons/Papirus/22x22/panel/bluetooth-active.svg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 22px 22px;
+  background-image: url("/usr/share/icons/Papirus/22x22/panel/bluetooth-active.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 22px 22px;
 }
 
 #bluetooth.connected {
-    background-image: url('/usr/share/icons/Papirus/22x22/panel/bluetooth-paired.svg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 22px 22px;
+  background-image: url("/usr/share/icons/Papirus/22x22/panel/bluetooth-paired.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 22px 22px;
 }
