@@ -16,8 +16,16 @@ return {
                 -- Start / refresh Git diff review.
                 map("<leader>gd", function()
                     gitsigns.setqflist("all", { open = false }, function(err)
-                        if not err then
+                        if err then
+                            return
+                        end
+
+                        local changes = vim.fn.getqflist()
+
+                        if #changes > 0 then
                             vim.cmd("cfirst")
+                        else
+                            vim.notify("No Git changes", vim.log.levels.INFO)
                         end
                     end)
                 end, "Start Git diff review")
