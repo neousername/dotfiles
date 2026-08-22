@@ -21,6 +21,6 @@ done | rofi -dmenu \
     -p "Launch:" \
     -theme "$HOME/.config/rofi/config.rasi")
 
-[[ -z "$SELECTED" ]] && exit 0
+[[ -z $SELECTED ]] && exit 0
 
-[[ -n "${CMDS[$SELECTED]+_}" ]] && uwsm app -- ${CMDS[$SELECTED]} 
+[[ -n ${CMDS[$SELECTED]+_} ]] && uwsm app -- ${CMDS[$SELECTED]}

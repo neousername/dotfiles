@@ -29,10 +29,10 @@ L4='    fail_color=rgba(ff453aee) rgba(ff453aee) 40deg'
 L5='    font_color = rgb(229, 229, 234)'
 L6="    font_family = $FONT"
 
-sed -i "5s|.*|$L1|"  ~/.config/hypr/hyprlock.conf
-sed -i "7s|.*|$L2|"  ~/.config/hypr/hyprlock.conf
-sed -i "8s|.*|$L3|"  ~/.config/hypr/hyprlock.conf
-sed -i "9s|.*|$L4|"  ~/.config/hypr/hyprlock.conf
+sed -i "5s|.*|$L1|" ~/.config/hypr/hyprlock.conf
+sed -i "7s|.*|$L2|" ~/.config/hypr/hyprlock.conf
+sed -i "8s|.*|$L3|" ~/.config/hypr/hyprlock.conf
+sed -i "9s|.*|$L4|" ~/.config/hypr/hyprlock.conf
 sed -i "11s|.*|$L5|" ~/.config/hypr/hyprlock.conf
 sed -i "12s|.*|$L6|" ~/.config/hypr/hyprlock.conf
 
@@ -43,7 +43,7 @@ L3='@define-color bg_hover  #3A3A3C;'
 L4='@define-color fg        #E5E5EA;'
 L5='@define-color fg_bright #FFFFFF;'
 L6='@define-color fg_dim    #8E8E93;'
-L7='@define-color accent    #AEAEB2;'      # macOS graphite
+L7='@define-color accent    #AEAEB2;' # macOS graphite
 L8='@define-color urgent    #FF453A;'
 
 sed -i "1s|.*|$L1|" ~/.config/waybar/style.css
@@ -68,12 +68,12 @@ I7="    background-image: url('/usr/share/icons/$ICON_THEME/22x22/panel/network-
 I8="    background-image: url('/usr/share/icons/$ICON_THEME/22x22/panel/bluetooth-active.svg');"
 I9="    background-image: url('/usr/share/icons/$ICON_THEME/22x22/panel/bluetooth-paired.svg');"
 
-sed -i "68s|.*|$I1|"  ~/.config/waybar/style.css
-sed -i "72s|.*|$I2|"  ~/.config/waybar/style.css
-sed -i "76s|.*|$I3|"  ~/.config/waybar/style.css
-sed -i "80s|.*|$I4|"  ~/.config/waybar/style.css
-sed -i "90s|.*|$I5|"  ~/.config/waybar/style.css
-sed -i "97s|.*|$I6|"  ~/.config/waybar/style.css
+sed -i "68s|.*|$I1|" ~/.config/waybar/style.css
+sed -i "72s|.*|$I2|" ~/.config/waybar/style.css
+sed -i "76s|.*|$I3|" ~/.config/waybar/style.css
+sed -i "80s|.*|$I4|" ~/.config/waybar/style.css
+sed -i "90s|.*|$I5|" ~/.config/waybar/style.css
+sed -i "97s|.*|$I6|" ~/.config/waybar/style.css
 sed -i "104s|.*|$I7|" ~/.config/waybar/style.css
 sed -i "112s|.*|$I8|" ~/.config/waybar/style.css
 sed -i "120s|.*|$I9|" ~/.config/waybar/style.css
@@ -86,7 +86,7 @@ L4='    border:    #3A3A3C;'
 L5='    fg:        #E5E5EA;'
 L6='    fg-bright: #FFFFFF;'
 L7='    fg-dim:    #8E8E93;'
-L8='    accent:    #AEAEB2;'               # macOS graphite
+L8='    accent:    #AEAEB2;' # macOS graphite
 L9='    urgent:    #FF453A;'
 
 sed -i "2s|.*|$L1|" ~/.config/rofi/config.rasi
@@ -105,10 +105,10 @@ sed -i "20s|.*|$L10|" ~/.config/rofi/config.rasi
 # ── mako (~/.config/mako/config) ─────────────────────────────────────────────
 L1='background-color=#1C1C1EFF'
 L2='text-color=#E5E5EAFF'
-L3='border-color=#AEAEB2FF'                # macOS graphite
+L3='border-color=#AEAEB2FF' # macOS graphite
 L4='progress-color=#AEAEB2FF'
 L5="font=$FONT 10"
-L6='border-color=#FF453AFF'                # urgency=critical override
+L6='border-color=#FF453AFF' # urgency=critical override
 
 sed -i "1s|.*|$L1|" ~/.config/mako/config
 sed -i "2s|.*|$L2|" ~/.config/mako/config

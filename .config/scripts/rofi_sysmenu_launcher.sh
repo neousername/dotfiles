@@ -33,6 +33,6 @@ done | rofi -dmenu \
     -p "System:" \
     -theme "$HOME/.config/rofi/config.rasi")
 
-[[ -z "$SELECTED" ]] && exit 0
+[[ -z $SELECTED ]] && exit 0
 
-[[ -n "${CMDS[$SELECTED]+_}" ]] && bash -c "${CMDS[$SELECTED]}" 
+[[ -n ${CMDS[$SELECTED]+_} ]] && bash -c "${CMDS[$SELECTED]}"

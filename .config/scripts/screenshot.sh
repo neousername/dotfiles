@@ -18,7 +18,7 @@ case $1 in
         ;;
 esac
 
-wl-copy --type image/png < "$FILE"
+wl-copy --type image/png <"$FILE"
 
 notify-send \
     -a "Screenshot" \
