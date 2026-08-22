@@ -1,6 +1,8 @@
 # Ignore everything
 *
 !.gitignore
+!.editorconfig
+!.stylua.toml
 
 # Un-ignore folders and files
 !.github/
