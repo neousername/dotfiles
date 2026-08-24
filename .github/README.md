@@ -69,7 +69,7 @@ Install the core packages:
 ```
 pacman -Syy
 pacstrap -K /mnt base base-devel linux linux-firmware btrfs-progs efibootmgr \
-util-linux intel-ucode cryptsetup limine sbctl sudo networkmanager firewalld reflector \
+util-linux intel-ucode cryptsetup limine sudo networkmanager firewalld reflector \
 avahi bluez bluez-utils bluetui acpi acpi_call acpid alsa-utils pipewire pipewire-alsa \
 pipewire-pulse pipewire-jack wireplumber pulsemixer sof-firmware bash-completion \
 git docker openssh keychain neovim alacritty terminus-font man 

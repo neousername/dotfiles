@@ -3,10 +3,6 @@ return {
     dependencies = { "nvim-tree/nvim-web-devicons" },
 
     config = function()
-        local function cwd()
-            return vim.fn.expand("%:p:h:t")
-        end
-
         require("lualine").setup({
             options = {
                 theme = "auto",
@@ -15,7 +11,7 @@ return {
             sections = {
                 lualine_a = { "mode" },
                 lualine_b = { "branch" },
-                lualine_c = { cwd, "filename" },
+                lualine_c = { "filename" },
 
                 -- Show the currently connected server and its status
                 lualine_x = { require("opencode").statusline },

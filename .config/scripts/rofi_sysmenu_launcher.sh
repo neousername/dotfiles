@@ -13,12 +13,12 @@ declare -A ICONS=(
 )
 
 declare -A CMDS=(
-    [WiFi]="uwsm app -- alacritty -e nmtui"
-    [Bluetooth]="uwsm app -- alacritty -e bluetui"
-    [Sound]="uwsm app -- alacritty -e pulsemixer"
+    [WiFi]="uwsm app -- ghostty -e nmtui"
+    [Bluetooth]="uwsm app -- ghostty -e bluetui"
+    [Sound]="uwsm app -- ghostty -e pulsemixer"
     [Displays]="uwsm app -- nwg-displays"
     [Storage]="uwsm app -- filelight"
-    [Performance]="uwsm app -- alacritty -e btop"
+    [Performance]="uwsm app -- ghostty -e btop"
     [Sleep]="systemctl suspend"
     [Logout]="uwsm stop"
 )

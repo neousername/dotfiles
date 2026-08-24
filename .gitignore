@@ -53,8 +53,8 @@
 !.config/rofi/
 !.config/rofi/**
 
-!.config/alacritty/
-!.config/alacritty/**
+!.config/ghostty/
+!.config/ghostty/**
 
 !.config/yazi/
 !.config/yazi/yazi.toml

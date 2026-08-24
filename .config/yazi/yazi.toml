@@ -23,12 +23,3 @@ prepend_rules = [
     { mime = "image/*", use = "image" },
     { mime = "application/pdf", use = "pdf" }
 ]
-
-[plugin]
-previewers = [
-  { url = "*/",             run = "folder", sync = true },  # directories
-  { mime = "application/json", run = "json" },              # JSON → formatted
-  { mime = "text/*",        run = "code" },                 # other text → highlighted
-  { url = "*",              run = "file" },                 # everything else
-]
-preloaders = []

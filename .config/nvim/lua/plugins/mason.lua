@@ -27,6 +27,7 @@ return {
                     "stylua",
                     "ruff",
                     "prettier",
+                    "biome",
                 },
             })
         end,
