@@ -21,8 +21,9 @@
             "class<discord>": "",
             "class<com.github.xournalpp.xournalpp>": "󰏪",
             "class<libreoffice-.*>": "",
-            "class<obs>": "󰑋",
-            "class<com.obsproject.Studio>": "󰑋"
+            "class<obs>": "󰻂",
+            "class<com.obsproject.Studio>": "󰻂",
+            "class<xreader>": ""
         },
         "tooltip": false,
 	"on-click": "activate"
@@ -40,12 +41,10 @@
     },
 
     "pulseaudio": {
-        "format": " ",
-        "format-muted": " ",
-        "states": {
-            "low": 33,
-            "medium": 99,
-            "high": 100
+        "format": "{icon}",
+        "format-muted": "󰖁",
+        "format-icons": {
+            "default": ["", "", ""]
         },
         "scroll-step": 5.0,
         "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
@@ -53,15 +52,15 @@
     },
 
     "network": {
-        "format-wifi": " ",
-        "format-ethernet": " ",
-        "format-disconnected": " ",
+        "format-wifi": "",
+        "format-ethernet": "󰈀",
+        "format-disconnected": "󰤭",
         "tooltip": false
     },
 
     "bluetooth": {
-        "format": " ",
-        "format-connected": " ",
+        "format": "",
+        "format-connected": "󰂱",
         "tooltip": false
     }
 }
