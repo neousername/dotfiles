@@ -337,7 +337,9 @@ ya pkg add yazi-rs/plugins:mount
 Then there are the apps I personally favour:
 
 ```
-pacman -S firefox libreoffice-still opencode lazygit uv
+pacman -S firefox libreoffice-still opencode lazygit uv obs-studio
+telegram-desktop discord
+
 ```
 
 ## Configuring apps

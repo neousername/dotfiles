@@ -1,17 +1,26 @@
 #!/usr/bin/env bash
+
 BASE="/usr/share/icons/Papirus-Dark/22x22/apps"
 
 declare -A ICONS=(
     [Firefox]="$BASE/firefox.svg"
+    [Telegram]="$BASE/telegram.svg"
+    [Discord]="$BASE/discord.svg"
+    [Xournal++]="$BASE/xournalpp.svg"
     [LibreOffice]="$BASE/libreoffice7.6-startcenter.svg"
+    [OBS]="$BASE/obs.svg"
 )
 
 declare -A CMDS=(
     [Firefox]="firefox"
+    [Telegram]="env QT_QPA_PLATFORM=xcb QT_SCALE_FACTOR=2 XCURSOR_SIZE=24 Telegram"
+    [Discord]="discord --ozone-platform=wayland"
+    [Xournal++]="xournalpp"
     [LibreOffice]="libreoffice"
+    [OBS]="obs"
 )
 
-NAMES=(Firefox LibreOffice)
+NAMES=(Firefox Telegram Discord Xournal++ LibreOffice OBS)
 
 SELECTED=$(for name in "${NAMES[@]}"; do
     printf "%s\0icon\x1f%s\n" "$name" "${ICONS[$name]}"
