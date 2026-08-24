@@ -1,4 +1,8 @@
 background = 1C1C1E
+foreground = E5E5EA
+cursor-color = AEAEB2
+selection-background = 3A3A3C
+selection-foreground = E5E5EA
 font-family = JetBrainsMono Nerd Font
 
 font-size = 21
