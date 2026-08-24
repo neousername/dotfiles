@@ -10,6 +10,10 @@
     urgent:    #FF453A;
 }
 window {
+    font:             "Inter 22";
+}
+
+window {
     background-color: @bg;
     border:           1px;
     border-color:     @border;
@@ -17,7 +21,6 @@ window {
     width:            480px;
     height:           500px;
     padding:          0px;
-    font:             "Inter 22";
 }
 mainbox {
     background-color: transparent;
@@ -66,7 +69,7 @@ element normal active {
 }
 element normal urgent {
     background-color: @urgent;
-    text-color:       #ffffffff;
+    text-color:       @fg-bright;
 }
 element alternate normal {
     background-color: transparent;
@@ -78,7 +81,7 @@ element alternate active {
 }
 element alternate urgent {
     background-color: @urgent;
-    text-color:       #ffffffff;
+    text-color:       @fg-bright;
 }
 element selected normal {
     background-color: @bg-hover;
@@ -90,7 +93,7 @@ element selected active {
 }
 element selected urgent {
     background-color: @urgent;
-    text-color:       #ffffffff;
+    text-color:       @fg-bright;
 }
 element-text {
     background-color: transparent;

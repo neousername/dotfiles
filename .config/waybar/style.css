@@ -6,13 +6,13 @@
 @define-color fg_dim    #8E8E93;
 @define-color accent    #AEAEB2;
 @define-color urgent    #FF453A;
+window#waybar {
+  font: 500 22px "Inter";
+}
 
 window#waybar {
   background-color: transparent;
   color: @fg;
-  font-family: "Inter";
-  font-size: 22px;
-  font-weight: 500;
 }
 
 #workspaces {
@@ -44,7 +44,7 @@ window#waybar {
 
 #workspaces button.urgent {
   background-color: @urgent;
-  color: #ffffff;
+  color: @fg_bright;
   border: none;
 }
 

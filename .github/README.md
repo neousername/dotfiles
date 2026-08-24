@@ -1,5 +1,7 @@
 # Personal Arch Linux Installation Guide
 
+To change the color theme, ask an agent to use `.CHANGE_THEME_WITH_AGENT.md`.
+
 NVIDIA with no hibernation; Intel CPU;
 BTRFS with encryption; 
 snapper; hyprland; my own dotfiles.
