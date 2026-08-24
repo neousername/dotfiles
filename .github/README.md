@@ -311,8 +311,7 @@ I consider these my "system" packages:
 pacman -S uwsm greetd greetd-tuigreet hyprland hyprlock hypridle hyprpaper \
 hyprsunset mako xdg-desktop-portal-hyprland xdg-desktop-portal-gtk \
 waybar rofi-wayland btop cliphist wl-clipboard grim slurp qt6ct \
-nwg-look nwg-displays ttf-jetbrains-mono-nerd inter-font papirus-icon-theme tmux \
-zathura-pdf-mupdf imv mpv cups celluloid filelight
+nwg-look nwg-displays ttf-jetbrains-mono-nerd inter-font papirus-icon-theme tmux xreader imv mpv cups celluloid filelight
 ```
 
 My neovim dependencies:

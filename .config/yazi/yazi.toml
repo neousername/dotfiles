@@ -9,7 +9,7 @@ image = [
     { run = "imv-dir %s", orphan = true }
 ]
 pdf = [
-    { run = "zathura %s", orphan = true }
+    { run = "GDK_SCALE=3 GDK_DPI_SCALE=1 xreader %s", orphan = true }
 ]
 edit = [
     { run = "nvim %s", block = true }
