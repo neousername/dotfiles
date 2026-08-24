@@ -24,6 +24,7 @@ window#waybar {
 }
 
 #workspaces button {
+  font-family: "Inter", "JetBrainsMono Nerd Font";
   min-width: 22px;
   color: @fg_dim;
   background-color: transparent;

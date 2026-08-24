@@ -11,7 +11,19 @@
     },
 
     "hyprland/workspaces": {
-        "format": "{name}",
+        "format": "{name} {windows}",
+        "format-window-separator": " ",
+        "window-rewrite-default": "󰘔",
+        "window-rewrite": {
+            "class<firefox>": "",
+            "class<TelegramDesktop>": "",
+            "class<com.mitchellh.ghostty>": "",
+            "class<discord>": "",
+            "class<com.github.xournalpp.xournalpp>": "󰏪",
+            "class<libreoffice-.*>": "",
+            "class<obs>": "󰑋",
+            "class<com.obsproject.Studio>": "󰑋"
+        },
         "tooltip": false,
 	"on-click": "activate"
     },
