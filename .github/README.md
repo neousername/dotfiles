@@ -119,7 +119,7 @@ In `/etc/mkinitcpio.conf`:
 ```
 MODULES=(btrfs)
 BINARIES=(/usr/bin/btrfs) 
-HOOKS=(base udev autodetect microcode modconf kms keyboard keymap consolefont block encrypt filesystems fsck)
+HOOKS=(base udev autodetect microcode modconf keyboard keymap consolefont block encrypt filesystems resume fsck)
 ```
 
 Regenerate the mkinitcpio files: `mkinitcpio -P`
@@ -152,7 +152,7 @@ timeout: 5
 /Arch Linux
         protocol: linux
         path: boot():/vmlinuz-linux
-        cmdline: quiet cryptdevice=UUID=<device-UUID>:root:allow-discards root=/dev/mapper/root rw rootflags=subvol=@ rootfstype=btrfs
+        cmdline: quiet cryptdevice=UUID=<device-UUID>:root:allow-discards root=/dev/mapper/root rw rootflags=subvol=@ rootfstype=btrfs 
         module_path: boot():/initramfs-linux.img
 ```
 
@@ -280,8 +280,19 @@ Run this:
 pacman -Syu linux-headers nvidia-open-dkms nvidia-utils lib32-nvidia-utils egl-wayland
 ```
 
-NVIDIA is incapable of hibernation on Arch Linux.
-Disable it completely in */etc/systemd/sleep.conf
+NVIDIA drivers are officially broken for hibernation as of 24. Aug 2026, 
+but I still have hibernation hook configured and the cmd arguments set up in hopes
+that it will be fixed. Here is how to set up hibernation: 
+
+```
+sudo btrfs inspect-internal map-swapfile -r /swap/swapfile
+findmnt -no UUID -T /swap/swapfile
+```
+
+Above commands will return two values.
+Append these to the Limine cmdline:
+`resume=UUID=YOUR_BTRFS_UUID resume_offset=YOUR_OFFSET`
+
 
 ## Installing apps
 
