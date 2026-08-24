@@ -22,5 +22,6 @@ alias grep='grep --color=auto'
 
 # My aliases
 alias g="lazygit"
+alias c='opencode --auto --port'
 
 PS1='[\W]\$ '

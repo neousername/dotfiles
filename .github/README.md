@@ -331,13 +331,16 @@ Do this from the user directory:
 
 ```
 ya pkg add yazi-rs/plugins:mount
+xdg-mime default yazi.desktop inode/directory
 ```
+This will add the mount plugin and also make firefox use
+yazi when selecting a folder from a browser.
 
 Then there are the apps I personally favour:
 
 ```
 pacman -S firefox libreoffice-still opencode lazygit uv obs-studio
-telegram-desktop discord
+telegram-desktop discord xreader
 
 ```
 
