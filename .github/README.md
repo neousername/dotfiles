@@ -170,6 +170,13 @@ swapon -p 0 /swap/swapfile
 
 Networking:
 
+Configure with nvim:
+
+```/etc/NetworkManager/conf.d/dns.conf
+[main]
+dns=systemd-resolved
+```
+
 ```
 systemctl enable systemd-resolved 
 systemctl enable firewalld 
