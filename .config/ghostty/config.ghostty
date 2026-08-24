@@ -5,6 +5,6 @@ selection-background = 3A3A3C
 selection-foreground = E5E5EA
 font-family = JetBrainsMono Nerd Font
 
-font-size = 20.5
+font-size = 22
 confirm-close-surface = false
 window-padding-color = extend
