@@ -284,8 +284,27 @@ Uncomment the multilib options in `/etc/pacman.conf`.
 Run this:
 
 ```bash
-pacman -Syu linux-headers nvidia-open-dkms nvidia-utils lib32-nvidia-utils egl-wayland
+pacman -Syu linux-headers nvidia-open-dkms nvidia-utils lib32-nvidia-utils egl-wayland \
+    libva-nvidia-driver libva-utils
 ```
+
+Load the NVIDIA modules early by updating `/etc/mkinitcpio.conf`, then regenerate
+the initramfs images:
+
+```bash
+MODULES=(btrfs nvidia nvidia_modeset nvidia_uvm nvidia_drm)
+mkinitcpio -P
+```
+
+For a UWSM-managed session, create `~/.config/uwsm/env`:
+
+```bash
+export LIBVA_DRIVER_NAME=nvidia
+export __GLX_VENDOR_LIBRARY_NAME=nvidia
+```
+
+`libva-nvidia-driver` provides the NVIDIA VA-API backend selected by
+`LIBVA_DRIVER_NAME=nvidia`. Verify it with `vainfo` after starting a new session.
 
 NVIDIA drivers do not officially support hibernation as of August 24, 2026,
 but I still have the hibernation hook and kernel command-line arguments configured
