@@ -120,8 +120,7 @@ In `/etc/mkinitcpio.conf`:
 
 ```
 MODULES=(btrfs)
-BINARIES=(/usr/bin/btrfs) 
-HOOKS=(base udev autodetect microcode modconf keyboard keymap consolefont block encrypt filesystems resume fsck)
+HOOKS=(base udev autodetect microcode modconf kms keyboard keymap consolefont block encrypt filesystems resume)
 ```
 
 Regenerate the mkinitcpio files: `mkinitcpio -P`
