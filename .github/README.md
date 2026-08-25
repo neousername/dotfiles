@@ -307,10 +307,19 @@ Append these to the Limine cmdline:
 I consider these my "system" packages:
 
 ```
-pacman -S uwsm greetd greetd-tuigreet hyprland hyprlock hypridle hyprpaper \
-hyprsunset mako xdg-desktop-portal-hyprland xdg-desktop-portal-gtk \
-waybar rofi-wayland btop cliphist wl-clipboard grim slurp qt6ct \
-nwg-look nwg-displays ttf-jetbrains-mono-nerd inter-font papirus-icon-theme tmux xreader imv mpv cups celluloid filelight
+pacman -S \
+    uwsm greetd greetd-tuigreet \
+    hyprland hyprlock hypridle hyprpaper hyprsunset \
+    hyprpolkitagent \
+    mako waybar rofi-wayland \
+    xdg-desktop-portal-hyprland xdg-desktop-portal-gtk \
+    qt6-wayland qt6ct \
+    nwg-look nwg-displays \
+    ttf-jetbrains-mono-nerd inter-font papirus-icon-theme \
+    wl-clipboard cliphist grim slurp \
+    btop tmux \
+    xreader imv mpv celluloid filelight \
+    cups
 ```
 
 My neovim dependencies:
