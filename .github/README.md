@@ -74,7 +74,7 @@ pacstrap -K /mnt base base-devel linux linux-firmware btrfs-progs efibootmgr \
 util-linux intel-ucode cryptsetup limine sudo networkmanager firewalld reflector \
 avahi bluez bluez-utils bluetui acpi acpi_call acpid alsa-utils pipewire pipewire-alsa \
 pipewire-pulse pipewire-jack wireplumber pulsemixer sof-firmware bash-completion \
-git docker openssh keychain neovim alacritty terminus-font man 
+openssh neovim terminus-font man 
 ```
 
 Chroot and configure the time:
@@ -319,7 +319,7 @@ pacman -S \
     wl-clipboard cliphist grim slurp \
     btop tmux \
     xreader imv mpv celluloid filelight \
-    cups
+    cups uv docker git ghostty keychain
 ```
 
 My neovim dependencies:
@@ -347,8 +347,8 @@ yazi when selecting a folder from a browser.
 Then there are the apps I personally favour:
 
 ```
-pacman -S firefox libreoffice-still opencode lazygit uv obs-studio
-telegram-desktop discord xreader
+pacman -S firefox libreoffice-still opencode lazygit obs-studio
+telegram-desktop discord 
 
 ```
 
@@ -405,7 +405,16 @@ git pull origin main
 ```
 
 - Configure your monitor with nwg-displays.
-- Enable hypridle: `systemctl --user enable --now hypridle.service`
+- Enable hypr-related services:
+
+```
+systemctl --user enable --now \
+    hyprpaper.service \
+    waybar.service \
+    hyprsunset.service \
+    hypridle.service \
+    hyprpolkitagent.service
+```
 - Install dependencies for the nvim plugins after running the `checkhealth` command.
 - Configure xdg-user-dirs in .config to not create some default directories.
 - Configure nwg-look and qt6ct to use inter-font and papirus icons.
