@@ -11,20 +11,20 @@
     },
 
     "hyprland/workspaces": {
-        "format": "{name} {windows}",
-        "format-window-separator": " ",
-        "window-rewrite-default": "󰘔",
+        "format": "{name}{windows}",
+        "format-window-separator": "",
+        "window-rewrite-default": " 󰘔",
         "window-rewrite": {
-            "class<firefox>": "",
-            "class<TelegramDesktop>": "",
-            "class<signal>": "󰿌",
-            "class<com.mitchellh.ghostty>": "",
-            "class<discord>": "",
-            "class<com.github.xournalpp.xournalpp>": "󰏪",
-            "class<libreoffice-.*>": "",
-            "class<obs>": "󰻂",
-            "class<com.obsproject.Studio>": "󰻂",
-            "class<xreader>": ""
+            "class<firefox>": " ",
+            "class<TelegramDesktop>": " ",
+            "class<signal>": " 󰿌",
+            "class<com.mitchellh.ghostty>": " ",
+            "class<discord>": " ",
+            "class<com.github.xournalpp.xournalpp>": " 󰏪",
+            "class<libreoffice-.*>": " ",
+            "class<obs>": " 󰻂",
+            "class<com.obsproject.Studio>": " 󰻂",
+            "class<xreader>": " "
         },
         "tooltip": false,
 	"on-click": "activate"
