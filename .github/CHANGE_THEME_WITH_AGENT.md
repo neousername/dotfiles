@@ -1,12 +1,54 @@
-Exact dark-theme color values and line numbers in Git-tracked .config files.
-Excluded: .config/nvim
+Exact theme values and line numbers in Git-tracked .config files.
 
-.config/ghostty/config.ghostty
-line 1: background = 1C1C1E
-line 2: foreground = E5E5EA
-line 3: cursor-color = AEAEB2
-line 4: selection-background = 3A3A3C
-line 5: selection-foreground = E5E5EA
+.config/nvim/lua/plugins/colorscheme.lua
+line 7 for tokyonight-day: vim.cmd([[colorscheme tokyonight-day]])
+line 7 for tokyonight-night: vim.cmd([[colorscheme tokyonight-night]])
+
+TokyoNight Day values for .config/ghostty/config.ghostty
+line 1: palette = 0=#b4b5b9
+line 2: palette = 1=#f52a65
+line 3: palette = 2=#587539
+line 4: palette = 3=#8c6c3e
+line 5: palette = 4=#2e7de9
+line 6: palette = 5=#9854f1
+line 7: palette = 6=#007197
+line 8: palette = 7=#6172b0
+line 9: palette = 8=#a1a6c5
+line 10: palette = 9=#ff4774
+line 11: palette = 10=#5c8524
+line 12: palette = 11=#a27629
+line 13: palette = 12=#358aff
+line 14: palette = 13=#a463ff
+line 15: palette = 14=#007ea8
+line 16: palette = 15=#3760bf
+line 18: background = #e1e2e7
+line 19: foreground = #3760bf
+line 20: cursor-color = #3760bf
+line 21: selection-background = #b7c1e3
+line 22: selection-foreground = #3760bf
+
+TokyoNight Night values for .config/ghostty/config.ghostty
+line 1: palette = 0=#15161e
+line 2: palette = 1=#f7768e
+line 3: palette = 2=#9ece6a
+line 4: palette = 3=#e0af68
+line 5: palette = 4=#7aa2f7
+line 6: palette = 5=#bb9af7
+line 7: palette = 6=#7dcfff
+line 8: palette = 7=#a9b1d6
+line 9: palette = 8=#414868
+line 10: palette = 9=#f7768e
+line 11: palette = 10=#9ece6a
+line 12: palette = 11=#e0af68
+line 13: palette = 12=#7aa2f7
+line 14: palette = 13=#bb9af7
+line 15: palette = 14=#7dcfff
+line 16: palette = 15=#c0caf5
+line 18: background = #1a1b26
+line 19: foreground = #c0caf5
+line 20: cursor-color = #c0caf5
+line 21: selection-background = #283457
+line 22: selection-foreground = #c0caf5
 
 .config/hypr/hyprlock.conf
 line 1: $input_inner = rgba(00000000)
@@ -51,4 +93,4 @@ line 6: @define-color fg_dim    #8E8E93;
 line 7: @define-color accent    #AEAEB2;
 line 8: @define-color urgent    #FF453A;
 
-No color values were found in the other tracked .config files outside .config/nvim.
+No color values were found in the other tracked .config files.
