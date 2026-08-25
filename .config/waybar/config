@@ -17,6 +17,7 @@
         "window-rewrite": {
             "class<firefox>": "",
             "class<TelegramDesktop>": "",
+            "class<signal>": "󰿌",
             "class<com.mitchellh.ghostty>": "",
             "class<discord>": "",
             "class<com.github.xournalpp.xournalpp>": "󰏪",
