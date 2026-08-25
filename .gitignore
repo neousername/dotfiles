@@ -1,8 +1,6 @@
 # Ignore everything
 *
 !.gitignore
-!.editorconfig
-!.stylua.toml
 !.CHANGE_THEME_WITH_AGENT.md
 
 # Un-ignore folders and files
