@@ -24,9 +24,6 @@
 !.config/nvim/after/lsp/
 !.config/nvim/after/lsp/**
 
-!.config/zathura/
-!.config/zathura/**
-
 !.config/mako/
 !.config/mako/**
 
