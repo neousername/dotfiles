@@ -7,7 +7,7 @@
 
     "group/status": {
         "orientation": "horizontal",
-        "modules": ["hyprland/language", "pulseaudio", "network", "bluetooth"]
+        "modules": ["hyprland/language", "pulseaudio", "network", "bluetooth", "battery"]
     },
 
     "hyprland/workspaces": {
@@ -63,5 +63,14 @@
         "format": "",
         "format-connected": "󰂱",
         "tooltip": false
+    },
+
+    "battery": {
+        "format": "{icon}",
+        "format-charging": "󰂄",
+        "format-plugged": "",
+        "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+        "tooltip": true,
+        "tooltip-format": "{capacity}%"
     }
 }

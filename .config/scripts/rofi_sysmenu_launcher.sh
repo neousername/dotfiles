@@ -19,7 +19,7 @@ declare -A CMDS=(
     [Displays]="uwsm app -- nwg-displays"
     [Storage]="uwsm app -- filelight"
     [Performance]="uwsm app -- ghostty -e btop"
-    [Sleep]="systemctl suspend"
+    [Sleep]="systemctl suspend-then-hibernate"
     [Logout]="uwsm stop"
 )
 

@@ -59,7 +59,8 @@ window#waybar {
 #language,
 #pulseaudio,
 #network,
-#bluetooth {
+#bluetooth,
+#battery {
   color: @fg;
   min-width: 44px;
   background-color: transparent;
@@ -78,9 +79,15 @@ window#waybar {
   padding-left: 15px;
 }
 
+#battery {
+  min-width: 28px;
+  padding-right: 8px;
+}
+
 #pulseaudio,
 #network,
-#bluetooth {
+#bluetooth,
+#battery {
   font-family: "JetBrainsMono Nerd Font";
   font-size: 19px;
 }
