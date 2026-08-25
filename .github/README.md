@@ -70,9 +70,9 @@ Install the core packages:
 ```bash
 pacman -Syy
 pacstrap -K /mnt base base-devel linux linux-firmware btrfs-progs efibootmgr \
-util-linux intel-ucode cryptsetup limine sudo networkmanager firewalld reflector \
+util-linux intel-ucode sof-firmware cryptsetup limine sudo networkmanager firewalld reflector \
 avahi bluez bluez-utils bluetui acpi acpi_call acpid alsa-utils pipewire pipewire-alsa \
-pipewire-pulse pipewire-jack wireplumber pulsemixer sof-firmware bash-completion \
+pipewire-pulse pipewire-jack wireplumber rtkit pulsemixer bash-completion \
 openssh neovim terminus-font man 
 ```
 
@@ -315,7 +315,7 @@ pacman -S \
     qt6-wayland qt6ct \
     nwg-look nwg-displays \
     ttf-jetbrains-mono-nerd inter-font papirus-icon-theme \
-    wl-clipboard cliphist grim slurp \
+    wl-clipboard cliphist grim slurp brightnessctl \
     btop tmux \
     xreader imv mpv celluloid filelight \
     cups uv docker git ghostty keychain
@@ -324,7 +324,7 @@ pacman -S \
 My Neovim dependencies:
 
 ```bash
-pacman -S tree-sitter-cli rust unzip
+pacman -S tree-sitter-cli rust unzip npm
 ```
 
 Install the Yazi file manager:
@@ -415,6 +415,13 @@ systemctl --user enable --now \
     hyprpolkitagent.service
 ```
 - Install dependencies for the Neovim plugins after running the `checkhealth` command.
-- Configure `xdg-user-dirs` in `.config` to prevent the creation of unwanted default directories.
 - Configure `nwg-look` and `qt6ct` to use the Inter font and Papirus icons.
 - Open web apps with hotkeys (see `keybinds.lua` under `webapps`).
+- Enable local network service discovery and printing:
+
+```bash
+sudo systemctl enable --now avahi-daemon.service cups.service
+```
+
+Avahi discovers services and devices over the local network, while CUPS manages
+printers and print jobs.
