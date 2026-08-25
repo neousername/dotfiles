@@ -1,6 +1,8 @@
 # Personal Arch Linux Installation Guide
 
-To change the color theme, ask an agent to use `.CHANGE_THEME_WITH_AGENT.md`.
+To change the color theme, ask an agent to use
+`.github/CHANGE_THEME_WITH_AGENT.md`. To apply the white theme, use
+`.github/MAKE_WHITETHEME_WITH_AGENT.md`.
 
 This setup uses an Intel CPU, NVIDIA graphics without hibernation, encrypted
 Btrfs, Snapper, Hyprland, and my own dotfiles.

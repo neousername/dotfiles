@@ -1,4 +1,4 @@
-Exact literal color values and line numbers in Git-tracked .config files.
+Exact dark-theme color values and line numbers in Git-tracked .config files.
 Excluded: .config/nvim
 
 .config/ghostty/config.ghostty

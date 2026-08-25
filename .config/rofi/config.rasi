@@ -1,13 +1,13 @@
 * {
-    bg:        #1C1C1E;
-    bg-alt:    #2C2C2E;
-    bg-hover:  #3A3A3C;
-    border:    #3A3A3C;
-    fg:        #E5E5EA;
-    fg-bright: #FFFFFF;
-    fg-dim:    #8E8E93;
-    accent:    #AEAEB2;
-    urgent:    #FF453A;
+    bg:        #F2F2F7;
+    bg-alt:    #E5E5EA;
+    bg-hover:  #D1D1D6;
+    border:    #D1D1D6;
+    fg:        #1C1C1E;
+    fg-bright: #000000;
+    fg-dim:    #636366;
+    accent:    #8E8E93;
+    urgent:    #FF3B30;
 }
 window {
     font:             "Inter 22";

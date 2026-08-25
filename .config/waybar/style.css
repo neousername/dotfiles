@@ -1,11 +1,11 @@
-@define-color bg        #1C1C1E;
-@define-color bg_alt    #2C2C2E;
-@define-color bg_hover  #3A3A3C;
-@define-color fg        #E5E5EA;
-@define-color fg_bright #FFFFFF;
-@define-color fg_dim    #8E8E93;
-@define-color accent    #AEAEB2;
-@define-color urgent    #FF453A;
+@define-color bg        #F2F2F7;
+@define-color bg_alt    #E5E5EA;
+@define-color bg_hover  #D1D1D6;
+@define-color fg        #1C1C1E;
+@define-color fg_bright #000000;
+@define-color fg_dim    #636366;
+@define-color accent    #8E8E93;
+@define-color urgent    #FF3B30;
 window#waybar {
   font: 500 22px "Inter";
 }

@@ -1,7 +1,6 @@
 # Ignore everything
 *
 !.gitignore
-!.CHANGE_THEME_WITH_AGENT.md
 
 # Un-ignore folders and files
 !.github/
