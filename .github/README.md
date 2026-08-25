@@ -444,3 +444,12 @@ sudo systemctl enable --now avahi-daemon.service cups.service
 
 Avahi discovers services and devices over the local network, while CUPS manages
 printers and print jobs.
+
+## Configure Git Identity
+
+After fetching the repository, configure the name and email used for commits:
+
+```bash
+git config --global user.name "Your Name"
+git config --global user.email "your_email@example.com"
+```
