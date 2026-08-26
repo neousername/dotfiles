@@ -54,3 +54,6 @@
 
 !.config/waybar/
 !.config/waybar/**
+
+!.config/opencode/
+!.config/opencode/opencode.jsonc
