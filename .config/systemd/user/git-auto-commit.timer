@@ -1,0 +1,10 @@
+[Unit]
+Description=Run the automatic home repository commit daily
+
+[Timer]
+OnCalendar=*-*-* 23:00:00
+Persistent=true
+Unit=git-auto-commit.service
+
+[Install]
+WantedBy=timers.target

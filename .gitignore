@@ -39,6 +39,11 @@
 !.config/scripts/
 !.config/scripts/**
 
+!.config/systemd/
+!.config/systemd/user/
+!.config/systemd/user/git-auto-commit.service
+!.config/systemd/user/git-auto-commit.timer
+
 !.config/tmux/
 !.config/tmux/**
 

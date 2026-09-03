@@ -434,7 +434,7 @@ systemctl --user enable --now \
     hyprsunset.service \
     hypridle.service \
     hyprpolkitagent.service \
-    cliphist.service
+    cliphist.service 
 ```
 - Install dependencies for the Neovim plugins after running the `checkhealth` command.
 - Configure `nwg-look` and `qt6ct` to use the Inter font and Papirus icons.
@@ -455,4 +455,14 @@ After fetching the repository, configure the name and email used for commits:
 ```bash
 git config --global user.name "Your Name"
 git config --global user.email "your_email@example.com"
+```
+
+## Automatic Git Backup
+
+This user service backs up dotfiles with Git every day at 23:00:
+
+```bash
+chmod +x ~/.config/scripts/git-auto-commit.sh
+systemctl --user daemon-reload
+systemctl --user enable --now git-auto-commit.timer
 ```
