@@ -433,7 +433,8 @@ systemctl --user enable --now \
     waybar.service \
     hyprsunset.service \
     hypridle.service \
-    hyprpolkitagent.service
+    hyprpolkitagent.service \
+    cliphist.service
 ```
 - Install dependencies for the Neovim plugins after running the `checkhealth` command.
 - Configure `nwg-look` and `qt6ct` to use the Inter font and Papirus icons.
