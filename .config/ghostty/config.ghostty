@@ -25,3 +25,4 @@ font-family = JetBrainsMono Nerd Font
 font-size = 20
 confirm-close-surface = false
 window-padding-color = extend
+mouse-scroll-multiplier = discrete:0.3,precision:1
