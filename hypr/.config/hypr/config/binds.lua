@@ -22,15 +22,15 @@ hl.bind("ALT + Tab", hl.dsp.window.cycle_next())
 hl.bind(mainMod .. " + Tab", hl.dsp.exec_cmd(noctCall .. "window-switcher"))
 
 -- Move active window around workspaces & monitors
-hl.bind(mainMod .. " + SHIFT + K", hl.dsp.window.move({ direction = "u" }))
-hl.bind(mainMod .. " + SHIFT + L", hl.dsp.window.move({ direction = "r" }))
-hl.bind(mainMod .. " + SHIFT + H", hl.dsp.window.move({ direction = "l" }))
-hl.bind(mainMod .. " + SHIFT + J", hl.dsp.window.move({ direction = "d" }))
-hl.bind(mainMod .. " + SHIFT + mouse_up", hl.dsp.window.move({ workspace = "m-1" }))
-hl.bind(mainMod .. " + SHIFT + mouse_down", hl.dsp.window.move({ workspace = "m+1" }))
-hl.bind(mainMod .. " + CONTROL + SHIFT + 1", hl.dsp.window.move({ monitor = MONITOR1 }))
-hl.bind(mainMod .. " + CONTROL + SHIFT + 2", hl.dsp.window.move({ monitor = MONITOR2 }))
-hl.bind(mainMod .. " + CONTROL + SHIFT + 3", hl.dsp.window.move({ monitor = MONITOR3 }))
+hl.bind(mainMod .. " + CONTROL + K", hl.dsp.window.move({ direction = "u" }))
+hl.bind(mainMod .. " + CONTROL + L", hl.dsp.window.move({ direction = "r" }))
+hl.bind(mainMod .. " + CONTROL + H", hl.dsp.window.move({ direction = "l" }))
+hl.bind(mainMod .. " + CONTROL + J", hl.dsp.window.move({ direction = "d" }))
+hl.bind(mainMod .. " + CONTROL + mouse_up", hl.dsp.window.move({ workspace = "m-1" }))
+hl.bind(mainMod .. " + CONTROL + mouse_down", hl.dsp.window.move({ workspace = "m+1" }))
+hl.bind(mainMod .. " + CONTROL + ALT + 1", hl.dsp.window.move({ monitor = MONITOR1 }))
+hl.bind(mainMod .. " + CONTROL + ALT + 2", hl.dsp.window.move({ monitor = MONITOR2 }))
+hl.bind(mainMod .. " + CONTROL + ALT + 3", hl.dsp.window.move({ monitor = MONITOR3 }))
 
 for i = 1, NUM_WPM do
 	local key = i % 10
@@ -79,6 +79,21 @@ hl.bind("XF86Calculator", hl.dsp.exec_cmd(launchPrefix .. CALCULATOR))
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(launchPrefix .. BROWSER))
 hl.bind(mainMod .. " + period", hl.dsp.exec_cmd(noctCall .. "panel-toggle control-center"))
 hl.bind(mainMod .. " + Escape", hl.dsp.exec_cmd(noctCall .. "session lock"))
+
+-- Webapps
+hl.bind(mainMod .. " + SHIFT + E", hl.dsp.exec_cmd(launchPrefix .. "firefox --new-window https://mail.google.com"))
+hl.bind(mainMod .. " + SHIFT + W", hl.dsp.exec_cmd(launchPrefix .. "firefox --new-window https://web.whatsapp.com"))
+hl.bind(mainMod .. " + SHIFT + A", hl.dsp.exec_cmd(launchPrefix .. "firefox --new-window https://chatgpt.com"))
+hl.bind(mainMod .. " + SHIFT + C", hl.dsp.exec_cmd(launchPrefix .. "firefox --new-window https://calendar.google.com"))
+hl.bind(
+	mainMod .. " + SHIFT + T",
+	hl.dsp.exec_cmd(launchPrefix .. "firefox --new-window https://tasks.google.com/tasks")
+)
+hl.bind(
+	mainMod .. " + SHIFT + D",
+	hl.dsp.exec_cmd(launchPrefix .. "firefox --new-window https://drive.google.com/drive/my-drive")
+)
+hl.bind(mainMod .. " + SHIFT + L", hl.dsp.exec_cmd("uwsm app -- firefox --new-window https://linear.app"))
 
 ---------------------------
 ---- HARDWARE CONTROLS ----
