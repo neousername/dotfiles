@@ -1,5 +1,8 @@
 To install CatchyOS follow the official guide at https://wiki.cachyos.org.
-When installing choose Hyprland. 
+When installing choose Hyprland. After installation
+change the default shell to bash. Enable secure boot. 
+And set up discards on the encrypted partition.
+
 
 Clone my dotfiles from this repository and simlink the configuration with stow. 
 Delete .bashrc and other conflicting stow files. 
