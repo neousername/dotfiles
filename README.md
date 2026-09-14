@@ -28,6 +28,7 @@ Install the other applications I use regularly:
 ```bash
 pacman -S \
     firefox libreoffice-still opencode lazygit obs-studio \
-    telegram-desktop signal-desktop discord steam blender ark uv
+    telegram-desktop signal-desktop discord steam blender ark uv \
+    stow 
 ```
 
