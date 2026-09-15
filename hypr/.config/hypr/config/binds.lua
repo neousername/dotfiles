@@ -34,7 +34,7 @@ hl.bind(mainMod .. " + CONTROL + ALT + 3", hl.dsp.window.move({ monitor = MONITO
 
 for i = 1, NUM_WPM do
 	local key = i % 10
-	hl.bind(mainMod .. " + SHIFT + " .. key, hl.dsp.window.move({ workspace = "m~" .. i }))
+	hl.bind(mainMod .. " + CONTROL + " .. key, hl.dsp.window.move({ workspace = "m~" .. i }))
 end
 
 -- Move & Resize with mouse

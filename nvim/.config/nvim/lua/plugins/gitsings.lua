@@ -23,7 +23,7 @@ return {
                         local changes = vim.fn.getqflist()
 
                         if #changes > 0 then
-                            vim.cmd("cfirst")
+                            vim.cmd("silent cfirst")
                         else
                             vim.notify("No Git changes", vim.log.levels.INFO)
                         end
@@ -31,8 +31,8 @@ return {
                 end, "Start Git diff review")
 
                 -- Navigate all Git changes across the project.
-                map("<leader>j", "<cmd>cnext<cr>", "Next Git change")
-                map("<leader>k", "<cmd>cprev<cr>", "Previous Git change")
+                map("<leader>j", "<cmd>silent cnext<cr>", "Next Git change")
+                map("<leader>k", "<cmd>silent cprev<cr>", "Previous Git change")
 
                 -- Preview current hunk inline.
                 map("<leader>i", gitsigns.preview_hunk_inline, "Preview Git change")
