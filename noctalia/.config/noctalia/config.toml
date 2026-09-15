@@ -121,7 +121,7 @@ settings_show_advanced = true
 gpu_poll_seconds = 2
 
 [theme]
-builtin = "Tokyo-Night"
+builtin = "Rosé Pine"
 community_palette = "Oxocarbon"
 mode = "dark"
 pure_black_dark = true
@@ -132,10 +132,13 @@ wallpaper_scheme = "m3-content"
     builtin_ids = [ "btop", "gtk3", "gtk4", "hyprland", "kcolorscheme", "qt" ]
 
 [wallpaper.default]
-path = "/usr/share/noctalia/assets/noctalia-wallpaper.png"
+path = "/home/neousername/Pictures/Wallpapers/rose-pine-wallpaper.png"
 
 [wallpaper.last]
-path = "/usr/share/noctalia/assets/noctalia-wallpaper.png"
+path = "/home/neousername/Pictures/Wallpapers/rose-pine-wallpaper.png"
+
+[wallpaper.monitors.HDMI-A-1]
+path = "/home/neousername/Pictures/Wallpapers/rose-pine-wallpaper.png"
 
 [widget.clock]
 color = "secondary"
