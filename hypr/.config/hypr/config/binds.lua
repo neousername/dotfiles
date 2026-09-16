@@ -83,7 +83,10 @@ hl.bind(mainMod .. " + Escape", hl.dsp.exec_cmd(noctCall .. "session lock"))
 -- Webapps
 hl.bind(mainMod .. " + SHIFT + E", hl.dsp.exec_cmd(launchPrefix .. "firefox --new-window https://mail.google.com"))
 hl.bind(mainMod .. " + SHIFT + W", hl.dsp.exec_cmd(launchPrefix .. "firefox --new-window https://web.whatsapp.com"))
-hl.bind(mainMod .. " + SHIFT + A", hl.dsp.exec_cmd(launchPrefix .. "firefox --new-window https://chatgpt.com"))
+hl.bind(
+	mainMod .. " + SHIFT + A",
+	hl.dsp.exec_cmd(launchPrefix .. "firefox --new-window https://gemini.google.com/app")
+)
 hl.bind(mainMod .. " + SHIFT + C", hl.dsp.exec_cmd(launchPrefix .. "firefox --new-window https://calendar.google.com"))
 hl.bind(
 	mainMod .. " + SHIFT + T",
