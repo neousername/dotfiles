@@ -29,6 +29,6 @@ Install the other applications I use regularly:
 pacman -S \
     firefox libreoffice-still opencode lazygit obs-studio \
     telegram-desktop signal-desktop discord steam blender ark uv \
-    stow 
+    stow ttf-jetbrains-mono-nerd
 ```
 
