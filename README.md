@@ -2,17 +2,16 @@ To install CachyOS, follow the official guide at https://wiki.cachyos.org.
 
 During installation, choose Hyprland. After the installation is complete:
 
-* Change the default shell to Bash.
-* Enable Secure Boot.
+* Tinker .config/hypr files to suit your language and hotkeys
+* Change the default shell to Bash: `chsh -s /usr/bin/bash`
+* Enable Secure Boot
 * Configure discard support for the encrypted partition.
 
 Clone my dotfiles from this repository and symlink the configuration files using GNU Stow.
 
-Run these commands to apply the configuration:
-
 ```bash
-stow --adopt *
-git restore .
+sudo pacman -S stow
+stow {folder-name}  
 ```
 
 Add this option to the /var/lib/noctalia-greeter/greeter.toml manually: 
@@ -38,6 +37,6 @@ Install the other applications I use regularly:
 pacman -S \
     firefox libreoffice-still opencode lazygit obs-studio \
     telegram-desktop signal-desktop discord steam blender ark uv \
-    stow ttf-jetbrains-mono-nerd
+    ttf-jetbrains-mono-nerd
 ```
 
