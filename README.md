@@ -15,6 +15,10 @@ stow --adopt *
 git restore .
 ```
 
+Add this option to the /var/lib/noctalia-greeter/greeter.toml manually: 
+[keyboard]
+layout = "de"
+
 Install my Neovim dependencies:
 
 ```bash
