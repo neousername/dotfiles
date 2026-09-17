@@ -8,7 +8,12 @@ During installation, choose Hyprland. After the installation is complete:
 
 Clone my dotfiles from this repository and symlink the configuration files using GNU Stow.
 
-Delete `.bashrc` and any other conflicting files before running Stow.
+Run these commands to apply the configuration:
+
+```bash
+stow --adopt *
+git restore .
+```
 
 Install my Neovim dependencies:
 
