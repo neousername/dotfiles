@@ -2,7 +2,7 @@ To install CachyOS, follow the official guide at https://wiki.cachyos.org.
 
 During installation, choose Hyprland. After the installation is complete:
 
-* Tinker .config/hypr files to suit your language and hotkeys
+* Tinker .config/hypr files to suit your language, monitor and hotkey setup.
 * Change the default shell to Bash: `chsh -s /usr/bin/bash`
 * Enable Secure Boot
 * Configure discard support for the encrypted partition.
@@ -11,7 +11,13 @@ Clone my dotfiles from this repository and symlink the configuration files using
 
 ```bash
 sudo pacman -S stow
-stow {folder-name}  
+stow {folder-name}
+stow --adapt {existing-folder-name}
+```
+
+After symlinking the files, reset git tree, which will apply the config:
+```
+git reset --hard HEAD
 ```
 
 Add this option to the /var/lib/noctalia-greeter/greeter.toml manually: 
@@ -35,7 +41,7 @@ Install the other applications I use regularly:
 
 ```bash
 pacman -S \
-    firefox libreoffice-still opencode lazygit obs-studio \
+    libreoffice-still opencode lazygit obs-studio \
     telegram-desktop signal-desktop discord steam blender ark uv \
     ttf-jetbrains-mono-nerd
 ```
