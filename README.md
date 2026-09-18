@@ -21,7 +21,7 @@ layout = "de"
 Install my Neovim dependencies:
 
 ```bash
-pacman -S tree-sitter-cli unzip npm
+pacman -S tree-sitter-cli unzip npm nvim
 ```
 
 Install the Yazi file manager and its dependencies:

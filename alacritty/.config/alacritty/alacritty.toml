@@ -1,5 +1,5 @@
 [general]
-import = ["~/.config/alacritty/themes/noctalia.toml"]
+import = ["rose-pine.toml"]
 working_directory = "None"
 live_config_reload = true
 
@@ -12,7 +12,7 @@ dimensions = { columns = 100, lines = 30 }
 dynamic_padding = true
 padding = { x = 4, y = 4 }
 decorations = "Full"
-opacity = 0.8
+opacity = 1
 title = "Alacritty@CachyOS"
 class = { instance = "Alacritty", general = "Alacritty" }
 decorations_theme_variant = "Dark"
