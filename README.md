@@ -2,13 +2,10 @@ To install CachyOS, follow the official guide at https://wiki.cachyos.org.
 
 During installation, choose Hyprland. After the installation is complete:
 
-* Tinker .config/hypr files to suit your language, monitor and hotkey setup.
-* Configure the nautilus settings with SUPER+Z and disable auto-theming of alacritty.
+* Tinker .config/hypr files to suit your language and monitor setup
+* Configure the nautilus settings with SUPER+Z and disable auto-theming of alacritty
+* Clone my dotfiles from this repository and symlink the configuration files using GNU Stow
 * Change the default shell to Bash: `chsh -s /usr/bin/bash`
-* Enable Secure Boot
-* Configure discard support for the encrypted partition.
-
-Clone my dotfiles from this repository and symlink the configuration files using GNU Stow.
 
 ```bash
 sudo pacman -S stow
@@ -46,3 +43,10 @@ pacman -S \
     telegram-desktop signal-desktop discord steam blender ark uv \
     ttf-jetbrains-mono-nerd tmux
 ```
+
+Post installation (refer to wiki for exact steps):
+* Install fwupd to manage firmware
+* Enable Secure Boot (this will be long and hard)
+* Configure discard support for the encrypted partition
+* Go through the General System Tweaks chapter
+* If gaming is wanted, through the Gaming chapter
