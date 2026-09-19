@@ -47,7 +47,7 @@ hl.bind(mainMod .. " + CONTROL + ALT + SHIFT + mouse_down",           hl.dsp.win
 ]]
 for i = 1, NUM_WPM do
 	local key = i % 10
-	hl.bind(mainMod .. " + SHIFT + " .. digitCode(key), hl.dsp.window.move({ workspace = "m~" .. i }))
+	hl.bind(mainMod .. " + CONTROL + " .. digitCode(key), hl.dsp.window.move({ workspace = "m~" .. i }))
 end
 
 for i = 1, NUM_WPM do
