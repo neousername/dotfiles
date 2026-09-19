@@ -38,6 +38,7 @@ hl.bind(mainMod .. " + CONTROL + ALT + L", hl.dsp.window.move({ workspace = "m+1
 hl.bind(mainMod .. " + CONTROL + ALT + H", hl.dsp.window.move({ workspace = "m-1" }))
 hl.bind(mainMod .. " + CONTROL + ALT + mouse_up", hl.dsp.window.move({ workspace = "m-1" }))
 hl.bind(mainMod .. " + CONTROL + ALT + mouse_down", hl.dsp.window.move({ workspace = "m+1" }))
+
 --[[
 hl.bind(mainMod .. " + CONTROL + ALT + SHIFT + " .. digitCode(1),     hl.dsp.window.move({ monitor = MONITOR1 }))
 hl.bind(mainMod .. " + CONTROL + ALT + SHIFT + " .. digitCode(2),     hl.dsp.window.move({ monitor = MONITOR2 }))
@@ -45,18 +46,18 @@ hl.bind(mainMod .. " + CONTROL + ALT + SHIFT + " .. digitCode(3),     hl.dsp.win
 hl.bind(mainMod .. " + CONTROL + ALT + SHIFT + mouse_up",             hl.dsp.window.move({ monitor   = "-1" }))
 hl.bind(mainMod .. " + CONTROL + ALT + SHIFT + mouse_down",           hl.dsp.window.move({ monitor   = "+1" }))
 ]]
-for i = 1, NUM_WPM do
-	local key = i % 10
-	hl.bind(mainMod .. " + CONTROL + " .. digitCode(key), hl.dsp.window.move({ workspace = "m~" .. i }))
-end
 
 for i = 1, NUM_WPM do
 	local key = i % 10
-	hl.bind(
-		mainMod .. " + CONTROL + ALT + " .. digitCode(key),
-		hl.dsp.window.move({ workspace = "m~" .. i, follow = false })
-	)
+	hl.bind(mainMod .. " + CONTROL + ALT + " .. digitCode(key), hl.dsp.window.move({ workspace = "m~" .. i }))
 end
+
+--[[
+for i = 1, NUM_WPM do
+	local key = i % 10
+	hl.bind(mainMod .. " + SHIFT + " .. digitCode(key), hl.dsp.window.move({ workspace = "m~" .. i, follow = false }))
+end
+]]
 
 -- Move & Resize with mouse
 hl.bind(mainMod .. " + mouse:272", hl.dsp.window.drag())
