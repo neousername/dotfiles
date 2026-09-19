@@ -42,8 +42,7 @@ Install the other applications I use regularly:
 
 ```bash
 pacman -S \
-    libreoffice-still opencode lazygit obs-studio \
+    libreoffice-still opencode lazygit obs-studio-browser \
     telegram-desktop signal-desktop discord steam blender ark uv \
     ttf-jetbrains-mono-nerd tmux
 ```
-
