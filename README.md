@@ -1,52 +1,76 @@
-To install CachyOS, follow the official guide at https://wiki.cachyos.org.
+# CachyOS Installation and Setup Guide
 
-During installation, choose Hyprland. After the installation is complete:
+To install CachyOS, follow the official guide at [wiki.cachyos.org](https://wiki.cachyos.org).
 
-* Tinker .config/hypr files to suit your language and monitor setup
-* Configure the nautilus settings with SUPER+Z and disable auto-theming of alacritty
-* Clone my dotfiles from this repository and symlink the configuration files using GNU Stow
-* Change the default shell to Bash: `chsh -s /usr/bin/bash`
+During installation, select **Hyprland**. Once the installation is complete, follow the post-install setup steps below.
+
+---
+
+## 1. Initial Configuration
+
+* Adjust the configuration files in `~/.config/hypr` to match your language and monitor layout.
+* Configure Nautilus settings with `SUPER + Z` and disable auto-theming in Alacritty.
+* Clone your dotfiles repository and symlink configuration files using GNU Stow:
 
 ```bash
 sudo pacman -S stow
-stow {folder-name}
-stow --adapt {existing-folder-name}
+stow <folder-name>
+stow --adopt <existing-folder-name>
 ```
 
-After symlinking the files, reset git tree, which will apply the config:
-```
+* After symlinking, reset the Git working tree to apply the configuration:
+
+```bash
 git reset --hard HEAD
 ```
 
-Add this option to the /var/lib/noctalia-greeter/greeter.toml manually: 
+* Change the default login shell to Bash:
+
+```bash
+chsh -s /usr/bin/bash
+```
+
+* Manually append the keyboard layout to `/var/lib/noctalia-greeter/greeter.toml`:
+
+```toml
 [keyboard]
 layout = "de"
-
-Install my Neovim dependencies:
-
-```bash
-pacman -S tree-sitter-cli unzip npm nvim
 ```
 
-Install the Yazi file manager and its dependencies:
+---
+
+## 2. Package Installation
+
+### Neovim and Dependencies
 
 ```bash
-pacman -S file ffmpeg 7zip jq poppler fd ripgrep fzf \
-zoxide resvg imagemagick yazi
+sudo pacman -S neovim tree-sitter-cli unzip npm
 ```
 
-Install the other applications I use regularly:
+### Yazi File Manager & Dependencies
 
 ```bash
-pacman -S \
-    libreoffice-still opencode lazygit obs-studio-browser \
-    telegram-desktop signal-desktop discord steam blender ark uv \
-    ttf-jetbrains-mono-nerd tmux
+sudo pacman -S file ffmpeg 7zip jq poppler fd ripgrep fzf \
+  zoxide resvg imagemagick yazi
 ```
 
-Post installation (refer to wiki for exact steps):
-* Install fwupd to manage firmware
-* Enable Secure Boot (this will be long and hard)
-* Configure discard support for the encrypted partition
-* Go through the General System Tweaks chapter
-* If gaming is wanted, through the Gaming chapter
+### Additional Daily Applications
+
+```bash
+sudo pacman -S \
+  libreoffice-still opencode lazygit obs-studio-browser \
+  telegram-desktop signal-desktop discord steam blender ark uv \
+  ttf-jetbrains-mono-nerd tmux
+```
+
+---
+
+## 3. Post-Installation Checklist
+
+Refer to the CachyOS and Arch wikis for detailed procedures on the following:
+
+* **Firmware Management:** Install `fwupd` to handle device firmware updates (refer to the ArchWiki).
+* **Secure Boot:** Enable Secure Boot (note: this process can be complex and time-consuming).
+* **Storage Maintenance:** Configure `discard` (TRIM) support for encrypted partitions.
+* **System Optimization:** Review and apply suggestions from the **General System Tweaks** chapter.
+* **Gaming Setup:** If gaming on this machine, follow the steps in the **Gaming** chapter.
