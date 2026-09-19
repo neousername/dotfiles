@@ -3,6 +3,7 @@ To install CachyOS, follow the official guide at https://wiki.cachyos.org.
 During installation, choose Hyprland. After the installation is complete:
 
 * Tinker .config/hypr files to suit your language, monitor and hotkey setup.
+* Configure the nautilus settings with SUPER+Z and disable auto-theming of alacritty.
 * Change the default shell to Bash: `chsh -s /usr/bin/bash`
 * Enable Secure Boot
 * Configure discard support for the encrypted partition.
