@@ -29,6 +29,7 @@ return {
 					"ruff",
 					"prettier",
 					"biome",
+					"clang-format",
 				},
 			})
 		end,

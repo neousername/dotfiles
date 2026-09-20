@@ -11,12 +11,14 @@ function y() {
   command rm -f -- "$tmp"
 }
 
+# To use tools installed with neovim mason directly
+export PATH="$HOME/.local/share/nvim/mason/bin:$PATH"
+
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
-PS1='[\u@\h \W]\$ '
 
 # My aliases
 alias g="lazygit"

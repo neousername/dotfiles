@@ -1,42 +1,42 @@
 return {
-    "lewis6991/gitsigns.nvim",
+	"lewis6991/gitsigns.nvim",
 
-    config = function()
-        local gitsigns = require("gitsigns")
+	config = function()
+		local gitsigns = require("gitsigns")
 
-        gitsigns.setup({
-            on_attach = function(bufnr)
-                local function map(lhs, rhs, desc)
-                    vim.keymap.set("n", lhs, rhs, {
-                        buffer = bufnr,
-                        desc = desc,
-                    })
-                end
+		gitsigns.setup({
+			on_attach = function(bufnr)
+				local function map(lhs, rhs, desc)
+					vim.keymap.set("n", lhs, rhs, {
+						buffer = bufnr,
+						desc = desc,
+					})
+				end
 
-                -- Start / refresh Git diff review.
-                map("<leader>gd", function()
-                    gitsigns.setqflist("all", { open = false }, function(err)
-                        if err then
-                            return
-                        end
+				-- Start / refresh Git diff review.
+				map("<leader>pg", function()
+					gitsigns.setqflist("all", { open = false }, function(err)
+						if err then
+							return
+						end
 
-                        local changes = vim.fn.getqflist()
+						local changes = vim.fn.getqflist()
 
-                        if #changes > 0 then
-                            vim.cmd("silent cfirst")
-                        else
-                            vim.notify("No Git changes", vim.log.levels.INFO)
-                        end
-                    end)
-                end, "Start Git diff review")
+						if #changes > 0 then
+							vim.cmd("silent cfirst")
+						else
+							vim.notify("No Git changes", vim.log.levels.INFO)
+						end
+					end)
+				end, "Start Git diff review")
 
-                -- Navigate all Git changes across the project.
-                map("<leader>j", "<cmd>silent cnext<cr>", "Next Git change")
-                map("<leader>k", "<cmd>silent cprev<cr>", "Previous Git change")
+				-- Navigate all Git changes across the project.
+				map("<leader>j", "<cmd>silent cnext<cr>", "Next Git change")
+				map("<leader>k", "<cmd>silent cprev<cr>", "Previous Git change")
 
-                -- Preview current hunk inline.
-                map("<leader>i", gitsigns.preview_hunk_inline, "Preview Git change")
-            end,
-        })
-    end,
+				-- Preview current hunk inline.
+				map("<leader>i", gitsigns.preview_hunk_inline, "Preview Git change")
+			end,
+		})
+	end,
 }
