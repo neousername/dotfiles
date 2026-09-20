@@ -23,4 +23,4 @@ alias g="lazygit"
 alias c='opencode --auto'
 alias t="tmux"
 
-PS1='[\w] ❯ '
+PS1='❯ '
