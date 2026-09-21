@@ -47,13 +47,6 @@ layout = "de"
 sudo pacman -S neovim tree-sitter-cli unzip npm
 ```
 
-### Yazi File Manager & Dependencies
-
-```bash
-sudo pacman -S file ffmpeg 7zip jq poppler fd ripgrep fzf \
-  zoxide resvg imagemagick yazi
-```
-
 ### Additional Daily Applications
 
 ```bash
