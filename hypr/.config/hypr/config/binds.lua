@@ -150,9 +150,11 @@ hl.bind(mainMod .. " + A", hl.dsp.exec_cmd(noctCall .. "panel-toggle control-cen
 -------------------------------
 
 -- Focus on monitors
+--[[
 hl.bind(mainMod .. " + " .. digitCode(1), hl.dsp.focus({ monitor = MONITOR1 }))
 hl.bind(mainMod .. " + " .. digitCode(2), hl.dsp.focus({ monitor = MONITOR2 }))
 hl.bind(mainMod .. " + " .. digitCode(3), hl.dsp.focus({ monitor = MONITOR3 }))
+]]
 
 -- Focus on workspace number
 -- Absolute
@@ -169,9 +171,9 @@ end
 ]]
 
 -- Move to adjacent workspaces and next empty on a given monitor
-hl.bind(mainMod .. " + Right", hl.dsp.focus({ workspace = "m+1" }))
-hl.bind(mainMod .. " + Left", hl.dsp.focus({ workspace = "m-1" }))
-hl.bind(mainMod .. " + Down", hl.dsp.focus({ workspace = "emptym" }))
+hl.bind(mainMod .. " + ALT + L + ", hl.dsp.focus({ workspace = "m+1" }))
+hl.bind(mainMod .. " + ALT + H + ", hl.dsp.focus({ workspace = "m-1" }))
+-- hl.bind(mainMod .. " + Down", hl.dsp.focus({ workspace = "emptym" }))
 
 -- Scroll through existing workspaces & monitors
 hl.bind(mainMod .. " + mouse_down", hl.dsp.focus({ workspace = "m-1" }))
