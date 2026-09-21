@@ -30,6 +30,8 @@ git reset --hard HEAD
 chsh -s /usr/bin/bash
 ```
 
+* Configure .gitconfig, bashrc and generate ssh-keys according to ssh-config in cloned dotfiles.
+
 * Manually append the keyboard layout to `/var/lib/noctalia-greeter/greeter.toml`:
 
 ```toml
