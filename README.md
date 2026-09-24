@@ -9,6 +9,7 @@ During installation, select **Hyprland**. Once the installation is complete, fol
 ## 1. Initial Configuration
 
 * Adjust the configuration files in `~/.config/hypr` to match your language and monitor layout.
++ Adjust power settings in noctalia settings. (does not go to sleep after idle by default).
 * Configure Nautilus settings with `SUPER + Z` and disable auto-theming in Alacritty.
 * Clone your dotfiles repository and symlink configuration files using GNU Stow:
 
