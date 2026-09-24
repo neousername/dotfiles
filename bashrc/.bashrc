@@ -11,7 +11,6 @@ alias grep='grep --color=auto'
 parse_git_branch() {
   git branch 2>/dev/null | sed -e '/^[^*]/d' -e 's/* //'
 }
-branch=$(parse_git_branch)
 
 # Colors
 RED="\[$(tput bold setaf 1)\]"
@@ -20,4 +19,4 @@ BLUE="\[$(tput bold setaf 4)\]"
 RESET="\[$(tput sgr0)\]"
 
 # Prompt
-PS1="${YELLOW}\W${RESET} → ${BLUE}git:(${RESET}${RED}${branch}${RESET}${BLUE})${RESET} ❯ "
+PS1="${YELLOW}\W${RESET} → ${BLUE}git:(${RESET}${RED}\$(parse_git_branch)${RESET}${BLUE})${RESET} ❯ "
