@@ -9,28 +9,28 @@ vim.opt.clipboard = "unnamedplus"
 
 -- Install plugins --
 vim.pack.add({
-  "https://github.com/rose-pine/neovim",
-  "https://github.com/windwp/nvim-autopairs",
-  "https://github.com/Fildo7525/pretty_hover",
+	"https://github.com/rose-pine/neovim",
+	"https://github.com/windwp/nvim-autopairs",
+	"https://github.com/Fildo7525/pretty_hover",
 
-  -- Lualine
-  "https://github.com/nvim-tree/nvim-web-devicons",
-  "https://github.com/nvim-lualine/lualine.nvim",
+	-- Lualine
+	"https://github.com/nvim-tree/nvim-web-devicons",
+	"https://github.com/nvim-lualine/lualine.nvim",
 
-  -- Telescope
-  "https://github.com/nvim-lua/plenary.nvim",
-  "https://github.com/nvim-telescope/telescope.nvim",
+	-- Telescope
+	"https://github.com/nvim-lua/plenary.nvim",
+	"https://github.com/nvim-telescope/telescope.nvim",
 
-  -- Neo-tree
-  "https://github.com/nvim-neo-tree/neo-tree.nvim",
-  "https://github.com/nvim-lua/plenary.nvim",
-  "https://github.com/MunifTanjim/nui.nvim",
+	-- Neo-tree
+	"https://github.com/nvim-neo-tree/neo-tree.nvim",
+	"https://github.com/nvim-lua/plenary.nvim",
+	"https://github.com/MunifTanjim/nui.nvim",
 
-  -- Mason
-  "https://github.com/mason-org/mason.nvim",
-  "https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim",
+	-- Mason
+	"https://github.com/mason-org/mason.nvim",
+	"https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim",
 
-  "https://github.com/neovim/nvim-lspconfig",
+	"https://github.com/neovim/nvim-lspconfig",
 })
 
 -- Initialize plugins --
@@ -41,9 +41,9 @@ require("lualine").setup()
 
 -- Telescope
 require("telescope").setup({
-  defaults = {
-    sorting_strategy = "ascending",
-  },
+	defaults = {
+		sorting_strategy = "ascending",
+	},
 })
 
 require("neo-tree").setup({})
@@ -51,12 +51,12 @@ require("neo-tree").setup({})
 -- Mason
 require("mason").setup()
 require("mason-tool-installer").setup {
-  ensure_installed = {
-    "lua-language-server",
-    "basedpyright",
-    "ruff",
-  },
-  auto_update = true,
+	ensure_installed = {
+		"lua-language-server",
+		"pyright",
+		"ruff",
+	},
+	auto_update = true,
 }
 
 -- Miscellaneous --
@@ -66,7 +66,7 @@ vim.cmd("colorscheme rose-pine")
 
 -- Terminal
 vim.keymap.set("n", "<leader>t", function()
-  vim.cmd("terminal")
+	vim.cmd("terminal")
 end)
 
 -- Navigation --
@@ -79,14 +79,14 @@ vim.keymap.set("n", "<leader>gs", builtin.git_status, { desc = "Telescope git st
 
 -- Tree-view
 vim.keymap.set("n", "<leader>pv", function()
-  vim.cmd("Neotree filesystem reveal float toggle")
+	vim.cmd("Neotree filesystem reveal float toggle")
 end, { desc = "Project view" })
 
 -- LSP --
 
 -- Enable nvim-lspconfigs
 vim.lsp.enable("lua_ls")
-vim.lsp.enable("basedpyright")
+vim.lsp.enable("pyright")
 vim.lsp.enable("ruff")
 
 -- Keybinds
@@ -98,11 +98,11 @@ vim.keymap.set("n", "gri", builtin.lsp_implementations)
 vim.keymap.set("n", "grt", builtin.lsp_type_definitions)
 vim.keymap.set("n", "gO", builtin.lsp_document_symbols)
 vim.keymap.set("n", "gd", vim.lsp.buf.definition, {
-  desc = "Go to definition",
+	desc = "Go to definition",
 })
 vim.keymap.set("n", "<leader>pd", builtin.diagnostics)
 vim.keymap.set("n", "K", function()
-  require("pretty_hover").hover()
+	require("pretty_hover").hover()
 end, { desc = "Pretty LSP hover" })
 
 
@@ -113,26 +113,26 @@ vim.opt.completeopt = { "menuone", "noselect", "popup" }
 vim.opt.pumheight = 5
 
 vim.api.nvim_create_autocmd("LspAttach", {
-  group = vim.api.nvim_create_augroup("my.lsp", {}),
-  callback = function(ev)
-    local client = assert(vim.lsp.get_client_by_id(ev.data.client_id))
+	group = vim.api.nvim_create_augroup("my.lsp", {}),
+	callback = function(ev)
+		local client = assert(vim.lsp.get_client_by_id(ev.data.client_id))
 
-    -- Enable auto-completion. Note: Use CTRL-Y to select an item. |complete_CTRL-Y|
-    if client:supports_method("textDocument/completion") then
-      vim.lsp.completion.enable(true, client.id, ev.buf, { autotrigger = true })
-    end
+		-- Enable auto-completion. Note: Use CTRL-Y to select an item. |complete_CTRL-Y|
+		if client:supports_method("textDocument/completion") then
+			vim.lsp.completion.enable(true, client.id, ev.buf, { autotrigger = true })
+		end
 
-    -- Auto-format ("lint") on save.
-    -- Usually not needed if server supports "textDocument/willSaveWaitUntil".
-    if not client:supports_method("textDocument/willSaveWaitUntil")
-        and client:supports_method("textDocument/formatting") then
-      vim.api.nvim_create_autocmd("BufWritePre", {
-        group = vim.api.nvim_create_augroup("my.lsp", { clear = false }),
-        buffer = ev.buf,
-        callback = function()
-          vim.lsp.buf.format({ bufnr = ev.buf, id = client.id, timeout_ms = 1000 })
-        end,
-      })
-    end
-  end,
+		-- Auto-format ("lint") on save.
+		-- Usually not needed if server supports "textDocument/willSaveWaitUntil".
+		if not client:supports_method("textDocument/willSaveWaitUntil")
+				and client:supports_method("textDocument/formatting") then
+			vim.api.nvim_create_autocmd("BufWritePre", {
+				group = vim.api.nvim_create_augroup("my.lsp", { clear = false }),
+				buffer = ev.buf,
+				callback = function()
+					vim.lsp.buf.format({ bufnr = ev.buf, id = client.id, timeout_ms = 1000 })
+				end,
+			})
+		end
+	end,
 })
