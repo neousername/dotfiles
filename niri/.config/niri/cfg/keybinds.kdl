@@ -61,8 +61,8 @@ binds {
 
     Mod+Shift+V                         { switch-focus-between-floating-and-tiling; }
 
-    Mod+P                            { consume-or-expel-window-left; }
-    Mod+N                           { consume-or-expel-window-right; }
+    Mod+P                               { consume-or-expel-window-left; }
+    Mod+N                               { consume-or-expel-window-right; }
 
     Mod+Comma                           { consume-window-into-column; }
     Mod+Period                          { expel-window-from-column; }
@@ -73,12 +73,16 @@ binds {
     Mod+Ctrl+Shift+R                    { switch-preset-window-height; }
     Mod+Ctrl+R                          { reset-window-height; }
 
+    Mod+Ctrl+Shift+J                    { move-window-to-workspace-down; }
+    Mod+Ctrl+Shift+K                    { move-window-to-workspace-up; }
 
     // ─── Workspace Switching ───
     Mod+WheelScrollDown                 cooldown-ms=150 { focus-workspace-down; }
     Mod+WheelScrollUp                   cooldown-ms=150 { focus-workspace-up; }
     Mod+CTRL+WheelScrollDown            cooldown-ms=150 { move-column-to-workspace-down; }
     Mod+CTRL+WheelScrollUp              cooldown-ms=150 { move-column-to-workspace-up; }
+    Mod+Shift+J                         { focus-workspace-down; }
+    Mod+Shift+K                         { focus-workspace-up; }
 
     Mod+WheelScrollRight                { focus-column-right; }
     Mod+WheelScrollLeft                 { focus-column-left; }
