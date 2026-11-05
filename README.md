@@ -59,4 +59,4 @@ Host github.com-personal
 ## Apps to install with shelly
 
 telegram-desktop, signal-desktop, discord, steam, gedit, neovim,
-tmux, opencode, ttf-jetbrains-mono-nerd, uv, npm
+tmux, opencode, ttf-jetbrains-mono-nerd, uv, npm, raylib, tree-sitter-cli

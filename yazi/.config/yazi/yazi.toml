@@ -1,0 +1,8 @@
+[mgr]
+ratio = [1, 1, 1]
+sort_dir_first = true
+
+[opener]
+edit = [
+    { run = "vim %s", block=true, for = "unix"}
+]
