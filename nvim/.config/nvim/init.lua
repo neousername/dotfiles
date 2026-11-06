@@ -86,18 +86,6 @@ vim.keymap.set("n", "<leader>pg", builtin.live_grep, { desc = "Telescope live gr
 vim.keymap.set("n", "<leader>pb", builtin.buffers, { desc = "Telescope buffers" })
 vim.keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "Telescope help tags" })
 
--- Mason
-require("mason").setup()
-require("mason-tool-installer").setup({
-	ensure_installed = {
-		"lua-language-server",
-		"pyright",
-		"ruff",
-		"stylua",
-	},
-	auto_update = true,
-})
-
 -- Harpoon
 local harpoon = require("harpoon")
 harpoon:setup()
@@ -150,6 +138,17 @@ vim.keymap.set("n", "<leader>pv", function()
 	vim.cmd("Neotree")
 end, { desc = "Project view" })
 
+-- Mason
+require("mason").setup()
+require("mason-tool-installer").setup({
+	ensure_installed = {
+		"lua-language-server",
+		"pyright",
+		"ruff",
+	},
+	auto_update = true,
+})
+
 -- Enable nvim-lspconfigs
 vim.lsp.enable("lua_ls")
 vim.lsp.enable("pyright")
@@ -178,11 +177,10 @@ vim.opt.autocomplete = true
 vim.opt.complete:append("o")
 vim.opt.completeopt = { "menu", "menuone", "noselect" }
 
--- External formatters only
+-- Formatters
 require("conform").setup({
 	formatters_by_ft = {
-		c = { "uncrustify" },
-		lua = { "stylua" },
+		c = { "indent" },
 		python = { "ruff_format" },
 	},
 	format_on_save = {
