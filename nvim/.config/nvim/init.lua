@@ -2,7 +2,7 @@
 vim.opt.cursorline = true
 vim.opt.number = true
 vim.opt.relativenumber = true
-vim.opt_local.expandtab = true
+vim.opt.expandtab = true
 vim.opt.wrap = false
 vim.opt.shiftwidth = 2
 vim.g.mapleader = " "
@@ -138,7 +138,7 @@ require("neo-tree").setup({
 		},
 	},
 	filesystem = {
-		filtered_times = {
+		filtered_items = {
 			visible = true,
 			hide_dotfiles = false,
 			hide_gitignored = false,
@@ -153,6 +153,7 @@ end, { desc = "Project view" })
 -- Enable nvim-lspconfigs
 vim.lsp.enable("lua_ls")
 vim.lsp.enable("pyright")
+vim.lsp.enable("ruff")
 vim.lsp.enable("clangd")
 
 -- LSP Keybinds
