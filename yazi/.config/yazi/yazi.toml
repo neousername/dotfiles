@@ -4,5 +4,5 @@ sort_dir_first = true
 
 [opener]
 edit = [
-    { run = "vim %s", block=true, for = "unix"}
+    { run = "nvim %s", block=true, for = "unix"}
 ]
