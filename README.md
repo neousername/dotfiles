@@ -25,7 +25,7 @@ Niri settings:
 - In **Layout** set **gaps** to 10 and **focus-ring/width** to 2
 - In **misc** file inside of **cursor** option set property **hide-when-typing**
 - In **input** inside **keyboard/xkb** add language layout and add `options "grp:alt_shift_toggle`,
-  also set `workspace-auto-back-and-forth` to **false**
+  also set `focus-follows-mouse max-scroll-amount="0%"`
 
 ## Pull dotfiles from the github repository
 
