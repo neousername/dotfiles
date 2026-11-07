@@ -24,7 +24,8 @@ Niri settings:
 - Set **geometry-corner-radius** to 0
 - In **Layout** set **gaps** to 10 and **focus-ring/width** to 2
 - In **misc** file inside of **cursor** option set property **hide-when-typing**
-- In **input** inside **keyboard/xkb** add language layout and add `options "grp:alt_shift_toggle` 
+- In **input** inside **keyboard/xkb** add language layout and add `options "grp:alt_shift_toggle`,
+  also set `workspace-auto-back-and-forth` to **false**
 
 ## Pull dotfiles from the github repository
 
@@ -59,4 +60,5 @@ Host github.com-personal
 ## Apps to install with shelly
 
 telegram-desktop, signal-desktop, discord, steam, gedit, neovim, indent,
-tmux, opencode, ttf-jetbrains-mono-nerd, uv, npm, raylib, tree-sitter-cli
+tmux, opencode, ttf-jetbrains-mono-nerd, uv, npm, raylib, tree-sitter-cli,
+libreoffice-fresh

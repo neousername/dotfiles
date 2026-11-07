@@ -181,6 +181,12 @@ vim.opt.completeopt = { "menu", "menuone", "noselect" }
 require("conform").setup({
   formatters_by_ft = {
     python = { "ruff_format" },
+    c = { "clang-format" },
+  },
+  formatters = {
+    ["clang-format"] = {
+      prepend_args = { "style={BasedOnStyle: LLVM, ColumnLimit: 0}" },
+    }
   },
   format_on_save = {
     timeout_ms = 2000,
