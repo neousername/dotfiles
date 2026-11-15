@@ -73,9 +73,6 @@ binds {
     Mod+Ctrl+Shift+R                    { switch-preset-window-height; }
     Mod+Ctrl+R                          { reset-window-height; }
 
-    Mod+Ctrl+Shift+J                    { move-window-to-workspace-down; }
-    Mod+Ctrl+Shift+K                    { move-window-to-workspace-up; }
-
     // ─── Workspace Switching ───
     Mod+WheelScrollDown                 cooldown-ms=150 { focus-workspace-down; }
     Mod+WheelScrollUp                   cooldown-ms=150 { focus-workspace-up; }

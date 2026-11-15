@@ -185,7 +185,7 @@ require("conform").setup({
   },
   formatters = {
     ["clang-format"] = {
-      prepend_args = { "style={BasedOnStyle: LLVM, ColumnLimit: 0}" },
+      prepend_args = { "--style={BasedOnStyle: LLVM, ColumnLimit: 0}" },
     }
   },
   format_on_save = {
