@@ -1,5 +1,5 @@
 [general]
-import = ["rose-pine.toml"]
+import = ["rose-pine-moon.toml"]
 
 [window]
 dynamic_padding = true
@@ -7,5 +7,5 @@ opacity = 1.0
 
 [font]
 normal = { family = "JetBrainsMono Nerd Font", style = "Regular" }
-size = 16.5
+size = 13
 

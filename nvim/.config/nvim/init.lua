@@ -59,7 +59,7 @@ vim.keymap.set("n", "<leader>t", function()
 end)
 
 -- Colorscheme
-require("rose-pine").setup()
+require("rose-pine").setup({ variant = "moon" })
 vim.cmd("colorscheme rose-pine")
 
 -- Autopairs
@@ -67,6 +67,9 @@ require("nvim-autopairs").setup()
 
 -- Lualine
 require("lualine").setup({
+  options = {
+    theme = "rose-pine",
+  },
   sections = {
     lualine_x = {},
     lualine_y = { "diagnostics", "progress" },
